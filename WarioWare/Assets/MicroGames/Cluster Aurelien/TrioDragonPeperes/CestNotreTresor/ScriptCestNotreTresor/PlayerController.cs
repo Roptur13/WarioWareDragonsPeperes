@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace DragonPepere
+namespace Dragons_Peperes
 {
     namespace CestNotreTresor
     {
@@ -33,6 +33,7 @@ namespace DragonPepere
                 moveInput = Input.GetAxisRaw("Left_Joystick_X");
                 rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
             }
+
         }
     }
 }
