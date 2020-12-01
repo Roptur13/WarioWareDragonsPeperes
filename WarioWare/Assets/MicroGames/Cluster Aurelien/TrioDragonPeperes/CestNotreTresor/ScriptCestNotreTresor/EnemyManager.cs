@@ -32,9 +32,9 @@ namespace Dragons_Peperes
             //TimedUpdate is called once every tick.
             public override void TimedUpdate()
             {
-
+                base.TimedUpdate();
                 if (Tick == 1)
-                    Debug.Log("Frer stp_1");
+                    Debug.Log("audio: COME BACK HERE");
 
                 if (Tick == 2)
                     Instantiate(enemy, transform.position, transform.rotation);
@@ -50,6 +50,15 @@ namespace Dragons_Peperes
 
                 if (Tick == 6)
                     Debug.Log("Frer stp_6");
+
+                if (Tick == 7)
+                    Debug.Log("la poupe du bateau apparait + end of scrolling");
+
+                if (Tick == 8)
+                {
+                    Debug.Log("Victoire ou défaite telle est la question");
+                }
+                    
 
             }
         }
