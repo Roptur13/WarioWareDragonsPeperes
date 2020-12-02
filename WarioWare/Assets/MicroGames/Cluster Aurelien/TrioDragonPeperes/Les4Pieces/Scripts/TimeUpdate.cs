@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TimeUpdate : MonoBehaviour
+/*public class TimeUpdate : MonoBehaviour
 
     public override void TimeUpdate()
     {
@@ -29,4 +29,4 @@ public class TimeUpdate : MonoBehaviour
     {
         
     }
-}
+}*/
