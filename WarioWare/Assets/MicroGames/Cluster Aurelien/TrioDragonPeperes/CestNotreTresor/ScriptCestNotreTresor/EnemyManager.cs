@@ -39,24 +39,15 @@ namespace Dragons_Peperes
                 if (Tick == 2)
                     Instantiate(enemy, transform.position, transform.rotation);
 
-                if (Tick == 3)
-                    Debug.Log("Frer stp_3");
-
-                if (Tick == 4)
-                    Debug.Log("Frer stp_4");
-
                 if (Tick == 5)
                     Instantiate(enemy, transform.position, transform.rotation);
-
-                if (Tick == 6)
-                    Debug.Log("Frer stp_6");
 
                 if (Tick == 7)
                     Debug.Log("la poupe du bateau apparait + end of scrolling");
 
                 if (Tick == 8)
                 {
-                    Debug.Log("Victoire ou défaite telle est la question");
+                    Debug.Log("Victoire");
                 }
                     
 
