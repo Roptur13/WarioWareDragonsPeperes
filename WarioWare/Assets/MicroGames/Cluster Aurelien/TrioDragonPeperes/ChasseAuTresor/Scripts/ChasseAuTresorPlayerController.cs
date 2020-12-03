@@ -15,15 +15,19 @@ namespace Dragons_Peperes
         {
             private bool canMove;
 
-            private float speed;                      
+            private float speed;
+
+            private Rigidbody2D rbPlayer;
 
             public override void Start()
             {
                 base.Start(); //Do not erase this line!
 
-                canMove = false;
+                canMove = true;
 
-                speed = 5.0f;
+                speed = 3.0f;
+
+                rbPlayer = GetComponent<Rigidbody2D>();
 
             }
 
@@ -32,18 +36,18 @@ namespace Dragons_Peperes
             {
                 base.FixedUpdate(); //Do not erase this line!
 
-                if (canMove == true && Input.GetAxisRaw("Horizontal") != 0)
+                if (canMove == true && Input.GetAxisRaw("Left_Joystick_X") != 0)
                 {
-                    gameObject.transform.Translate(Input.GetAxisRaw("Horizontal") * speed * Time.deltaTime, 0, 0);
+                    rbPlayer.velocity = new Vector2(Input.GetAxisRaw("Left_Joystick_X") * speed, rbPlayer.velocity.y);
                     canMove = false;
                 }
-                else if (canMove == true && Input.GetAxisRaw("Vertical") != 0)
+                else if (canMove == true && Input.GetAxisRaw("Left_Joystick_Y") != 0)
                 {
-                    gameObject.transform.Translate(0 , Input.GetAxisRaw("Vertical") * speed * Time.deltaTime, 0);
+                    rbPlayer.velocity = new Vector2(rbPlayer.velocity.x , Input.GetAxisRaw("Left_Joystick_Y") * speed);
                     canMove = false;
                 }
 
-                if (Tick > 2 && Input.GetAxisRaw("Horizontal") == 0 && Input.GetAxisRaw("Vertical") == 0)
+                if (/*Tick > 2 &&*/ Input.GetAxisRaw("Left_Joystick_X") == 0 && Input.GetAxisRaw("Left_Joystick_Y") == 0)
                 {
                     canMove = true;
                 }
