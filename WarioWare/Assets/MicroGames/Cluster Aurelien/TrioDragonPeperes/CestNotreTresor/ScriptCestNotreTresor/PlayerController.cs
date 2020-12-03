@@ -25,7 +25,7 @@ namespace Dragons_Peperes
 
             private void Update()
             {
-  
+                Debug.Log(Input.GetAxis("Left_Joystick_X"));
             }
 
             private void FixedUpdate()

@@ -15,10 +15,14 @@ namespace Dragons_Peperes
 
             public GameObject enemy;
 
+            public GameObject spot1;
+            public GameObject spot2;
+            public GameObject spot3;
 
             public override void Start()
             {
                 base.Start(); //Do not erase this line!
+
 
             }
 
@@ -32,15 +36,39 @@ namespace Dragons_Peperes
             //TimedUpdate is called once every tick.
             public override void TimedUpdate()
             {
-                base.TimedUpdate();
-                if (Tick == 1)
+                //base.TimedUpdate();
+
+                #region EasyMode
+
+                    if (Tick == 1)
+                        Debug.Log("audio: COME BACK HERE");
+
+                    if (Tick == 2)
+                        Instantiate(enemy, spot2.transform);
+
+                    if (Tick == 5)
+                        Instantiate(enemy, spot2.transform);
+
+                    if (Tick == 7)
+                        Debug.Log("la poupe du bateau apparait + end of scrolling");
+
+                    if (Tick == 8)
+                    {
+                        Debug.Log("Victoire");
+                    }
+                #endregion
+
+                #region NormalMode
+
+                /*if (Tick == 1)
                     Debug.Log("audio: COME BACK HERE");
 
                 if (Tick == 2)
-                    Instantiate(enemy, transform.position, transform.rotation);
+                    Instantiate(enemy, spot2.transform);
 
                 if (Tick == 5)
-                    Instantiate(enemy, transform.position, transform.rotation);
+                    Instantiate(enemy, spot1.transform);
+                    Instantiate(enemy, spot3.transform);
 
                 if (Tick == 7)
                     Debug.Log("la poupe du bateau apparait + end of scrolling");
@@ -48,9 +76,30 @@ namespace Dragons_Peperes
                 if (Tick == 8)
                 {
                     Debug.Log("Victoire");
-                }
-                    
+                }*/
+                #endregion
 
+                #region HardMode
+
+                /*if (Tick == 1)
+                    Debug.Log("audio: COME BACK HERE");
+
+                if (Tick == 2)
+                    Instantiate(enemy, spot1.transform);
+                    Instantiate(enemy, spot3.transform);
+
+                if (Tick == 5)
+                    Instantiate(enemy, spot1.transform);
+                    Instantiate(enemy, spot3.transform);
+
+                if (Tick == 7)
+                    Debug.Log("la poupe du bateau apparait + end of scrolling");
+
+                if (Tick == 8)
+                {
+                    Debug.Log("Victoire");
+                }*/
+                #endregion
             }
         }
     }
