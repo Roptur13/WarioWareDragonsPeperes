@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: Les4Pieces
   m_EditorClassIdentifier: 
   cluster: 1
-  trio: Brigantin
-  aptiqueChal: 0
+  trio: ACommeAkuma
+  haptiqueChal: 0
   inputChal: 0
+  indexEnum: 0
   microGameScene:
     sceneAsset: {fileID: 102900000, guid: ee805ebf41f89d14db53ebe44537e234, type: 3}
     required: 1
