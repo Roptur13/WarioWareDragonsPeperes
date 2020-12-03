@@ -13,6 +13,7 @@ namespace Dragons_Peperes
         public class EnemyController : MonoBehaviour
         {
             [SerializeField] float enemySpeed = 6;
+            [SerializeField] float enemyXSpeed = 4;
 
             public Transform target;
 
@@ -33,12 +34,15 @@ namespace Dragons_Peperes
 
             void MoveEnemy()
             {
-                transform.position = Vector2.MoveTowards(transform.position, new Vector2(target.position.x, transform.position.y), enemySpeed * Time.deltaTime);
+                //se dirige vers l'axe X du Joueur
+                transform.position = Vector2.MoveTowards(transform.position, new Vector2(target.position.x, transform.position.y), enemyXSpeed * Time.deltaTime);
 
+                //se déplace sur l'axe Y en négatif
                 Vector2 temp = transform.position;
                 temp.y -= enemySpeed * Time.deltaTime;
                 transform.position = temp;
 
+                //si l'ennemi dépasse un certain axe, se fait détruire
                 if (temp.y < bound_Y)
                     Destroy(gameObject, 1);
             }
@@ -47,7 +51,7 @@ namespace Dragons_Peperes
             {
                 if (other.name == "Player")
                 {
-                    Debug.Log("O Player tá tão fdd");
+                    Debug.Log("Game Lost");
                 }
             }
         }
