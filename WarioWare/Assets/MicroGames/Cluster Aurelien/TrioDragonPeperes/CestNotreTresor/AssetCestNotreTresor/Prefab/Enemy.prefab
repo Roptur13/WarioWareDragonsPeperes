@@ -96,6 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemySpeed: 5.5
+  enemyXSpeed: 5
   target: {fileID: 0}
   bound_Y: -7
 --- !u!61 &1854291854959990353
