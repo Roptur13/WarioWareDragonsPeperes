@@ -23,7 +23,7 @@ namespace Dragons_Peperes
 
             private void FixedUpdate()
             {
-                if (Mathf.Abs(Input.GetAxisRaw("Left_Joystick_X")) == 0 && Mathf.Abs(Input.GetAxisRaw("Left_Joystick_Y")) == 0)
+                if (Mathf.Abs(Input.GetAxisRaw("Left_Joystick_X")) <= 0.2 && Mathf.Abs(Input.GetAxisRaw("Left_Joystick_Y")) <= 0.2)
                 {
                     canMove = true;
                 }
@@ -32,12 +32,12 @@ namespace Dragons_Peperes
                 {
                     if (Mathf.Abs(Input.GetAxisRaw("Left_Joystick_X")) == 1.0f)
                     {
-                        transform.position += new Vector3(distance, 0, 0);
+                        transform.position += new Vector3(Input.GetAxisRaw("Left_Joystick_X") * distance, 0, 0);
                         canMove = false;
                     }
                     if (Mathf.Abs(Input.GetAxisRaw("Left_Joystick_Y")) == 1.0f)
                     {
-                        transform.position += new Vector3(0, distance, 0);
+                        transform.position += new Vector3(0, -Input.GetAxisRaw("Left_Joystick_Y") * distance, 0);
                         canMove = false;
                     }
                 }
