@@ -11,42 +11,36 @@ namespace Dragons_Peperes
 
             private bool canMove;
 
-            public float speed;
-
-            public Transform movePoint;
-
+            public float distance;
 
             // Start is called before the first frame update
             void Start()
             {
                 canMove = true;
 
-                speed = 3.0f;
-
-                movePoint.parent = null;
-            }
-
-            // Update is called once per frame
-            void Update()
-            {
-                
+                distance = 1.0f;
             }
 
             private void FixedUpdate()
             {
-                transform.position = Vector3.MoveTowards(transform.position, movePoint.position, speed * Time.deltaTime);
+                if (Mathf.Abs(Input.GetAxisRaw("Left_Joystick_X")) == 0 && Mathf.Abs(Input.GetAxisRaw("Left_Joystick_Y")) == 0)
+                {
+                    canMove = true;
+                }
 
-                if(Vector3.Distance(transform.position, movePoint.position) < 0.05)
+                if (canMove == true)
                 {
                     if (Mathf.Abs(Input.GetAxisRaw("Left_Joystick_X")) == 1.0f)
                     {
-                        movePoint.position += new Vector3(Input.GetAxisRaw("Left_Joystick_X"), 0, 0);
+                        transform.position += new Vector3(distance, 0, 0);
+                        canMove = false;
                     }
                     if (Mathf.Abs(Input.GetAxisRaw("Left_Joystick_Y")) == 1.0f)
                     {
-                        movePoint.position += new Vector3(0, -Input.GetAxisRaw("Left_Joystick_Y"), 0);
+                        transform.position += new Vector3(0, distance, 0);
+                        canMove = false;
                     }
-                }                
+                }
             }
         }
     }
