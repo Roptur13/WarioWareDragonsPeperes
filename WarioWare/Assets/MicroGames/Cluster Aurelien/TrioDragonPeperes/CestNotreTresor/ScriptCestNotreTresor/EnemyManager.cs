@@ -15,9 +15,13 @@ namespace Dragons_Peperes
 
             public GameObject enemy;
 
+            [Space]
+            [Header("Lieux de spawns pour les enemies")]
             public GameObject spot1;
             public GameObject spot2;
             public GameObject spot3;
+
+            TimedBehaviour timedBehaviour;
 
             public override void Start()
             {
@@ -40,6 +44,9 @@ namespace Dragons_Peperes
 
                 #region EasyMode
 
+
+                if(currentDifficulty == Testing.Manager.Difficulty.EASY)
+                {
                     if (Tick == 1)
                         Debug.Log("audio: COME BACK HERE");
 
@@ -56,49 +63,57 @@ namespace Dragons_Peperes
                     {
                         Debug.Log("Victoire");
                     }
+                }
+                    
                 #endregion
 
-                #region NormalMode
+                #region MediumMode
 
-                /*if (Tick == 1)
-                    Debug.Log("audio: COME BACK HERE");
-
-                if (Tick == 2)
-                    Instantiate(enemy, spot2.transform);
-
-                if (Tick == 5)
-                    Instantiate(enemy, spot1.transform);
-                    Instantiate(enemy, spot3.transform);
-
-                if (Tick == 7)
-                    Debug.Log("la poupe du bateau apparait + end of scrolling");
-
-                if (Tick == 8)
+                if(currentDifficulty == Testing.Manager.Difficulty.MEDIUM)
                 {
-                    Debug.Log("Victoire");
-                }*/
+                    if (Tick == 1)
+                        Debug.Log("audio: COME BACK HERE");
+
+                    if (Tick == 2)
+                        Instantiate(enemy, spot2.transform);
+
+                    if (Tick == 5)
+                        Instantiate(enemy, spot1.transform);
+                        Instantiate(enemy, spot3.transform);
+
+                    if (Tick == 7)
+                        Debug.Log("la poupe du bateau apparait + end of scrolling");
+
+                    if (Tick == 8)
+                    {
+                        Debug.Log("Victoire");
+                    }
+                }
                 #endregion
 
                 #region HardMode
 
-                /*if (Tick == 1)
-                    Debug.Log("audio: COME BACK HERE");
-
-                if (Tick == 2)
-                    Instantiate(enemy, spot1.transform);
-                    Instantiate(enemy, spot3.transform);
-
-                if (Tick == 5)
-                    Instantiate(enemy, spot1.transform);
-                    Instantiate(enemy, spot3.transform);
-
-                if (Tick == 7)
-                    Debug.Log("la poupe du bateau apparait + end of scrolling");
-
-                if (Tick == 8)
+                if(currentDifficulty == Testing.Manager.Difficulty.HARD)
                 {
-                    Debug.Log("Victoire");
-                }*/
+                    if (Tick == 1)
+                        Debug.Log("audio: COME BACK HERE");
+
+                    if (Tick == 2)
+                        Instantiate(enemy, spot1.transform);
+                    Instantiate(enemy, spot3.transform);
+
+                    if (Tick == 5)
+                        Instantiate(enemy, spot1.transform);
+                    Instantiate(enemy, spot3.transform);
+
+                    if (Tick == 7)
+                        Debug.Log("la poupe du bateau apparait + end of scrolling");
+
+                    if (Tick == 8)
+                    {
+                        Debug.Log("Victoire");
+                    }
+                }
                 #endregion
             }
         }
