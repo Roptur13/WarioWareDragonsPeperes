@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,17 +11,18 @@ namespace DragonsPeperes
         {
             public List<GameObject> symboles = new List<GameObject>();
 
-           // public Vector3[] positions = new Vector3[symboles.Count];
+           public List<GameObjects> pieces = new List<GameObjects>();
+ 
 
-           //  Random.Range   
-
-            //va te faire enculer
+            
             public override void Start()
             {
-                //for (int i = 0; i<symboles.Count; i++)
-               // {
-               //     Instantiate(symboles[i], positions[i], Quaternion.identity);
-               // }
+                for (int i = 0, i < pieces.Count; i++)
+                {
+                    int rand = Random.Range(0, symboles.Count);
+                    Instantiate(symboles[rand], pieces[i].transform.position, Quaternion.identity);
+                    symboles.RemoveAt(rand);
+                }
 
                 base.Start(); //Do not erase this line!
 

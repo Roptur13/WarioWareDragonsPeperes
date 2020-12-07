@@ -374,7 +374,7 @@ MonoBehaviour:
   currentDifficulty: 0
   timer: 0
   currentTime: 0
-  Symboles:
+  symboles:
   - {fileID: 3661826768024337093, guid: 44748d477cea2cf468803543d0cb146e, type: 3}
   - {fileID: 1126808758712917682, guid: 77e774b9978fb854ca93c9873e17a11e, type: 3}
   - {fileID: 5156680838754664213, guid: 8a686f71af0474e4491bc6eab6f68730, type: 3}
