@@ -12,41 +12,108 @@ namespace Dragons_Peperes
 
         public class InputsChoiceScript : TimedBehaviour
         {
-            private string[] easyInputPossibility1 = new string[] { "Haut", "Bas", "Droite" };
-            private string[] easyInputPossibility2 = new string[] { "Bas", "Bas", "Gauche" };
-            private string[] easyInputPossibility3 = new string[] { "Gauche", "Haut", "Gauche" };
-            private string[] easyInputPossibility4 = new string[] { "Droite", "Bas", "Gauche" };
-            private string[] easyInputPossibility5 = new string[] { "Haut", "Gauche", "Haut" };
-
+            
             private int possibilityNumber;
+
+            private Vector3[] easyInputLocationList = { new Vector3(-3.7f, 0, 0), new Vector3(0, 0, 0), new Vector3(3.7f, 0, 0) };
+
+            public GameObject upArrow;
+            public GameObject downArrow;
+            public GameObject leftArrow;
+            public GameObject rightArrow;
+
+            public float duration;
 
             public override void Start()
             {
                 base.Start(); //Do not erase this line!
 
-                possibilityNumber = Random.Range(1, 6);
+                duration = 2f;
 
-                switch(possibilityNumber)
+                for (int i = 0; i < 3; i++)
                 {
-                    case 1 :
+                    possibilityNumber = Random.Range(1, 5);
 
-                        break;
-                    case 2 :
-                        break;
-                    case 3 :
-                        break;
-                    case 4 :
-                        break;
-                    case 5 :
-                        break;
+                    switch(possibilityNumber)
+                    {
+                        case 1:
+                            if(i == 0)
+                            {
+                                GameObject input1 = Instantiate(upArrow, easyInputLocationList[i], Quaternion.identity);
+                                Destroy(input1, duration);
+                            }
+                            if (i == 1)
+                            {
+                                GameObject input2 = Instantiate(upArrow, easyInputLocationList[i], Quaternion.identity);
+                                Destroy(input2, duration);
+                            }
+                            if (i == 2)
+                            {
+                                GameObject input3 = Instantiate(upArrow, easyInputLocationList[i], Quaternion.identity);
+                                Destroy(input3, duration);
+                            }                            
+                            break;
+                        case 2:
+                            if (i == 0)
+                            {
+                                GameObject input1 = Instantiate(downArrow, easyInputLocationList[i], Quaternion.identity);
+                                Destroy(input1, duration);
+                            }
+                            if (i == 1)
+                            {
+                                GameObject input2 = Instantiate(downArrow, easyInputLocationList[i], Quaternion.identity);
+                                Destroy(input2, duration);
+                            }
+                            if (i == 2)
+                            {
+                                GameObject input3 = Instantiate(downArrow, easyInputLocationList[i], Quaternion.identity);
+                                Destroy(input3, duration);
+                            }
+                            break;
+                        case 3:
+                            if (i == 0)
+                            {
+                                GameObject input1 = Instantiate(leftArrow, easyInputLocationList[i], Quaternion.identity);
+                                Destroy(input1, duration);
+                            }
+                            if (i == 1)
+                            {
+                                GameObject input2 = Instantiate(leftArrow, easyInputLocationList[i], Quaternion.identity);
+                                Destroy(input2, duration);
+                            }
+                            if (i == 2)
+                            {
+                                GameObject input3 = Instantiate(leftArrow, easyInputLocationList[i], Quaternion.identity);
+                                Destroy(input3, duration);
+                            }
+                            break;
+                        case 4:
+                            if (i == 0)
+                            {
+                                GameObject input1 = Instantiate(rightArrow, easyInputLocationList[i], Quaternion.identity);
+                                Destroy(input1, duration);
+                            }
+                            if (i == 1)
+                            {
+                                GameObject input2 = Instantiate(rightArrow, easyInputLocationList[i], Quaternion.identity);
+                                Destroy(input2, duration);
+                            }
+                            if (i == 2)
+                            {
+                                GameObject input3 = Instantiate(rightArrow, easyInputLocationList[i], Quaternion.identity);
+                                Destroy(input3, duration);
+                            }
+                            break;
+                    }
                 }
-
             }
 
             //FixedUpdate is called on a fixed time.
             public override void FixedUpdate()
             {
                 base.FixedUpdate(); //Do not erase this line!
+
+
 
             }
 
@@ -55,6 +122,7 @@ namespace Dragons_Peperes
             {
 
             }
+            
         }
     }
 }
