@@ -20,10 +20,12 @@ namespace Dragons_Peperes
 
             public float bound_Y;
 
+            private EnemyManager minigameManager;
 
             private void Start()
             {
                 target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+                minigameManager = FindObjectOfType<EnemyManager>();
             }
 
 
@@ -52,6 +54,8 @@ namespace Dragons_Peperes
                 if (other.name == "Player")
                 {
                     Debug.Log("Game Lost");
+
+                    minigameManager.YouLost();
                 }
             }
         }

@@ -13,10 +13,13 @@ MonoBehaviour:
   m_Name: CestNotreTresor
   m_EditorClassIdentifier: 
   cluster: 1
-  trio: Brigantin
-  aptiqueChal: 0
+  trio: ACommeAkuma
+  haptiqueChal: 0
   inputChal: 0
+  indexEnum: 0
+  verbe: Esquivez
   microGameScene:
     sceneAsset: {fileID: 102900000, guid: 2c37fdeff133a12429ae696e1a86f82e, type: 3}
     required: 1
     buildIndex: 2
+  currentDifficulty: 0
