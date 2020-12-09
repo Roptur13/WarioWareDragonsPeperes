@@ -37,7 +37,7 @@ namespace Dragons_Peperes
                     }
                     if (Mathf.Abs(Input.GetAxisRaw("Left_Joystick_Y")) == 1.0f)
                     {
-                        transform.position += new Vector3(0, -Input.GetAxisRaw("Left_Joystick_Y") * distance, 0);
+                        transform.position += new Vector3(0, Input.GetAxisRaw("Left_Joystick_Y") * distance, 0);
                         canMove = false;
                     }
                 }
