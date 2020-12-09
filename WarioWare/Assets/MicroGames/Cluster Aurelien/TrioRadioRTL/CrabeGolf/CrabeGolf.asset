@@ -10,16 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c2cda822bfa80074f881e6fe0192b4c9, type: 3}
-  m_Name: CestNotreTresor
+  m_Name: CrabeGolf
   m_EditorClassIdentifier: 
   cluster: 1
-  trio: ACommeAkuma
+  trio: RadioRTL
   haptiqueChal: 0
   inputChal: 0
-  indexEnum: 0
-  verbe: Esquivez
+  indexEnum: 1
   microGameScene:
-    sceneAsset: {fileID: 102900000, guid: 2c37fdeff133a12429ae696e1a86f82e, type: 3}
+    sceneAsset: {fileID: 102900000, guid: 447cdb5bb911ccc4e94457ef6a5baabd, type: 3}
     required: 1
-    buildIndex: 2
-  currentDifficulty: 0
+    buildIndex: -1

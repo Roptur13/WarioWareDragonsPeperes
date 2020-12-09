@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c2cda822bfa80074f881e6fe0192b4c9, type: 3}
-  m_Name: CestNotreTresor
+  m_Name: EatingContest
   m_EditorClassIdentifier: 
-  cluster: 1
-  trio: ACommeAkuma
+  cluster: 0
+  trio: Brigantin
   haptiqueChal: 0
   inputChal: 0
   indexEnum: 0
-  verbe: Esquivez
+  verbe: Eat!  Press A/E
   microGameScene:
-    sceneAsset: {fileID: 102900000, guid: 2c37fdeff133a12429ae696e1a86f82e, type: 3}
+    sceneAsset: {fileID: 102900000, guid: 728fb7f41e85dc243b5a628de9e0a50a, type: 3}
     required: 1
-    buildIndex: 2
+    buildIndex: 3
   currentDifficulty: 0
