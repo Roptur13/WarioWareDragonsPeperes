@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -592,6 +592,54 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!1 &1241422253
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1241422255}
+  - component: {fileID: 1241422254}
+  m_Layer: 0
+  m_Name: L4PManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1241422254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241422253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d422ca031beee304d9d3dc79be2cc432, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bpm: 60
+  currentDifficulty: 0
+  timer: 0
+  currentTime: 0
+  enableInput: 0
+--- !u!4 &1241422255
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241422253}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 16.453966, y: 3.0500968, z: -30.959204}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1287650890
 GameObject:
   m_ObjectHideFlags: 0
@@ -882,6 +930,11 @@ MonoBehaviour:
   - {fileID: 156484714}
   - {fileID: 2050632536}
   - {fileID: 137820695}
+  hiddenCoin:
+  - {fileID: 4471764575349486080, guid: 7988a79b17ed67e4889d47b8c16a635a, type: 3}
+  - {fileID: 4471764575349486080, guid: f1b5fda0712dbec4ba304e837742f0af, type: 3}
+  - {fileID: 4471764575349486080, guid: 997aa401138eb2542ba999e4575de50d, type: 3}
+  - {fileID: 4471764575349486080, guid: e11b9364421eaba4da1772fc9e91c2f1, type: 3}
 --- !u!4 &1982237994
 Transform:
   m_ObjectHideFlags: 0

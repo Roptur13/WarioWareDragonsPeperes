@@ -17,11 +17,18 @@ namespace Dragons_Peperes
             [SerializeField] bool isCarte3;
             [SerializeField] bool isCarte4;
 
+
             private CarteManager carteManager;
+
+            public bool carteIsHere;
 
             private void Start()
             {
                 carteManager = FindObjectOfType<CarteManager>();
+
+                carteIsHere = true;
+
+                #region We want that coin
 
                 if (isCarte1)
                 {
@@ -42,7 +49,9 @@ namespace Dragons_Peperes
                 {
                     carteManager.weWantCoin4 = true;
                 }
+                #endregion
             }
+
         }
     }
 }

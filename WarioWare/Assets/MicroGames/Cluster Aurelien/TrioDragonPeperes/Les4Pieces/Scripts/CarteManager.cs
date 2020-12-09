@@ -36,13 +36,6 @@ namespace Dragons_Peperes
                 Instantiate(go, spotCarte.transform);
             }
 
-            private void Update()
-            {
-                if (Input.GetKeyDown(KeyCode.Space))
-                {
-                    SpawnRandomCarte();
-                }
-            }
 
         }
     }

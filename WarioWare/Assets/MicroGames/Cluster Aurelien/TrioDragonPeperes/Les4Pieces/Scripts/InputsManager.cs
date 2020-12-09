@@ -12,6 +12,8 @@ namespace Dragons_Peperes
         public class InputsManager : MonoBehaviour
         {
             private CarteManager carteManager;
+            private GameManager gameManager;
+            //private CarteController carteController;
 
             [SerializeField] bool isSpot1;
             [SerializeField] bool isSpot2;
@@ -44,226 +46,265 @@ namespace Dragons_Peperes
             private void Start()
             {
                 carteManager = FindObjectOfType<CarteManager>();
+                gameManager = FindObjectOfType<GameManager>();
+                //carteController = FindObjectOfType<CarteController>();
             }
 
             private void Update()
             {
-                if (isSpot1)
+                if (gameManager.enableInput)
                 {
-                    if (Input.GetKeyDown(KeyCode.Joystick1Button3))
+                    if (isSpot1)
                     {
-                        if (coin1OnSpot1)
+                        if (Input.GetKeyDown(KeyCode.Joystick1Button3))
                         {
-                            if(carteManager.weWantCoin1 == true)
+                            if (coin1OnSpot1)
                             {
-                                Debug.Log("epic win bro");
-                            }
-                            else
-                            {
-                                Debug.Log("Fuck u");
+                                if (carteManager.weWantCoin1 == true)
+                                {
+                                    Debug.Log("epic win bro");
+                                    gameManager.YouWIn();
+                                }
+                                else
+                                {
+                                    Debug.Log("Fuck u");
+                                    gameManager.YouLost();
+                                }
+
                             }
 
+                            if (coin2OnSpot1)
+                            {
+                                if (carteManager.weWantCoin2 == true)
+                                {
+                                    Debug.Log("epic win bro");
+                                    gameManager.YouWIn();
+                                }
+                                else
+                                {
+                                    Debug.Log("Fuck u");
+                                    gameManager.YouLost();
+                                }
+                            }
+
+                            if (coin3OnSpot1)
+                            {
+                                if (carteManager.weWantCoin3 == true)
+                                {
+                                    Debug.Log("epic win bro");
+                                    gameManager.YouWIn();
+                                }
+                                else
+                                {
+                                    Debug.Log("Fuck u");
+                                    gameManager.YouLost();
+                                }
+                            }
+
+                            if (coin4OnSpot1)
+                            {
+                                if (carteManager.weWantCoin4 == true)
+                                {
+                                    Debug.Log("epic win bro");
+                                    gameManager.YouWIn();
+                                }
+                                else
+                                {
+                                    Debug.Log("Fuck u");
+                                    gameManager.YouLost();
+                                }
+                            }
                         }
+                    }
 
-                        if (coin2OnSpot1)
+                    if (isSpot2)
+                    {
+                        if (Input.GetKeyDown(KeyCode.Joystick1Button2))
                         {
-                            if (carteManager.weWantCoin2== true)
+                            if (coin1OnSpot2)
                             {
-                                Debug.Log("epic win bro");
+                                if (carteManager.weWantCoin1 == true)
+                                {
+                                    Debug.Log("epic win bro");
+                                    gameManager.YouWIn();
+                                }
+                                else
+                                {
+                                    Debug.Log("Fuck u");
+                                    gameManager.YouLost();
+                                }
                             }
-                            else
+
+                            if (coin2OnSpot2)
                             {
-                                Debug.Log("Fuck u");
+                                if (carteManager.weWantCoin2 == true)
+                                {
+                                    Debug.Log("epic win bro");
+                                    gameManager.YouWIn();
+                                }
+                                else
+                                {
+                                    Debug.Log("Fuck u");
+                                    gameManager.YouLost();
+                                }
+                            }
+
+                            if (coin3OnSpot2)
+                            {
+                                if (carteManager.weWantCoin3 == true)
+                                {
+                                    Debug.Log("epic win bro");
+                                    gameManager.YouWIn();
+                                }
+                                else
+                                {
+                                    Debug.Log("Fuck u");
+                                    gameManager.YouLost();
+                                }
+                            }
+
+                            if (coin4OnSpot2)
+                            {
+                                if (carteManager.weWantCoin4 == true)
+                                {
+                                    Debug.Log("epic win bro");
+                                    gameManager.YouWIn();
+                                }
+                                else
+                                {
+                                    Debug.Log("Fuck u");
+                                    gameManager.YouLost();
+                                }
                             }
                         }
+                    }
 
-                        if (coin3OnSpot1)
+                    if (isSpot3)
+                    {
+                        if (Input.GetKeyDown(KeyCode.Joystick1Button0))
                         {
-                            if (carteManager.weWantCoin3 == true)
+                            if (coin1OnSpot3)
                             {
-                                Debug.Log("epic win bro");
+                                if (carteManager.weWantCoin1 == true)
+                                {
+                                    Debug.Log("epic win bro");
+                                    gameManager.YouWIn();
+                                }
+                                else
+                                {
+                                    Debug.Log("Fuck u");
+                                    gameManager.YouLost();
+                                }
                             }
-                            else
+
+                            if (coin2OnSpot3)
                             {
-                                Debug.Log("Fuck u");
+                                if (carteManager.weWantCoin2 == true)
+                                {
+                                    Debug.Log("epic win bro");
+                                    gameManager.YouWIn();
+                                }
+                                else
+                                {
+                                    Debug.Log("Fuck u");
+                                    gameManager.YouLost();
+                                }
+                            }
+
+                            if (coin3OnSpot3)
+                            {
+                                if (carteManager.weWantCoin3 == true)
+                                {
+                                    Debug.Log("epic win bro");
+                                    gameManager.YouWIn();
+                                }
+                                else
+                                {
+                                    Debug.Log("Fuck u");
+                                    gameManager.YouLost();
+                                }
+                            }
+
+                            if (coin4OnSpot3)
+                            {
+                                if (carteManager.weWantCoin4 == true)
+                                {
+                                    Debug.Log("epic win bro");
+                                    gameManager.YouWIn();
+                                }
+                                else
+                                {
+                                    Debug.Log("Fuck u");
+                                    gameManager.YouLost();
+                                }
                             }
                         }
+                    }
 
-                        if (coin4OnSpot1)
+                    if (isSpot4)
+                    {
+                        if (Input.GetKeyDown(KeyCode.Joystick1Button1))
                         {
-                            if (carteManager.weWantCoin4 == true)
+                            if (coin1OnSpot4)
                             {
-                                Debug.Log("epic win bro");
+                                if (carteManager.weWantCoin1 == true)
+                                {
+                                    Debug.Log("epic win bro");
+                                    gameManager.YouWIn();
+                                }
+                                else
+                                {
+                                    Debug.Log("Fuck u");
+                                    gameManager.YouLost();
+                                }
                             }
-                            else
+
+                            if (coin2OnSpot4)
                             {
-                                Debug.Log("Fuck u");
+                                if (carteManager.weWantCoin2 == true)
+                                {
+                                    Debug.Log("epic win bro");
+                                    gameManager.YouWIn();
+                                }
+                                else
+                                {
+                                    Debug.Log("Fuck u");
+                                    gameManager.YouLost();
+                                }
+                            }
+
+                            if (coin3OnSpot4)
+                            {
+                                if (carteManager.weWantCoin3 == true)
+                                {
+                                    Debug.Log("epic win bro");
+                                    gameManager.YouWIn();
+                                }
+                                else
+                                {
+                                    Debug.Log("Fuck u");
+                                    gameManager.YouLost();
+                                }
+                            }
+
+                            if (coin4OnSpot4)
+                            {
+                                if (carteManager.weWantCoin4 == true)
+                                {
+                                    Debug.Log("epic win bro");
+                                    gameManager.YouWIn();
+                                }
+                                else
+                                {
+                                    Debug.Log("Fuck u");
+                                    gameManager.YouLost();
+                                }
                             }
                         }
                     }
                 }
 
-                if (isSpot2)
-                {
-                    if (Input.GetKeyDown(KeyCode.Joystick1Button2))
-                    {
-                        if (coin1OnSpot2)
-                        {
-                            if (carteManager.weWantCoin1 == true)
-                            {
-                                Debug.Log("epic win bro");
-                            }
-                            else
-                            {
-                                Debug.Log("Fuck u");
-                            }
-                        }
 
-                        if (coin2OnSpot2)
-                        {
-                            if (carteManager.weWantCoin2 == true)
-                            {
-                                Debug.Log("epic win bro");
-                            }
-                            else
-                            {
-                                Debug.Log("Fuck u");
-                            }
-                        }
-
-                        if (coin3OnSpot2)
-                        {
-                            if (carteManager.weWantCoin3 == true)
-                            {
-                                Debug.Log("epic win bro");
-                            }
-                            else
-                            {
-                                Debug.Log("Fuck u");
-                            }
-                        }
-
-                        if (coin4OnSpot2)
-                        {
-                            if (carteManager.weWantCoin4 == true)
-                            {
-                                Debug.Log("epic win bro");
-                            }
-                            else
-                            {
-                                Debug.Log("Fuck u");
-                            }
-                        }
-                    }
-                }
-
-                if (isSpot3)
-                {
-                    if (Input.GetKeyDown(KeyCode.Joystick1Button0))
-                    {
-                        if (coin1OnSpot3)
-                        {
-                            if (carteManager.weWantCoin1 == true)
-                            {
-                                Debug.Log("epic win bro");
-                            }
-                            else
-                            {
-                                Debug.Log("Fuck u");
-                            }
-                        }
-
-                        if (coin2OnSpot3)
-                        {
-                            if (carteManager.weWantCoin2 == true)
-                            {
-                                Debug.Log("epic win bro");
-                            }
-                            else
-                            {
-                                Debug.Log("Fuck u");
-                            }
-                        }
-
-                        if (coin3OnSpot3)
-                        {
-                            if (carteManager.weWantCoin3 == true)
-                            {
-                                Debug.Log("epic win bro");
-                            }
-                            else
-                            {
-                                Debug.Log("Fuck u");
-                            }
-                        }
-
-                        if (coin4OnSpot3)
-                        {
-                            if (carteManager.weWantCoin4 == true)
-                            {
-                                Debug.Log("epic win bro");
-                            }
-                            else
-                            {
-                                Debug.Log("Fuck u");
-                            }
-                        }
-                    }
-                }
-
-                if (isSpot4)
-                {
-                    if (Input.GetKeyDown(KeyCode.Joystick1Button1))
-                    {
-                        if (coin1OnSpot4)
-                        {
-                            if (carteManager.weWantCoin1 == true)
-                            {
-                                Debug.Log("epic win bro");
-                            }
-                            else
-                            {
-                                Debug.Log("Fuck u");
-                            }
-                        }
-
-                        if (coin2OnSpot4)
-                        {
-                            if (carteManager.weWantCoin2 == true)
-                            {
-                                Debug.Log("epic win bro");
-                            }
-                            else
-                            {
-                                Debug.Log("Fuck u");
-                            }
-                        }
-
-                        if (coin3OnSpot4)
-                        {
-                            if (carteManager.weWantCoin3 == true)
-                            {
-                                Debug.Log("epic win bro");
-                            }
-                            else
-                            {
-                                Debug.Log("Fuck u");
-                            }
-                        }
-
-                        if (coin4OnSpot4)
-                        {
-                            if (carteManager.weWantCoin4 == true)
-                            {
-                                Debug.Log("epic win bro");
-                            }
-                            else
-                            {
-                                Debug.Log("Fuck u");
-                            }
-                        }
-                    }
-                }
             }
 
             private void OnTriggerEnter2D(Collider2D collision)

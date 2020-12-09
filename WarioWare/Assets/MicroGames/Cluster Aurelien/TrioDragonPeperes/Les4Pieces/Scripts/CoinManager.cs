@@ -16,48 +16,9 @@ namespace Dragons_Peperes
 
             public List<GameObject> spots = new List<GameObject>();
 
+            public List<GameObject> hiddenCoin = new List<GameObject>();
 
-
-            private void Start()
-            {
-                //SpawnCoins();
-
-                for(int i = 0; i < spots.Count; i++)
-                {
-                    int rand = Random.Range(0, coins.Count);
-                    Instantiate(coins[rand], spots[i].transform.position, Quaternion.identity);
-                    coins.RemoveAt(rand);
-                }
-
-                
-
-            }
-
-            private void Update()
-            {
-                if (Input.GetKeyDown(KeyCode.Joystick1Button3))
-                {
-                    //TestSpawn();
-                }
-            }
-
-            /*private void SpawnCoins()
-            {
-                int count = coins.Count;
-                if(count == 0)
-                {
-                    return;
-                }
-
-                int i = Random.Range(0, count - 1);
-                GameObject go = coins[i];
-                coins.Remove(go);
-
-                Instantiate(go, spot1.transform);
-
-            }*/
-
-            void TestSpawn()
+            public void SpawnCoins()
             {
                 for (int i = 0; i < spots.Count; i++)
                 {
@@ -66,6 +27,7 @@ namespace Dragons_Peperes
                     coins.RemoveAt(rand);
                 }
             }
+
         }
     }
 }
