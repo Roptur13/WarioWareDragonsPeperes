@@ -6,6 +6,10 @@ namespace Dragons_Peperes
 {
     namespace ChasseAuTresor
     {
+        /// <summary>
+        /// Noé Blanc
+        /// </summary>
+
         public class PlayerController : MonoBehaviour
         {
 
@@ -13,12 +17,16 @@ namespace Dragons_Peperes
 
             public float distance;
 
+            public int inputNumber;
+
             // Start is called before the first frame update
             void Start()
             {
                 canMove = true;
 
                 distance = 1.0f;
+
+                inputNumber = 0;
             }
 
             private void FixedUpdate()
@@ -33,11 +41,13 @@ namespace Dragons_Peperes
                     if (Mathf.Abs(Input.GetAxisRaw("Left_Joystick_X")) == 1.0f)
                     {
                         transform.position += new Vector3(Input.GetAxisRaw("Left_Joystick_X") * distance, 0, 0);
+                        inputNumber = inputNumber + 1;
                         canMove = false;
                     }
                     if (Mathf.Abs(Input.GetAxisRaw("Left_Joystick_Y")) == 1.0f)
                     {
                         transform.position += new Vector3(0, Input.GetAxisRaw("Left_Joystick_Y") * distance, 0);
+                        inputNumber = inputNumber + 1;
                         canMove = false;
                     }
                 }
