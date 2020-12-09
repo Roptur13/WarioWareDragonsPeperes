@@ -16,7 +16,7 @@ namespace Dragons_Peperes
 
             private CoinManager coinManager;
             private CarteManager carteManager;
-            private CoinController coinController;
+            public CoinController[] coinController;
 
 
             public override void Start()
@@ -25,7 +25,7 @@ namespace Dragons_Peperes
 
                 coinManager = FindObjectOfType<CoinManager>();
                 carteManager = FindObjectOfType<CarteManager>();
-                coinController = FindObjectOfType<CoinController>();
+                
 
             }
 
@@ -46,11 +46,16 @@ namespace Dragons_Peperes
                     if(Tick == 1)
                     {
                         coinManager.SpawnCoins();
+                        coinController = FindObjectsOfType<CoinController>();
                     }
 
                     if(Tick == 4)
                     {
-                        coinController.hideCoins = true;
+                        for(int i = 0; i < coinController.Length; i++)
+                        {
+                            coinController[i].hideCoins = true;
+                        }
+                        
                     }
 
                     if(Tick == 5)
