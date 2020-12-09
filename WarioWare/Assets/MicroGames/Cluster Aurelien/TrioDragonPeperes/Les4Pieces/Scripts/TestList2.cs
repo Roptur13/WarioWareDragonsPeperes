@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,13 +10,13 @@ namespace DragonsPeperes
         {
             public List<GameObject> symboles = new List<GameObject>();
 
-           public List<GameObjects> pieces = new List<GameObjects>();
+           public List<GameObject> pieces = new List<GameObject>();
  
 
             
             public override void Start()
             {
-                for (int i = 0, i < pieces.Count; i++)
+                for (int i = 0; i < pieces.Count; i++)
                 {
                     int rand = Random.Range(0, symboles.Count);
                     Instantiate(symboles[rand], pieces[i].transform.position, Quaternion.identity);
