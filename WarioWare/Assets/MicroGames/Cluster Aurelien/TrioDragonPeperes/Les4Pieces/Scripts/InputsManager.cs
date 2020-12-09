@@ -54,6 +54,7 @@ namespace Dragons_Peperes
             {
                 if (gameManager.enableInput)
                 {
+
                     if (isSpot1)
                     {
                         if (Input.GetKeyDown(KeyCode.Joystick1Button3))
@@ -311,49 +312,46 @@ namespace Dragons_Peperes
             {
 
                 #region Check where is Coin1
-                if((collision.gameObject.tag == "Coin1") && (isSpot1))
+                if((collision.name == "Coin_1(Clone)") && (isSpot1))
                 {
                     coin1OnSpot1 = true;
-                
                 }
 
-                if ((collision.gameObject.tag == "Coin1") && (isSpot2))
+                if ((collision.name == "Coin_1(Clone)") && (isSpot2))
                 {
                     coin1OnSpot2 = true;
                 }
 
-                if ((collision.gameObject.tag == "Coin1") && (isSpot3))
+                if ((collision.name == "Coin_1(Clone)") && (isSpot3))
                 {
                     coin1OnSpot3 = true;
-
                 }
 
-                if ((collision.gameObject.tag == "Coin1") && (isSpot4))
+                if ((collision.name == "Coin_1(Clone)") && (isSpot4))
                 {
                     coin1OnSpot4 = true;
-
                 }
                 #endregion
 
                 #region Check where is Coin2
-                if ((collision.gameObject.tag == "Coin2") && (isSpot1))
+                if ((collision.name == "Coin_2(Clone)") && (isSpot1))
                 {
                     coin2OnSpot1 = true;
 
                 }
 
-                if ((collision.gameObject.tag == "Coin2") && (isSpot2))
+                if ((collision.name == "Coin_2(Clone)") && (isSpot2))
                 {
                     coin2OnSpot2 = true;
                 }
 
-                if ((collision.gameObject.tag == "Coin2") && (isSpot3))
+                if ((collision.name == "Coin_2(Clone)") && (isSpot3))
                 {
                     coin2OnSpot3 = true;
 
                 }
 
-                if ((collision.gameObject.tag == "Coin2") && (isSpot4))
+                if ((collision.name == "Coin_2(Clone)") && (isSpot4))
                 {
                     coin2OnSpot4 = true;
 
@@ -361,24 +359,24 @@ namespace Dragons_Peperes
                 #endregion
 
                 #region Check where is Coin3
-                if ((collision.gameObject.tag == "Coin3") && (isSpot1))
+                if ((collision.name == "Coin_3(Clone)") && (isSpot1))
                 {
                     coin3OnSpot1 = true;
 
                 }
 
-                if ((collision.gameObject.tag == "Coin3") && (isSpot2))
+                if ((collision.name == "Coin_3(Clone)") && (isSpot2))
                 {
                     coin3OnSpot2 = true;
                 }
 
-                if ((collision.gameObject.tag == "Coin3") && (isSpot3))
+                if ((collision.name == "Coin_3(Clone)") && (isSpot3))
                 {
                     coin3OnSpot3 = true;
 
                 }
 
-                if ((collision.gameObject.tag == "Coin3") && (isSpot4))
+                if ((collision.name == "Coin_3(Clone)") && (isSpot4))
                 {
                     coin3OnSpot4 = true;
 
@@ -386,24 +384,24 @@ namespace Dragons_Peperes
                 #endregion
 
                 #region Check where is Coin3
-                if ((collision.gameObject.tag == "Coin4") && (isSpot1))
+                if ((collision.name == "Coin_4(Clone)") && (isSpot1))
                 {
                     coin4OnSpot1 = true;
 
                 }
 
-                if ((collision.gameObject.tag == "Coin4") && (isSpot2))
+                if ((collision.name == "Coin_4(Clone)") && (isSpot2))
                 {
                     coin4OnSpot2 = true;
                 }
 
-                if ((collision.gameObject.tag == "Coin4") && (isSpot3))
+                if ((collision.name == "Coin_4(Clone)") && (isSpot3))
                 {
                     coin4OnSpot3 = true;
 
                 }
 
-                if ((collision.gameObject.tag == "Coin4") && (isSpot4))
+                if ((collision.name == "Coin_4(Clone)") && (isSpot4))
                 {
                     coin4OnSpot4 = true;
 

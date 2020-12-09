@@ -51,17 +51,20 @@ namespace Dragons_Peperes
 
                     if(Tick == 4)
                     {
-                        for(int i = 0; i < coinController.Length; i++)
-                        {
-                            coinController[i].hideCoins = true;
-                        }
                         
                     }
 
                     if(Tick == 5)
                     {
-                        carteManager.SpawnRandomCarte();
+
                         enableInput = true;
+                        for (int i = 0; i < coinController.Length; i++)
+                        {
+                            coinController[i].hideCoins = true;
+                        }
+
+                        carteManager.SpawnRandomCarte();
+
                     }
 
                     if(Tick == 6)
