@@ -415,7 +415,7 @@ namespace Dragons_Peperes
                 }
                 #endregion
 
-                #region Check where is Coin3
+                #region Check where is Coin4
                 if ((collision.name == "Coin_4(Clone)") && (isSpot1))
                 {
                     coin4OnSpot1 = true;

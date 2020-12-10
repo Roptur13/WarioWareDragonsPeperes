@@ -42,24 +42,18 @@ namespace Dragons_Peperes
                 {
                     if(Tick == 1)
                     {
-                        coinManager.SpawnCoins();
+                        coinManager.SpawnCoinsEasy();
                         coinController = FindObjectsOfType<CoinController>();
-                    }
-
-                    if(Tick == 4)
-                    {
-                        
                     }
 
                     if(Tick == 5)
                     {
-
                         enableInput = true;
                         for (int i = 0; i < coinController.Length; i++)
                         {
                             coinController[i].hideCoins = true;
                         }
-                        carteManager.SpawnRandomCarte();
+                        carteManager.SpawnRandomCarteEasy();
                     }
 
                     if(Tick == 7)
@@ -73,6 +67,74 @@ namespace Dragons_Peperes
                         YouLost();
                     }
                 }
+                #endregion
+
+                #region MediumMode
+
+                if(currentDifficulty == Testing.Manager.Difficulty.MEDIUM)
+                {
+                    if (Tick == 1)
+                    {
+                        coinManager.SpawnCoinsMedium();
+                        coinController = FindObjectsOfType<CoinController>();
+                    }
+
+                    if (Tick == 5)
+                    {
+                        enableInput = true;
+                        for (int i = 0; i < coinController.Length; i++)
+                        {
+                            coinController[i].hideCoins = true;
+                        }
+                        carteManager.SpawnRandomCarteMedium();
+                    }
+
+                    if (Tick == 7)
+                    {
+                        //destroy hiddencoins
+                    }
+
+                    if (Tick == 8)
+                    {
+                        //le joueur n'a pas trouvé la bonne pièce à temps, il loose
+                        YouLost();
+                    }
+                }
+
+                #endregion
+
+                #region HardMode
+
+                if (currentDifficulty == Testing.Manager.Difficulty.HARD)
+                {
+                    if (Tick == 1)
+                    {
+                        coinManager.SpawnCoinsHard();
+                        coinController = FindObjectsOfType<CoinController>();
+                    }
+
+                    if (Tick == 5)
+                    {
+                        enableInput = true;
+                        for (int i = 0; i < coinController.Length; i++)
+                        {
+                            coinController[i].hideCoins = true;
+                        }
+                        carteManager.SpawnRandomCarteHard();
+                    }
+
+                    if (Tick == 7)
+                    {
+                        //destroy hiddencoins
+                    }
+
+                    if (Tick == 8)
+                    {
+                        //le joueur n'a pas trouvé la bonne pièce à temps, il loose
+                        YouLost();
+                    }
+                }
+
                 #endregion
             }
 

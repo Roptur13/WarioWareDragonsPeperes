@@ -94,11 +94,14 @@ namespace Dragons_Peperes
                         Instantiate(enemy, spot2.transform);
                     }
 
+                    if (Tick == 3)
+                    {
+                        Instantiate(enemy, spot3.transform);
+                    }
 
                     if (Tick == 5)
                     {
                         Instantiate(enemy, spot1.transform);
-                        Instantiate(enemy, spot3.transform);
                     }
 
                     if (Tick == 7)
@@ -125,17 +128,28 @@ namespace Dragons_Peperes
                     if (Tick == 2)
                     {
                         Instantiate(enemy, spot1.transform);
-                        Instantiate(enemy, spot3.transform);
+                    }
+
+                    if(Tick == 3)
+                    {
+                        //Instantiate(enemy, spot3.transform);
                     }
 
                     if (Tick == 5)
                     {
                         Instantiate(enemy, spot1.transform);
+                        Instantiate(enemy, spot1.transform);
+                    }
+
+                    if(Tick == 6)
+                    {
                         Instantiate(enemy, spot3.transform);
                     }
 
                     if (Tick == 7)
+                    {
                         Debug.Log("la poupe du bateau apparait + end of scrolling");
+                    }
 
                     if (Tick == 8)
                     {

@@ -12,7 +12,7 @@ namespace Dragons_Peperes
 
         public class EnemyController : MonoBehaviour
         {
-            [SerializeField] float enemySpeed = 6;
+            [SerializeField] float enemySpeed = 8;
             [SerializeField] float enemyXSpeed = 4;
 
             public Transform target;

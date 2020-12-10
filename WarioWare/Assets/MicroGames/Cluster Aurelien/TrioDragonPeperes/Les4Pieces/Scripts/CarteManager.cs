@@ -11,27 +11,58 @@ namespace Dragons_Peperes
         /// </summary>
         public class CarteManager : MonoBehaviour
         {
-
-
             public GameObject spotCarte;
-            public List<GameObject> cartes;
+
+            public List<GameObject> cartesEasy;
+            public List<GameObject> cartesMedium;
+            public List<GameObject> cartesHard;
 
             public bool weWantCoin1;
             public bool weWantCoin2;
             public bool weWantCoin3;
             public bool weWantCoin4;
 
-            public void SpawnRandomCarte()
+            public void SpawnRandomCarteEasy()
             {
-                int count = cartes.Count;
+                int count = cartesEasy.Count;
                 if (count == 0)
                 {
                     return;
                 }
 
                 int i = Random.Range(0, count - 1);
-                GameObject go = cartes[i];
-                cartes.Remove(go);
+                GameObject go = cartesEasy[i];
+                cartesEasy.Remove(go);
+
+                Instantiate(go, spotCarte.transform);
+            }
+
+            public void SpawnRandomCarteMedium()
+            {
+                int count = cartesMedium.Count;
+                if (count == 0)
+                {
+                    return;
+                }
+
+                int i = Random.Range(0, count - 1);
+                GameObject go = cartesMedium[i];
+                cartesMedium.Remove(go);
+
+                Instantiate(go, spotCarte.transform);
+            }
+
+            public void SpawnRandomCarteHard()
+            {
+                int count = cartesHard.Count;
+                if (count == 0)
+                {
+                    return;
+                }
+
+                int i = Random.Range(0, count - 1);
+                GameObject go = cartesHard[i];
+                cartesHard.Remove(go);
 
                 Instantiate(go, spotCarte.transform);
             }
