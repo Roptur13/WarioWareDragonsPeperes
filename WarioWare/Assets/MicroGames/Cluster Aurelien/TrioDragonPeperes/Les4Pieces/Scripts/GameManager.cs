@@ -62,9 +62,9 @@ namespace Dragons_Peperes
                         carteManager.SpawnRandomCarte();
                     }
 
-                    if(Tick == 6)
+                    if(Tick == 7)
                     {
-
+                        //destroy hiddencoins
                     }
 
                     if(Tick == 8)

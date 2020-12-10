@@ -64,11 +64,13 @@ namespace Dragons_Peperes
                                 if (carteManager.weWantCoin1 == true)
                                 {
                                     Debug.Log("epic win bro");
+                                    //destroy hiddencoins
                                     gameManager.YouWIn();
                                 }
                                 else
                                 {
                                     Debug.Log("Fuck u");
+                                    //destroy hiddencoins
                                     gameManager.YouLost();
                                 }
 
@@ -79,11 +81,13 @@ namespace Dragons_Peperes
                                 if (carteManager.weWantCoin2 == true)
                                 {
                                     Debug.Log("epic win bro");
+                                    //destroy hiddencoins
                                     gameManager.YouWIn();
                                 }
                                 else
                                 {
                                     Debug.Log("Fuck u");
+                                    //destroy hiddencoins
                                     gameManager.YouLost();
                                 }
                             }
@@ -93,11 +97,13 @@ namespace Dragons_Peperes
                                 if (carteManager.weWantCoin3 == true)
                                 {
                                     Debug.Log("epic win bro");
+                                    //destroy hiddencoins
                                     gameManager.YouWIn();
                                 }
                                 else
                                 {
                                     Debug.Log("Fuck u");
+                                    //destroy hiddencoins
                                     gameManager.YouLost();
                                 }
                             }
@@ -107,11 +113,13 @@ namespace Dragons_Peperes
                                 if (carteManager.weWantCoin4 == true)
                                 {
                                     Debug.Log("epic win bro");
+                                    //destroy hiddencoins
                                     gameManager.YouWIn();
                                 }
                                 else
                                 {
                                     Debug.Log("Fuck u");
+                                    //destroy hiddencoins
                                     gameManager.YouLost();
                                 }
                             }
@@ -127,11 +135,13 @@ namespace Dragons_Peperes
                                 if (carteManager.weWantCoin1 == true)
                                 {
                                     Debug.Log("epic win bro");
+                                    //destroy hiddencoins
                                     gameManager.YouWIn();
                                 }
                                 else
                                 {
                                     Debug.Log("Fuck u");
+                                    //destroy hiddencoins
                                     gameManager.YouLost();
                                 }
                             }
@@ -141,11 +151,13 @@ namespace Dragons_Peperes
                                 if (carteManager.weWantCoin2 == true)
                                 {
                                     Debug.Log("epic win bro");
+                                    //destroy hiddencoins
                                     gameManager.YouWIn();
                                 }
                                 else
                                 {
                                     Debug.Log("Fuck u");
+                                    //destroy hiddencoins
                                     gameManager.YouLost();
                                 }
                             }
@@ -155,11 +167,13 @@ namespace Dragons_Peperes
                                 if (carteManager.weWantCoin3 == true)
                                 {
                                     Debug.Log("epic win bro");
+                                    //destroy hiddencoins
                                     gameManager.YouWIn();
                                 }
                                 else
                                 {
                                     Debug.Log("Fuck u");
+                                    //destroy hiddencoins
                                     gameManager.YouLost();
                                 }
                             }
@@ -169,11 +183,13 @@ namespace Dragons_Peperes
                                 if (carteManager.weWantCoin4 == true)
                                 {
                                     Debug.Log("epic win bro");
+                                    //destroy hiddencoins
                                     gameManager.YouWIn();
                                 }
                                 else
                                 {
                                     Debug.Log("Fuck u");
+                                    //destroy hiddencoins
                                     gameManager.YouLost();
                                 }
                             }
@@ -189,11 +205,13 @@ namespace Dragons_Peperes
                                 if (carteManager.weWantCoin1 == true)
                                 {
                                     Debug.Log("epic win bro");
+                                    //destroy hiddencoins
                                     gameManager.YouWIn();
                                 }
                                 else
                                 {
                                     Debug.Log("Fuck u");
+                                    //destroy hiddencoins
                                     gameManager.YouLost();
                                 }
                             }
@@ -203,11 +221,13 @@ namespace Dragons_Peperes
                                 if (carteManager.weWantCoin2 == true)
                                 {
                                     Debug.Log("epic win bro");
+                                    //destroy hiddencoins
                                     gameManager.YouWIn();
                                 }
                                 else
                                 {
                                     Debug.Log("Fuck u");
+                                    //destroy hiddencoins
                                     gameManager.YouLost();
                                 }
                             }
@@ -217,11 +237,13 @@ namespace Dragons_Peperes
                                 if (carteManager.weWantCoin3 == true)
                                 {
                                     Debug.Log("epic win bro");
+                                    //destroy hiddencoins
                                     gameManager.YouWIn();
                                 }
                                 else
                                 {
                                     Debug.Log("Fuck u");
+                                    //destroy hiddencoins
                                     gameManager.YouLost();
                                 }
                             }
@@ -231,11 +253,13 @@ namespace Dragons_Peperes
                                 if (carteManager.weWantCoin4 == true)
                                 {
                                     Debug.Log("epic win bro");
+                                    //destroy hiddencoins
                                     gameManager.YouWIn();
                                 }
                                 else
                                 {
                                     Debug.Log("Fuck u");
+                                    //destroy hiddencoins
                                     gameManager.YouLost();
                                 }
                             }
@@ -251,11 +275,13 @@ namespace Dragons_Peperes
                                 if (carteManager.weWantCoin1 == true)
                                 {
                                     Debug.Log("epic win bro");
+                                    //destroy hiddencoins
                                     gameManager.YouWIn();
                                 }
                                 else
                                 {
                                     Debug.Log("Fuck u");
+                                    //destroy hiddencoins
                                     gameManager.YouLost();
                                 }
                             }
@@ -265,11 +291,13 @@ namespace Dragons_Peperes
                                 if (carteManager.weWantCoin2 == true)
                                 {
                                     Debug.Log("epic win bro");
+                                    //destroy hiddencoins
                                     gameManager.YouWIn();
                                 }
                                 else
                                 {
                                     Debug.Log("Fuck u");
+                                    //destroy hiddencoins
                                     gameManager.YouLost();
                                 }
                             }
@@ -279,11 +307,13 @@ namespace Dragons_Peperes
                                 if (carteManager.weWantCoin3 == true)
                                 {
                                     Debug.Log("epic win bro");
+                                    //destroy hiddencoins
                                     gameManager.YouWIn();
                                 }
                                 else
                                 {
                                     Debug.Log("Fuck u");
+                                    //destroy hiddencoins
                                     gameManager.YouLost();
                                 }
                             }
@@ -293,11 +323,13 @@ namespace Dragons_Peperes
                                 if (carteManager.weWantCoin4 == true)
                                 {
                                     Debug.Log("epic win bro");
+                                    //destroy hiddencoins
                                     gameManager.YouWIn();
                                 }
                                 else
                                 {
                                     Debug.Log("Fuck u");
+                                    //destroy hiddencoins
                                     gameManager.YouLost();
                                 }
                             }
