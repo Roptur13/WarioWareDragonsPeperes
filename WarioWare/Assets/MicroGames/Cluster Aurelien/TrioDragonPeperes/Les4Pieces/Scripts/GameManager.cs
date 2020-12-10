@@ -11,7 +11,6 @@ namespace Dragons_Peperes
         /// </summary>
         public class GameManager : TimedBehaviour
         {
-
             public bool enableInput;
 
             private CoinManager coinManager;
@@ -25,8 +24,6 @@ namespace Dragons_Peperes
 
                 coinManager = FindObjectOfType<CoinManager>();
                 carteManager = FindObjectOfType<CarteManager>();
-                
-
             }
 
             //FixedUpdate is called on a fixed time.
@@ -62,9 +59,7 @@ namespace Dragons_Peperes
                         {
                             coinController[i].hideCoins = true;
                         }
-
                         carteManager.SpawnRandomCarte();
-
                     }
 
                     if(Tick == 6)
@@ -78,11 +73,7 @@ namespace Dragons_Peperes
                         YouLost();
                     }
                 }
-
                 #endregion
-
-
-
             }
 
             public void YouWIn()
