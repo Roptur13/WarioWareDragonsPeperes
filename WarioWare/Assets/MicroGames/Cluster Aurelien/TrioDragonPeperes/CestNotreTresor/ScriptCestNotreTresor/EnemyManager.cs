@@ -12,6 +12,7 @@ namespace Dragons_Peperes
 
         public class EnemyManager : TimedBehaviour
         {
+            public GameObject showInput;
 
             public GameObject enemy;
 
@@ -20,6 +21,7 @@ namespace Dragons_Peperes
             public GameObject spot1;
             public GameObject spot2;
             public GameObject spot3;
+
 
             TimedBehaviour timedBehaviour;
 
@@ -49,12 +51,20 @@ namespace Dragons_Peperes
                 if(currentDifficulty == Testing.Manager.Difficulty.EASY)
                 {
                     if (Tick == 1)
-                        Debug.Log("audio: COME BACK HERE");
+                    {
+                        showInput.SetActive(true);
+                    }
 
-                    if (Tick == 2)
+                    if(Tick == 3)
+                    {
+                        Destroy(showInput);
+                    }
+                        
+
+                    if (Tick == 4)
                         Instantiate(enemy, spot2.transform);
 
-                    if (Tick == 5)
+                    if (Tick == 6)
                         Instantiate(enemy, spot2.transform);
 
                     if (Tick == 7)
