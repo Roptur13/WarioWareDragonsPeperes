@@ -74,7 +74,7 @@ namespace Dragons_Peperes
                                 }
                                 if (currentDifficulty == Testing.Manager.Difficulty.HARD)
                                 {
-                                    GameObject input1 = Instantiate(upArrow, inputLocationList[8], Quaternion.identity);
+                                    GameObject input1 = Instantiate(upArrow, inputLocationList[7], Quaternion.identity);
                                     inputInstantiated.Add(input1);
                                 }
 
@@ -93,7 +93,7 @@ namespace Dragons_Peperes
                                 }
                                 if (currentDifficulty == Testing.Manager.Difficulty.HARD)
                                 {
-                                    GameObject input2 = Instantiate(upArrow, inputLocationList[9], Quaternion.identity);
+                                    GameObject input2 = Instantiate(upArrow, inputLocationList[8], Quaternion.identity);
                                     inputInstantiated.Add(input2);
                                 }
                             }
@@ -111,7 +111,7 @@ namespace Dragons_Peperes
                                 }
                                 if (currentDifficulty == Testing.Manager.Difficulty.HARD)
                                 {
-                                    GameObject input3 = Instantiate(upArrow, inputLocationList[10], Quaternion.identity);
+                                    GameObject input3 = Instantiate(upArrow, inputLocationList[9], Quaternion.identity);
                                     inputInstantiated.Add(input3);
                                 }
                             }
@@ -124,39 +124,19 @@ namespace Dragons_Peperes
                                 }
                                 if (currentDifficulty == Testing.Manager.Difficulty.HARD)
                                 {
-                                    GameObject input4 = Instantiate(upArrow, inputLocationList[11], Quaternion.identity);
+                                    GameObject input4 = Instantiate(upArrow, inputLocationList[10], Quaternion.identity);
                                     inputInstantiated.Add(input4);
                                 }
                             }
                             if (i == 4)
-                            {                                    
-                                if (currentDifficulty == Testing.Manager.Difficulty.MEDIUM)
-                                {
-                                    GameObject input5 = Instantiate(upArrow, inputLocationList[7], Quaternion.identity);
-                                    inputInstantiated.Add(input5);
-                                }
+                            {                       
                                 if (currentDifficulty == Testing.Manager.Difficulty.HARD)
                                 {
-                                    GameObject input5 = Instantiate(upArrow, inputLocationList[12], Quaternion.identity);
+                                    GameObject input5 = Instantiate(upArrow, inputLocationList[11], Quaternion.identity);
                                     inputInstantiated.Add(input5);
                                 }
                             }
-                            if (i == 5)
-                            {                                    
-                                if (currentDifficulty == Testing.Manager.Difficulty.HARD)
-                                {
-                                    GameObject input6 = Instantiate(upArrow, inputLocationList[13], Quaternion.identity);
-                                    inputInstantiated.Add(input6);
-                                }
-                            }
-                            if (i == 6)
-                            {
-                                if (currentDifficulty == Testing.Manager.Difficulty.HARD)
-                                {
-                                    GameObject input7 = Instantiate(upArrow, inputLocationList[14], Quaternion.identity);
-                                    inputInstantiated.Add(input7);
-                                }
-                            }
+                            
                             treasure.transform.position += new Vector3(0, distance, 0);
                             break;
                         case 2:
@@ -174,7 +154,7 @@ namespace Dragons_Peperes
                                 }
                                 if (currentDifficulty == Testing.Manager.Difficulty.HARD)
                                 {
-                                    GameObject input1 = Instantiate(downArrow, inputLocationList[8], Quaternion.identity);
+                                    GameObject input1 = Instantiate(downArrow, inputLocationList[7], Quaternion.identity);
                                     inputInstantiated.Add(input1);
                                 }
                             }
@@ -192,7 +172,7 @@ namespace Dragons_Peperes
                                 }
                                 if (currentDifficulty == Testing.Manager.Difficulty.HARD)
                                 {
-                                    GameObject input2 = Instantiate(downArrow, inputLocationList[9], Quaternion.identity);
+                                    GameObject input2 = Instantiate(downArrow, inputLocationList[8], Quaternion.identity);
                                     inputInstantiated.Add(input2);
                                 }
                             }
@@ -210,7 +190,7 @@ namespace Dragons_Peperes
                                 }
                                 if (currentDifficulty == Testing.Manager.Difficulty.HARD)
                                 {
-                                    GameObject input3 = Instantiate(downArrow, inputLocationList[10], Quaternion.identity);
+                                    GameObject input3 = Instantiate(downArrow, inputLocationList[9], Quaternion.identity);
                                     inputInstantiated.Add(input3);
                                 }
                             }
@@ -223,39 +203,19 @@ namespace Dragons_Peperes
                                 }
                                 if (currentDifficulty == Testing.Manager.Difficulty.HARD)
                                 {
-                                    GameObject input4 = Instantiate(downArrow, inputLocationList[11], Quaternion.identity);
+                                    GameObject input4 = Instantiate(downArrow, inputLocationList[10], Quaternion.identity);
                                     inputInstantiated.Add(input4);
                                 }
                             }
                             if (i == 4)
                             {
-                                if (currentDifficulty == Testing.Manager.Difficulty.MEDIUM)
-                                {
-                                    GameObject input5 = Instantiate(downArrow, inputLocationList[7], Quaternion.identity);
-                                    inputInstantiated.Add(input5);
-                                }
                                 if (currentDifficulty == Testing.Manager.Difficulty.HARD)
                                 {
-                                    GameObject input5 = Instantiate(downArrow, inputLocationList[12], Quaternion.identity);
+                                    GameObject input5 = Instantiate(downArrow, inputLocationList[11], Quaternion.identity);
                                     inputInstantiated.Add(input5);
                                 }
                             }
-                            if (i == 5)
-                            {
-                                if (currentDifficulty == Testing.Manager.Difficulty.HARD)
-                                {
-                                    GameObject input6 = Instantiate(downArrow, inputLocationList[13], Quaternion.identity);
-                                    inputInstantiated.Add(input6);
-                                }
-                            }
-                            if (i == 6)
-                            {
-                                if (currentDifficulty == Testing.Manager.Difficulty.HARD)
-                                {
-                                    GameObject input7 = Instantiate(downArrow, inputLocationList[14], Quaternion.identity);
-                                    inputInstantiated.Add(input7);
-                                }
-                            }
+                            
                             treasure.transform.position += new Vector3(0, -distance, 0);
                             break;
                         case 3:
@@ -273,7 +233,7 @@ namespace Dragons_Peperes
                                 }
                                 if (currentDifficulty == Testing.Manager.Difficulty.HARD)
                                 {
-                                    GameObject input1 = Instantiate(leftArrow, inputLocationList[8], Quaternion.identity);
+                                    GameObject input1 = Instantiate(leftArrow, inputLocationList[7], Quaternion.identity);
                                     inputInstantiated.Add(input1);
                                 }
                             }
@@ -291,7 +251,7 @@ namespace Dragons_Peperes
                                 }
                                 if (currentDifficulty == Testing.Manager.Difficulty.HARD)
                                 {
-                                    GameObject input2 = Instantiate(leftArrow, inputLocationList[9], Quaternion.identity);
+                                    GameObject input2 = Instantiate(leftArrow, inputLocationList[8], Quaternion.identity);
                                     inputInstantiated.Add(input2);
                                 }
                             }
@@ -309,7 +269,7 @@ namespace Dragons_Peperes
                                 }
                                 if (currentDifficulty == Testing.Manager.Difficulty.HARD)
                                 {
-                                    GameObject input3 = Instantiate(leftArrow, inputLocationList[10], Quaternion.identity);
+                                    GameObject input3 = Instantiate(leftArrow, inputLocationList[9], Quaternion.identity);
                                     inputInstantiated.Add(input3);
                                 }
                             }
@@ -322,40 +282,19 @@ namespace Dragons_Peperes
                                 }
                                 if (currentDifficulty == Testing.Manager.Difficulty.HARD)
                                 {
-                                    GameObject input4 = Instantiate(leftArrow, inputLocationList[11], Quaternion.identity);
+                                    GameObject input4 = Instantiate(leftArrow, inputLocationList[10], Quaternion.identity);
                                     inputInstantiated.Add(input4);
                                 }
                             }
                             if (i == 4)
                             {
-                                if (currentDifficulty == Testing.Manager.Difficulty.MEDIUM)
-                                {
-                                    GameObject input5 = Instantiate(leftArrow, inputLocationList[7], Quaternion.identity);
-                                    inputInstantiated.Add(input5);
-                                }
                                 if (currentDifficulty == Testing.Manager.Difficulty.HARD)
                                 {
-                                    GameObject input5 = Instantiate(leftArrow, inputLocationList[12], Quaternion.identity);
+                                    GameObject input5 = Instantiate(leftArrow, inputLocationList[11], Quaternion.identity);
                                     inputInstantiated.Add(input5);
                                 }
                             }
-                            if (i == 5)
-                            {
-                                if (currentDifficulty == Testing.Manager.Difficulty.HARD)
-                                {
-                                    GameObject input6 = Instantiate(leftArrow, inputLocationList[13], Quaternion.identity);
-                                    inputInstantiated.Add(input6);
-                                }
-                            }
-                            if (i == 6)
-                            {                                    
-                                if (currentDifficulty == Testing.Manager.Difficulty.HARD)
-                                {
-                                    GameObject input7 = Instantiate(leftArrow, inputLocationList[14], Quaternion.identity);
-                                    inputInstantiated.Add(input7);
-                                }
-
-                            }
+                            
                             treasure.transform.position += new Vector3(-distance, 0, 0);
                             break;
                         case 4:
@@ -373,7 +312,7 @@ namespace Dragons_Peperes
                                 }
                                 if (currentDifficulty == Testing.Manager.Difficulty.HARD)
                                 {
-                                    GameObject input1 = Instantiate(rightArrow, inputLocationList[8], Quaternion.identity);
+                                    GameObject input1 = Instantiate(rightArrow, inputLocationList[7], Quaternion.identity);
                                     inputInstantiated.Add(input1);
                                 }
                             }
@@ -391,7 +330,7 @@ namespace Dragons_Peperes
                                 }
                                 if (currentDifficulty == Testing.Manager.Difficulty.HARD)
                                 {
-                                    GameObject input2 = Instantiate(rightArrow, inputLocationList[9], Quaternion.identity);
+                                    GameObject input2 = Instantiate(rightArrow, inputLocationList[8], Quaternion.identity);
                                     inputInstantiated.Add(input2);
                                 }
                             }
@@ -409,7 +348,7 @@ namespace Dragons_Peperes
                                 }
                                 if (currentDifficulty == Testing.Manager.Difficulty.HARD)
                                 {
-                                    GameObject input3 = Instantiate(rightArrow, inputLocationList[10], Quaternion.identity);
+                                    GameObject input3 = Instantiate(rightArrow, inputLocationList[9], Quaternion.identity);
                                     inputInstantiated.Add(input3);
                                 }
                             }
@@ -422,39 +361,19 @@ namespace Dragons_Peperes
                                 }
                                 if (currentDifficulty == Testing.Manager.Difficulty.HARD)
                                 {
-                                    GameObject input4 = Instantiate(rightArrow, inputLocationList[11], Quaternion.identity);
+                                    GameObject input4 = Instantiate(rightArrow, inputLocationList[10], Quaternion.identity);
                                     inputInstantiated.Add(input4);
                                 }
                             }
                             if (i == 4)
                             {
-                                if (currentDifficulty == Testing.Manager.Difficulty.MEDIUM)
-                                {
-                                    GameObject input5 = Instantiate(rightArrow, inputLocationList[7], Quaternion.identity);
-                                    inputInstantiated.Add(input5);
-                                }
                                 if (currentDifficulty == Testing.Manager.Difficulty.HARD)
                                 {
-                                    GameObject input5 = Instantiate(rightArrow, inputLocationList[12], Quaternion.identity);
+                                    GameObject input5 = Instantiate(rightArrow, inputLocationList[11], Quaternion.identity);
                                     inputInstantiated.Add(input5);
                                 }
                             }
-                            if (i == 5)
-                            {
-                                if (currentDifficulty == Testing.Manager.Difficulty.HARD)
-                                {
-                                    GameObject input6 = Instantiate(rightArrow, inputLocationList[13], Quaternion.identity);
-                                    inputInstantiated.Add(input6);
-                                }
-                            }
-                            if (i == 6)
-                            {
-                                if (currentDifficulty == Testing.Manager.Difficulty.HARD)
-                                {
-                                    GameObject input7 = Instantiate(rightArrow, inputLocationList[14], Quaternion.identity);
-                                    inputInstantiated.Add(input7);
-                                }
-                            }
+                            
                             treasure.transform.position += new Vector3(distance, 0, 0);
                             break;
                     }
