@@ -5,48 +5,63 @@ using UnityEngine;
 
 namespace Dragons_Peperes
 {
-    namespace CestNotreTresor
+    namespace Les4Pieces
     {
         /// <summary>
         /// Mael Ricou
         /// </summary>
         public class CoinManager : MonoBehaviour
         {
-            public List<GameObject> coins = new List<GameObject>();
+            public List<GameObject> coinsEasy = new List<GameObject>();
 
-            public List<GameObject> spots = new List<GameObject>();
-
-            public GameObject spot1;
+            public List<GameObject> spotsEasy = new List<GameObject>();
 
 
-            private void Start()
+            public List<GameObject> coinsMedium = new List<GameObject>();
+
+            public List<GameObject> spotsMedium = new List<GameObject>();
+
+            public List<GameObject> coinsHard = new List<GameObject>();
+
+
+            public GameObject fourthSpot;
+
+            //public List<GameObject> hiddenCoin = new List<GameObject>();
+
+            public void SpawnCoinsEasy()
             {
-                //SpawnCoins();
-
-                for(int i = 0; i < spots.Count; i++)
+                for (int i = 0; i < spotsEasy.Count; i++)
                 {
-                    int rand = Random.Range(0, coins.Count);
-                    Instantiate(coins[rand], spots[i].transform.position, Quaternion.identity);
-                    coins.RemoveAt(rand);
+                    int rand = Random.Range(0, coinsEasy.Count);
+                    Instantiate(coinsEasy[rand], spotsEasy[i].transform.position, Quaternion.identity);
+                    coinsEasy.RemoveAt(rand);
                 }
-
             }
 
-            private void SpawnCoins()
+            public void SpawnCoinsMedium()
             {
-                int count = coins.Count;
-                if(count == 0)
+                fourthSpot.SetActive(true);
+
+                for (int i = 0; i < spotsMedium.Count; i++)
                 {
-                    return;
+                    int rand = Random.Range(0, coinsMedium.Count);
+                    Instantiate(coinsMedium[rand], spotsMedium[i].transform.position, Quaternion.identity);
+                    coinsMedium.RemoveAt(rand);
                 }
-
-                int i = Random.Range(0, count - 1);
-                GameObject go = coins[i];
-                coins.Remove(go);
-
-                Instantiate(go, spot1.transform);
-
             }
+
+            public void SpawnCoinsHard()
+            {
+                fourthSpot.SetActive(true);
+
+                for (int i = 0; i < spotsMedium.Count; i++)
+                {
+                    int rand = Random.Range(0, coinsMedium.Count);
+                    Instantiate(coinsHard[rand], spotsMedium[i].transform.position, Quaternion.identity);
+                    coinsHard.RemoveAt(rand);
+                }
+            }
+
         }
     }
 }
