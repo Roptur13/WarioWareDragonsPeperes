@@ -17,6 +17,8 @@ namespace Dragons_Peperes
             private CarteManager carteManager;
             public CoinController[] coinController;
 
+            public GameObject fourthSpot;
+
 
             public override void Start()
             {
@@ -24,6 +26,11 @@ namespace Dragons_Peperes
 
                 coinManager = FindObjectOfType<CoinManager>();
                 carteManager = FindObjectOfType<CarteManager>();
+
+                if(currentDifficulty != Testing.Manager.Difficulty.EASY)
+                {
+                    fourthSpot.SetActive(true);
+                }
             }
 
             //FixedUpdate is called on a fixed time.
@@ -73,6 +80,7 @@ namespace Dragons_Peperes
 
                 if(currentDifficulty == Testing.Manager.Difficulty.MEDIUM)
                 {
+
                     if (Tick == 1)
                     {
                         coinManager.SpawnCoinsMedium();

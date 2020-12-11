@@ -831,6 +831,7 @@ MonoBehaviour:
   currentTime: 0
   enableInput: 0
   coinController: []
+  fourthSpot: {fileID: 137820695}
 --- !u!4 &1241422255
 Transform:
   m_ObjectHideFlags: 0
@@ -1251,7 +1252,6 @@ MonoBehaviour:
   - {fileID: 2050632536}
   - {fileID: 137820695}
   coinsHard: []
-  fourthSpot: {fileID: 137820695}
 --- !u!4 &1982237994
 Transform:
   m_ObjectHideFlags: 0

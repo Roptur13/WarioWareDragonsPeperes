@@ -52,20 +52,19 @@ namespace Dragons_Peperes
                 {
                     if (Tick == 1)
                     {
-                        showInput.SetActive(true);
+                        //showInput.SetActive(true);
                     }
 
                     if(Tick == 3)
                     {
-                        Destroy(showInput);
+                        //Destroy(showInput);
+                        Instantiate(enemy, spot2.transform);
                     }
                         
 
-                    if (Tick == 4)
+                    if (Tick == 5)
                         Instantiate(enemy, spot2.transform);
 
-                    if (Tick == 6)
-                        Instantiate(enemy, spot2.transform);
 
                     if (Tick == 7)
                         Debug.Log("la poupe du bateau apparait + end of scrolling");
@@ -132,19 +131,15 @@ namespace Dragons_Peperes
 
                     if(Tick == 3)
                     {
-                        //Instantiate(enemy, spot3.transform);
+                        Instantiate(enemy, spot3.transform);
                     }
 
                     if (Tick == 5)
                     {
-                        Instantiate(enemy, spot1.transform);
-                        Instantiate(enemy, spot1.transform);
+                        Instantiate(enemy, spot2.transform);
+
                     }
 
-                    if(Tick == 6)
-                    {
-                        Instantiate(enemy, spot3.transform);
-                    }
 
                     if (Tick == 7)
                     {
