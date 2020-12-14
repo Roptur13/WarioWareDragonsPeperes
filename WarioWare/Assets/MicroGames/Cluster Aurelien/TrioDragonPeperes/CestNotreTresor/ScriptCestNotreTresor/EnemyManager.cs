@@ -50,17 +50,20 @@ namespace Dragons_Peperes
                 {
                     if (Tick == 1)
                     {
-                        //showInput.SetActive(true);
+                        showInput.SetActive(true);
                     }
 
                     if (Tick == 3)
                     {
-                        //Destroy(showInput);
+                        Destroy(showInput);
                         Instantiate(enemy, spot2.transform);
                     }                  
 
                     if (Tick == 5)
+                    {
+                        Destroy(showInput);
                         Instantiate(enemy, spot2.transform);
+                    }
 
 
                     if (Tick == 7)
@@ -81,6 +84,7 @@ namespace Dragons_Peperes
                 {
                     if (Tick == 1)
                     {
+                        showInput.SetActive(true);
                         Debug.Log("audio: COME BACK HERE");
                     }
                         
@@ -92,6 +96,7 @@ namespace Dragons_Peperes
 
                     if (Tick == 3)
                     {
+                        Destroy(showInput);
                         Instantiate(enemy, spot3.transform);
                     }
 
@@ -168,7 +173,7 @@ namespace Dragons_Peperes
                 //on check si le BPM est en Medium pour définir la vitesse du enemy
                 if (bpm == 90)
                 {
-                    enemyController.enemySpeed += 1;
+                    //enemyController.enemySpeed += 1;
                 }
                 //on check si le BPM est en Fast pour définir la vitesse du enemy
                 if (bpm == 120)
