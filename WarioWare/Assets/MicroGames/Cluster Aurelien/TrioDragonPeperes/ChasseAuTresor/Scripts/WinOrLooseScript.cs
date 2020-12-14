@@ -54,7 +54,7 @@ namespace Dragons_Peperes
                 {
                     Debug.Log("Gagné !");
                     hasWon = true;
-                    //Manager.Instance.Result(true);
+                    Manager.Instance.Result(true);
                 }
             }
 
@@ -64,7 +64,7 @@ namespace Dragons_Peperes
                 if(Tick == 8 && hasWon == false)
                 {
                     Debug.Log("Perdu !");
-                    //Manager.Instance.Result(false);
+                    Manager.Instance.Result(false);
                 }
             }
         }

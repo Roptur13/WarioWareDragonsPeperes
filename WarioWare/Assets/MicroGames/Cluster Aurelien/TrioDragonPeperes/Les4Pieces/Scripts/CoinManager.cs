@@ -24,7 +24,7 @@ namespace Dragons_Peperes
             public List<GameObject> coinsHard = new List<GameObject>();
 
 
-            public GameObject fourthSpot;
+            
 
             //public List<GameObject> hiddenCoin = new List<GameObject>();
 
@@ -40,7 +40,6 @@ namespace Dragons_Peperes
 
             public void SpawnCoinsMedium()
             {
-                fourthSpot.SetActive(true);
 
                 for (int i = 0; i < spotsMedium.Count; i++)
                 {
@@ -52,7 +51,6 @@ namespace Dragons_Peperes
 
             public void SpawnCoinsHard()
             {
-                fourthSpot.SetActive(true);
 
                 for (int i = 0; i < spotsMedium.Count; i++)
                 {

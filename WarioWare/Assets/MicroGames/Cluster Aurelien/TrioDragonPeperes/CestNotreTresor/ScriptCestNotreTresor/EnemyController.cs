@@ -12,7 +12,7 @@ namespace Dragons_Peperes
 
         public class EnemyController : MonoBehaviour
         {
-            [SerializeField] float enemySpeed = 8;
+            public float enemySpeed = 5.5f;
             [SerializeField] float enemyXSpeed = 4;
 
             public Transform target;
@@ -26,6 +26,9 @@ namespace Dragons_Peperes
             {
                 target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
                 minigameManager = FindObjectOfType<EnemyManager>();
+
+                minigameManager.SetEnemySpeed();
+
             }
 
 

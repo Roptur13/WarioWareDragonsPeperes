@@ -22,6 +22,7 @@ namespace Dragons_Peperes
             public GameObject spot2;
             public GameObject spot3;
 
+            private EnemyController enemyController;
 
             TimedBehaviour timedBehaviour;
 
@@ -29,15 +30,13 @@ namespace Dragons_Peperes
             public override void Start()
             {
                 base.Start(); //Do not erase this line!
-
-
+                enemyController = FindObjectOfType<EnemyController>();
             }
 
             //FixedUpdate is called on a fixed time.
             public override void FixedUpdate()
             {
                 base.FixedUpdate(); //Do not erase this line!
-
             }
 
             //TimedUpdate is called once every tick.
@@ -47,25 +46,22 @@ namespace Dragons_Peperes
 
                 #region EasyMode
 
-
                 if(currentDifficulty == Testing.Manager.Difficulty.EASY)
                 {
                     if (Tick == 1)
                     {
-                        showInput.SetActive(true);
+                        //showInput.SetActive(true);
                     }
 
-                    if(Tick == 3)
+                    if (Tick == 3)
                     {
-                        Destroy(showInput);
-                    }
-                        
+                        //Destroy(showInput);
+                        Instantiate(enemy, spot2.transform);
+                    }                  
 
-                    if (Tick == 4)
+                    if (Tick == 5)
                         Instantiate(enemy, spot2.transform);
 
-                    if (Tick == 6)
-                        Instantiate(enemy, spot2.transform);
 
                     if (Tick == 7)
                         Debug.Log("la poupe du bateau apparait + end of scrolling");
@@ -132,19 +128,15 @@ namespace Dragons_Peperes
 
                     if(Tick == 3)
                     {
-                        //Instantiate(enemy, spot3.transform);
+                        Instantiate(enemy, spot3.transform);
                     }
 
                     if (Tick == 5)
                     {
-                        Instantiate(enemy, spot1.transform);
-                        Instantiate(enemy, spot1.transform);
+                        Instantiate(enemy, spot2.transform);
+
                     }
 
-                    if(Tick == 6)
-                    {
-                        Instantiate(enemy, spot3.transform);
-                    }
 
                     if (Tick == 7)
                     {
@@ -163,6 +155,32 @@ namespace Dragons_Peperes
             public void YouLost()
             {
                 Testing.Manager.Instance.Result(false);              
+            }
+
+            public void SetEnemySpeed()
+            {
+                //on check si le BPM est en Slow pour définir la vitesse du enemy
+                if (bpm == 60)
+                {
+                    //laisser la vitesse de base
+                }
+
+                //on check si le BPM est en Medium pour définir la vitesse du enemy
+                if (bpm == 90)
+                {
+                    enemyController.enemySpeed += 1;
+                }
+                //on check si le BPM est en Fast pour définir la vitesse du enemy
+                if (bpm == 120)
+                {
+
+                }
+
+                //on check si le BPM est en Super Fast pour définir la vitesse du enemy
+                if (bpm == 140)
+                {
+
+                }
             }
         }
     }
