@@ -38,13 +38,13 @@ namespace Dragons_Peperes
 
                 if (canMove == true)
                 {
-                    if (Mathf.Abs(Input.GetAxisRaw("Left_Joystick_X")) == 1.0f)
+                    if (Mathf.Abs(Input.GetAxisRaw("Left_Joystick_X")) >= 0.95f)
                     {
                         transform.position += new Vector3(Input.GetAxisRaw("Left_Joystick_X") * distance, 0, 0);
                         inputNumber = inputNumber + 1;
                         canMove = false;
                     }
-                    if (Mathf.Abs(Input.GetAxisRaw("Left_Joystick_Y")) == 1.0f)
+                    if (Mathf.Abs(Input.GetAxisRaw("Left_Joystick_Y")) >= 0.95f)
                     {
                         transform.position += new Vector3(0, Input.GetAxisRaw("Left_Joystick_Y") * distance, 0);
                         inputNumber = inputNumber + 1;
