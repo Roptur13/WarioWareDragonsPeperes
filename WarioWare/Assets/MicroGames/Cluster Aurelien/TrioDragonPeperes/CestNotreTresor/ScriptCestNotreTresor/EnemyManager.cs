@@ -46,7 +46,7 @@ namespace Dragons_Peperes
 
                 #region EasyMode
 
-                if(currentDifficulty == Testing.Manager.Difficulty.EASY)
+                if(currentDifficulty == Difficulty.EASY)
                 {
                     if (Tick == 1)
                     {
@@ -80,7 +80,7 @@ namespace Dragons_Peperes
 
                 #region MediumMode
 
-                if(currentDifficulty == Testing.Manager.Difficulty.MEDIUM)
+                if(currentDifficulty == Difficulty.MEDIUM)
                 {
                     if (Tick == 1)
                     {
@@ -121,7 +121,7 @@ namespace Dragons_Peperes
 
                 #region HardMode
 
-                if(currentDifficulty == Testing.Manager.Difficulty.HARD)
+                if(currentDifficulty == Difficulty.HARD)
                 {
                     if (Tick == 1)
                         Debug.Log("audio: COME BACK HERE");
