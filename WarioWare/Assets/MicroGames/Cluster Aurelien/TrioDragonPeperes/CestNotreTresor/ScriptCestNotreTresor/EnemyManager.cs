@@ -60,7 +60,10 @@ namespace Dragons_Peperes
                     }                  
 
                     if (Tick == 5)
+                    {
+                        Destroy(showInput);
                         Instantiate(enemy, spot2.transform);
+                    }
 
 
                     if (Tick == 7)
@@ -88,12 +91,12 @@ namespace Dragons_Peperes
 
                     if (Tick == 2)
                     {
-                        Destroy(showInput);
                         Instantiate(enemy, spot2.transform);
                     }
 
                     if (Tick == 3)
                     {
+                        Destroy(showInput);
                         Instantiate(enemy, spot3.transform);
                     }
 
@@ -170,7 +173,7 @@ namespace Dragons_Peperes
                 //on check si le BPM est en Medium pour définir la vitesse du enemy
                 if (bpm == 90)
                 {
-                    enemyController.enemySpeed += 1;
+                    //enemyController.enemySpeed += 1;
                 }
                 //on check si le BPM est en Fast pour définir la vitesse du enemy
                 if (bpm == 120)
