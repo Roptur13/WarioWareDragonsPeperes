@@ -27,8 +27,17 @@ namespace Dragons_Peperes
                 target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
                 minigameManager = FindObjectOfType<EnemyManager>();
 
-                minigameManager.SetEnemySpeed();
+                if(minigameManager.bpm > 90)
+                {
+                    enemySpeed = enemySpeed * 1.2f;
+                }
 
+                if(minigameManager.bpm >= 140f)
+                {
+                    enemySpeed = enemySpeed * 1.5f;
+                }
+
+                
             }
 
 
