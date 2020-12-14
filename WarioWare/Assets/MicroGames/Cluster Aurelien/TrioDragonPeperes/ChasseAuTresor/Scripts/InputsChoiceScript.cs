@@ -40,15 +40,15 @@ namespace Dragons_Peperes
                 player.SetActive(false);
                 treasure.transform.position = new Vector3(0, 0, 0);
 
-                if(currentDifficulty == Testing.Manager.Difficulty.EASY)
+                if(currentDifficulty == Difficulty.EASY)
                 {
                     inputNumber = 3;
                 }
-                else if(currentDifficulty == Testing.Manager.Difficulty.MEDIUM)
+                else if(currentDifficulty == Difficulty.MEDIUM)
                 {
                     inputNumber = 4;
                 }
-                else if(currentDifficulty == Testing.Manager.Difficulty.HARD)
+                else if(currentDifficulty == Difficulty.HARD)
                 {
                     inputNumber = 5;
                 }
@@ -62,17 +62,17 @@ namespace Dragons_Peperes
                         case 1:
                             if (i == 0)
                             {
-                                if(currentDifficulty == Testing.Manager.Difficulty.EASY)
+                                if(currentDifficulty == Difficulty.EASY)
                                 {
                                     GameObject input1 = Instantiate(upArrow, inputLocationList[0], Quaternion.identity);
                                     inputInstantiated.Add(input1);
                                 }
-                                if (currentDifficulty == Testing.Manager.Difficulty.MEDIUM)
+                                if (currentDifficulty == Difficulty.MEDIUM)
                                 {
                                     GameObject input1 = Instantiate(upArrow, inputLocationList[3], Quaternion.identity);
                                     inputInstantiated.Add(input1);
                                 }
-                                if (currentDifficulty == Testing.Manager.Difficulty.HARD)
+                                if (currentDifficulty == Difficulty.HARD)
                                 {
                                     GameObject input1 = Instantiate(upArrow, inputLocationList[7], Quaternion.identity);
                                     inputInstantiated.Add(input1);
@@ -81,17 +81,17 @@ namespace Dragons_Peperes
                             }
                             if (i == 1)
                             {
-                                if (currentDifficulty == Testing.Manager.Difficulty.EASY)
+                                if (currentDifficulty == Difficulty.EASY)
                                 {
                                     GameObject input2 = Instantiate(upArrow, inputLocationList[1], Quaternion.identity);
                                     inputInstantiated.Add(input2);
                                 }
-                                if (currentDifficulty == Testing.Manager.Difficulty.MEDIUM)
+                                if (currentDifficulty == Difficulty.MEDIUM)
                                 {
                                     GameObject input2 = Instantiate(upArrow, inputLocationList[4], Quaternion.identity);
                                     inputInstantiated.Add(input2);
                                 }
-                                if (currentDifficulty == Testing.Manager.Difficulty.HARD)
+                                if (currentDifficulty == Difficulty.HARD)
                                 {
                                     GameObject input2 = Instantiate(upArrow, inputLocationList[8], Quaternion.identity);
                                     inputInstantiated.Add(input2);
@@ -99,17 +99,17 @@ namespace Dragons_Peperes
                             }
                             if (i == 2)
                             {
-                                if (currentDifficulty == Testing.Manager.Difficulty.EASY)
+                                if (currentDifficulty == Difficulty.EASY)
                                 {
                                     GameObject input3 = Instantiate(upArrow, inputLocationList[2], Quaternion.identity);
                                     inputInstantiated.Add(input3);
                                 }
-                                if (currentDifficulty == Testing.Manager.Difficulty.MEDIUM)
+                                if (currentDifficulty == Difficulty.MEDIUM)
                                 {
                                     GameObject input3 = Instantiate(upArrow, inputLocationList[5], Quaternion.identity);
                                     inputInstantiated.Add(input3);
                                 }
-                                if (currentDifficulty == Testing.Manager.Difficulty.HARD)
+                                if (currentDifficulty == Difficulty.HARD)
                                 {
                                     GameObject input3 = Instantiate(upArrow, inputLocationList[9], Quaternion.identity);
                                     inputInstantiated.Add(input3);
@@ -117,12 +117,12 @@ namespace Dragons_Peperes
                             }
                             if (i == 3)
                             {                                    
-                                if (currentDifficulty == Testing.Manager.Difficulty.MEDIUM)
+                                if (currentDifficulty == Difficulty.MEDIUM)
                                 {
                                     GameObject input4 = Instantiate(upArrow, inputLocationList[6], Quaternion.identity);
                                     inputInstantiated.Add(input4);
                                 }
-                                if (currentDifficulty == Testing.Manager.Difficulty.HARD)
+                                if (currentDifficulty == Difficulty.HARD)
                                 {
                                     GameObject input4 = Instantiate(upArrow, inputLocationList[10], Quaternion.identity);
                                     inputInstantiated.Add(input4);
@@ -130,7 +130,7 @@ namespace Dragons_Peperes
                             }
                             if (i == 4)
                             {                       
-                                if (currentDifficulty == Testing.Manager.Difficulty.HARD)
+                                if (currentDifficulty == Difficulty.HARD)
                                 {
                                     GameObject input5 = Instantiate(upArrow, inputLocationList[11], Quaternion.identity);
                                     inputInstantiated.Add(input5);
@@ -142,17 +142,17 @@ namespace Dragons_Peperes
                         case 2:
                             if (i == 0)
                             {
-                                if (currentDifficulty == Testing.Manager.Difficulty.EASY)
+                                if (currentDifficulty == Difficulty.EASY)
                                 {
                                     GameObject input1 = Instantiate(downArrow, inputLocationList[0], Quaternion.identity);
                                     inputInstantiated.Add(input1);
                                 }
-                                if (currentDifficulty == Testing.Manager.Difficulty.MEDIUM)
+                                if (currentDifficulty == Difficulty.MEDIUM)
                                 {
                                     GameObject input1 = Instantiate(downArrow, inputLocationList[3], Quaternion.identity);
                                     inputInstantiated.Add(input1);
                                 }
-                                if (currentDifficulty == Testing.Manager.Difficulty.HARD)
+                                if (currentDifficulty == Difficulty.HARD)
                                 {
                                     GameObject input1 = Instantiate(downArrow, inputLocationList[7], Quaternion.identity);
                                     inputInstantiated.Add(input1);
@@ -160,17 +160,17 @@ namespace Dragons_Peperes
                             }
                             if (i == 1)
                             {
-                                if (currentDifficulty == Testing.Manager.Difficulty.EASY)
+                                if (currentDifficulty == Difficulty.EASY)
                                 {
                                     GameObject input2 = Instantiate(downArrow, inputLocationList[1], Quaternion.identity);
                                     inputInstantiated.Add(input2);
                                 }
-                                if (currentDifficulty == Testing.Manager.Difficulty.MEDIUM)
+                                if (currentDifficulty == Difficulty.MEDIUM)
                                 {
                                     GameObject input2 = Instantiate(downArrow, inputLocationList[4], Quaternion.identity);
                                     inputInstantiated.Add(input2);
                                 }
-                                if (currentDifficulty == Testing.Manager.Difficulty.HARD)
+                                if (currentDifficulty == Difficulty.HARD)
                                 {
                                     GameObject input2 = Instantiate(downArrow, inputLocationList[8], Quaternion.identity);
                                     inputInstantiated.Add(input2);
@@ -178,17 +178,17 @@ namespace Dragons_Peperes
                             }
                             if (i == 2)
                             {
-                                if (currentDifficulty == Testing.Manager.Difficulty.EASY)
+                                if (currentDifficulty == Difficulty.EASY)
                                 {
                                     GameObject input3 = Instantiate(downArrow, inputLocationList[2], Quaternion.identity);
                                     inputInstantiated.Add(input3);
                                 }
-                                if (currentDifficulty == Testing.Manager.Difficulty.MEDIUM)
+                                if (currentDifficulty == Difficulty.MEDIUM)
                                 {
                                     GameObject input3 = Instantiate(downArrow, inputLocationList[5], Quaternion.identity);
                                     inputInstantiated.Add(input3);
                                 }
-                                if (currentDifficulty == Testing.Manager.Difficulty.HARD)
+                                if (currentDifficulty == Difficulty.HARD)
                                 {
                                     GameObject input3 = Instantiate(downArrow, inputLocationList[9], Quaternion.identity);
                                     inputInstantiated.Add(input3);
@@ -196,12 +196,12 @@ namespace Dragons_Peperes
                             }
                             if (i == 3)
                             {                                    
-                                if (currentDifficulty == Testing.Manager.Difficulty.MEDIUM)
+                                if (currentDifficulty == Difficulty.MEDIUM)
                                 {
                                     GameObject input4 = Instantiate(downArrow, inputLocationList[6], Quaternion.identity);
                                     inputInstantiated.Add(input4);
                                 }
-                                if (currentDifficulty == Testing.Manager.Difficulty.HARD)
+                                if (currentDifficulty == Difficulty.HARD)
                                 {
                                     GameObject input4 = Instantiate(downArrow, inputLocationList[10], Quaternion.identity);
                                     inputInstantiated.Add(input4);
@@ -209,7 +209,7 @@ namespace Dragons_Peperes
                             }
                             if (i == 4)
                             {
-                                if (currentDifficulty == Testing.Manager.Difficulty.HARD)
+                                if (currentDifficulty == Difficulty.HARD)
                                 {
                                     GameObject input5 = Instantiate(downArrow, inputLocationList[11], Quaternion.identity);
                                     inputInstantiated.Add(input5);
@@ -221,17 +221,17 @@ namespace Dragons_Peperes
                         case 3:
                             if (i == 0)
                             {
-                                if (currentDifficulty == Testing.Manager.Difficulty.EASY)
+                                if (currentDifficulty == Difficulty.EASY)
                                 {
                                     GameObject input1 = Instantiate(leftArrow, inputLocationList[0], Quaternion.identity);
                                     inputInstantiated.Add(input1);
                                 }
-                                if (currentDifficulty == Testing.Manager.Difficulty.MEDIUM)
+                                if (currentDifficulty == Difficulty.MEDIUM)
                                 {
                                     GameObject input1 = Instantiate(leftArrow, inputLocationList[3], Quaternion.identity);
                                     inputInstantiated.Add(input1);
                                 }
-                                if (currentDifficulty == Testing.Manager.Difficulty.HARD)
+                                if (currentDifficulty == Difficulty.HARD)
                                 {
                                     GameObject input1 = Instantiate(leftArrow, inputLocationList[7], Quaternion.identity);
                                     inputInstantiated.Add(input1);
@@ -239,17 +239,17 @@ namespace Dragons_Peperes
                             }
                             if (i == 1)
                             {
-                                if (currentDifficulty == Testing.Manager.Difficulty.EASY)
+                                if (currentDifficulty == Difficulty.EASY)
                                 {
                                     GameObject input2 = Instantiate(leftArrow, inputLocationList[1], Quaternion.identity);
                                     inputInstantiated.Add(input2);
                                 }
-                                if (currentDifficulty == Testing.Manager.Difficulty.MEDIUM)
+                                if (currentDifficulty == Difficulty.MEDIUM)
                                 {
                                     GameObject input2 = Instantiate(leftArrow, inputLocationList[4], Quaternion.identity);
                                     inputInstantiated.Add(input2);
                                 }
-                                if (currentDifficulty == Testing.Manager.Difficulty.HARD)
+                                if (currentDifficulty == Difficulty.HARD)
                                 {
                                     GameObject input2 = Instantiate(leftArrow, inputLocationList[8], Quaternion.identity);
                                     inputInstantiated.Add(input2);
@@ -257,17 +257,17 @@ namespace Dragons_Peperes
                             }
                             if (i == 2)
                             {
-                                if (currentDifficulty == Testing.Manager.Difficulty.EASY)
+                                if (currentDifficulty == Difficulty.EASY)
                                 {
                                     GameObject input3 = Instantiate(leftArrow, inputLocationList[2], Quaternion.identity);
                                     inputInstantiated.Add(input3);
                                 }
-                                if (currentDifficulty == Testing.Manager.Difficulty.MEDIUM)
+                                if (currentDifficulty == Difficulty.MEDIUM)
                                 {
                                     GameObject input3 = Instantiate(leftArrow, inputLocationList[5], Quaternion.identity);
                                     inputInstantiated.Add(input3);
                                 }
-                                if (currentDifficulty == Testing.Manager.Difficulty.HARD)
+                                if (currentDifficulty == Difficulty.HARD)
                                 {
                                     GameObject input3 = Instantiate(leftArrow, inputLocationList[9], Quaternion.identity);
                                     inputInstantiated.Add(input3);
@@ -275,12 +275,12 @@ namespace Dragons_Peperes
                             }
                             if (i == 3)
                             {
-                                if (currentDifficulty == Testing.Manager.Difficulty.MEDIUM)
+                                if (currentDifficulty ==Difficulty.MEDIUM)
                                 {
                                     GameObject input4 = Instantiate(leftArrow, inputLocationList[6], Quaternion.identity);
                                     inputInstantiated.Add(input4);
                                 }
-                                if (currentDifficulty == Testing.Manager.Difficulty.HARD)
+                                if (currentDifficulty == Difficulty.HARD)
                                 {
                                     GameObject input4 = Instantiate(leftArrow, inputLocationList[10], Quaternion.identity);
                                     inputInstantiated.Add(input4);
@@ -288,7 +288,7 @@ namespace Dragons_Peperes
                             }
                             if (i == 4)
                             {
-                                if (currentDifficulty == Testing.Manager.Difficulty.HARD)
+                                if (currentDifficulty == Difficulty.HARD)
                                 {
                                     GameObject input5 = Instantiate(leftArrow, inputLocationList[11], Quaternion.identity);
                                     inputInstantiated.Add(input5);
@@ -300,17 +300,17 @@ namespace Dragons_Peperes
                         case 4:
                             if (i == 0)
                             {
-                                if (currentDifficulty == Testing.Manager.Difficulty.EASY)
+                                if (currentDifficulty == Difficulty.EASY)
                                 {
                                     GameObject input1 = Instantiate(rightArrow, inputLocationList[0], Quaternion.identity);
                                     inputInstantiated.Add(input1);
                                 }
-                                if (currentDifficulty == Testing.Manager.Difficulty.MEDIUM)
+                                if (currentDifficulty == Difficulty.MEDIUM)
                                 {
                                     GameObject input1 = Instantiate(rightArrow, inputLocationList[3], Quaternion.identity);
                                     inputInstantiated.Add(input1);
                                 }
-                                if (currentDifficulty == Testing.Manager.Difficulty.HARD)
+                                if (currentDifficulty == Difficulty.HARD)
                                 {
                                     GameObject input1 = Instantiate(rightArrow, inputLocationList[7], Quaternion.identity);
                                     inputInstantiated.Add(input1);
@@ -318,17 +318,17 @@ namespace Dragons_Peperes
                             }
                             if (i == 1)
                             {
-                                if (currentDifficulty == Testing.Manager.Difficulty.EASY)
+                                if (currentDifficulty == Difficulty.EASY)
                                 {
                                     GameObject input2 = Instantiate(rightArrow, inputLocationList[1], Quaternion.identity);
                                     inputInstantiated.Add(input2);
                                 }
-                                if (currentDifficulty == Testing.Manager.Difficulty.MEDIUM)
+                                if (currentDifficulty == Difficulty.MEDIUM)
                                 {
                                     GameObject input2 = Instantiate(rightArrow, inputLocationList[4], Quaternion.identity);
                                     inputInstantiated.Add(input2);
                                 }
-                                if (currentDifficulty == Testing.Manager.Difficulty.HARD)
+                                if (currentDifficulty == Difficulty.HARD)
                                 {
                                     GameObject input2 = Instantiate(rightArrow, inputLocationList[8], Quaternion.identity);
                                     inputInstantiated.Add(input2);
@@ -336,17 +336,17 @@ namespace Dragons_Peperes
                             }
                             if (i == 2)
                             {
-                                if (currentDifficulty == Testing.Manager.Difficulty.EASY)
+                                if (currentDifficulty == Difficulty.EASY)
                                 {
                                     GameObject input3 = Instantiate(rightArrow, inputLocationList[2], Quaternion.identity);
                                     inputInstantiated.Add(input3);
                                 }
-                                if (currentDifficulty == Testing.Manager.Difficulty.MEDIUM)
+                                if (currentDifficulty == Difficulty.MEDIUM)
                                 {
                                     GameObject input3 = Instantiate(rightArrow, inputLocationList[5], Quaternion.identity);
                                     inputInstantiated.Add(input3);
                                 }
-                                if (currentDifficulty == Testing.Manager.Difficulty.HARD)
+                                if (currentDifficulty == Difficulty.HARD)
                                 {
                                     GameObject input3 = Instantiate(rightArrow, inputLocationList[9], Quaternion.identity);
                                     inputInstantiated.Add(input3);
@@ -354,12 +354,12 @@ namespace Dragons_Peperes
                             }
                             if (i == 3)
                             {                                    
-                                if (currentDifficulty == Testing.Manager.Difficulty.MEDIUM)
+                                if (currentDifficulty == Difficulty.MEDIUM)
                                 {
                                     GameObject input4 = Instantiate(rightArrow, inputLocationList[6], Quaternion.identity);
                                     inputInstantiated.Add(input4);
                                 }
-                                if (currentDifficulty == Testing.Manager.Difficulty.HARD)
+                                if (currentDifficulty == Difficulty.HARD)
                                 {
                                     GameObject input4 = Instantiate(rightArrow, inputLocationList[10], Quaternion.identity);
                                     inputInstantiated.Add(input4);
@@ -367,7 +367,7 @@ namespace Dragons_Peperes
                             }
                             if (i == 4)
                             {
-                                if (currentDifficulty == Testing.Manager.Difficulty.HARD)
+                                if (currentDifficulty == Difficulty.HARD)
                                 {
                                     GameObject input5 = Instantiate(rightArrow, inputLocationList[11], Quaternion.identity);
                                     inputInstantiated.Add(input5);

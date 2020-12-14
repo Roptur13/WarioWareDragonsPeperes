@@ -29,15 +29,15 @@ namespace Dragons_Peperes
 
                 
 
-                if(currentDifficulty == Manager.Difficulty.EASY)
+                if(currentDifficulty == Difficulty.EASY)
                 {
                     inputNumberToWin = 3;
                 }
-                if (currentDifficulty == Manager.Difficulty.MEDIUM)
+                if (currentDifficulty == Difficulty.MEDIUM)
                 {
                     inputNumberToWin = 4;
                 }
-                if (currentDifficulty == Manager.Difficulty.HARD)
+                if (currentDifficulty == Difficulty.HARD)
                 {
                     inputNumberToWin = 5;
                 }
