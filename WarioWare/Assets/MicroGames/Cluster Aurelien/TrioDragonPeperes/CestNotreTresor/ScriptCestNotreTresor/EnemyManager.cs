@@ -160,33 +160,7 @@ namespace Dragons_Peperes
             public void YouLost()
             {
                 Testing.Manager.Instance.Result(false);              
-            }
-
-            public void SetEnemySpeed()
-            {
-                //on check si le BPM est en Slow pour définir la vitesse du enemy
-                if (bpm == 60)
-                {
-                    //laisser la vitesse de base
-                }
-
-                //on check si le BPM est en Medium pour définir la vitesse du enemy
-                if (bpm == 90)
-                {
-                    //enemyController.enemySpeed += 1;
-                }
-                //on check si le BPM est en Fast pour définir la vitesse du enemy
-                if (bpm == 120)
-                {
-
-                }
-
-                //on check si le BPM est en Super Fast pour définir la vitesse du enemy
-                if (bpm == 140)
-                {
-
-                }
-            }
+            }           
         }
     }
 }
