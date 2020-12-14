@@ -50,12 +50,12 @@ namespace Dragons_Peperes
                 {
                     if (Tick == 1)
                     {
-                        //showInput.SetActive(true);
+                        showInput.SetActive(true);
                     }
 
                     if (Tick == 3)
                     {
-                        //Destroy(showInput);
+                        Destroy(showInput);
                         Instantiate(enemy, spot2.transform);
                     }                  
 
@@ -81,12 +81,14 @@ namespace Dragons_Peperes
                 {
                     if (Tick == 1)
                     {
+                        showInput.SetActive(true);
                         Debug.Log("audio: COME BACK HERE");
                     }
                         
 
                     if (Tick == 2)
                     {
+                        Destroy(showInput);
                         Instantiate(enemy, spot2.transform);
                     }
 
