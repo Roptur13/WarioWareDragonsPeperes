@@ -128,7 +128,7 @@ namespace Dragons_Peperes
 
                     if (isSpot2)
                     {
-                        if (Input.GetKeyDown(KeyCode.Joystick1Button2))
+                        if (Input.GetKeyDown(KeyCode.Joystick1Button1))
                         {
                             if (coin1OnSpot2)
                             {
@@ -268,7 +268,7 @@ namespace Dragons_Peperes
 
                     if (isSpot4)
                     {
-                        if (Input.GetKeyDown(KeyCode.Joystick1Button1))
+                        if (Input.GetKeyDown(KeyCode.Joystick1Button2))
                         {
                             if (coin1OnSpot4)
                             {
