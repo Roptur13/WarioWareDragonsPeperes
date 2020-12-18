@@ -246,7 +246,7 @@ MonoBehaviour:
   treasure: {fileID: 1462516084}
   upSprite: {fileID: 21300000, guid: b9910f86e948a2f48a89937c4243e2c6, type: 3}
   downSprite: {fileID: 21300000, guid: 814d3ae13ca644f4babce1ed4193c96b, type: 3}
-  leftSprite: {fileID: 21300000, guid: b00c8b2d2a27bd84b936efca1c42ee19, type: 3}
+  leftSprite: {fileID: 21300000, guid: 20a432e7d0891c54f9f572c883d27543, type: 3}
   rightSprite: {fileID: 21300000, guid: f01665372b5216c499ed3426f639c81a, type: 3}
 --- !u!1 &1171013710
 GameObject:
