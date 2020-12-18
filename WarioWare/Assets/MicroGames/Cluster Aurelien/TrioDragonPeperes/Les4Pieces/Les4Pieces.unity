@@ -1702,7 +1702,11 @@ MonoBehaviour:
   - {fileID: 156484714}
   - {fileID: 2050632536}
   - {fileID: 137820695}
-  coinsHard: []
+  coinsHard:
+  - {fileID: 8222456404408331097, guid: 5d6c856b56748394881accee1b988ff1, type: 3}
+  - {fileID: 5160650203624422023, guid: 4dd3f8b107da70e4a9632c60ae58222b, type: 3}
+  - {fileID: 1203224067894107525, guid: eb21a17a4f4a9044db8f4b52d2d71062, type: 3}
+  - {fileID: 1676644813660362428, guid: 1a9fb189fae3b054197c88261b3a959b, type: 3}
 --- !u!4 &1982237994
 Transform:
   m_ObjectHideFlags: 0
