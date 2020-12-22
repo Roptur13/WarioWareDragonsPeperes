@@ -57,8 +57,10 @@ namespace Dragons_Peperes
 
                     if (isSpot1)
                     {
+                        //Y button
                         if (Input.GetKeyDown(KeyCode.Joystick1Button3))
                         {
+                            Debug.Log("Y frer");
                             if (coin1OnSpot1)
                             {
                                 if (carteManager.weWantCoin1 == true)
@@ -128,8 +130,10 @@ namespace Dragons_Peperes
 
                     if (isSpot2)
                     {
+                        //B button
                         if (Input.GetKeyDown(KeyCode.Joystick1Button1))
                         {
+                            Debug.Log("B frer");
                             if (coin1OnSpot2)
                             {
                                 if (carteManager.weWantCoin1 == true)
@@ -198,8 +202,10 @@ namespace Dragons_Peperes
 
                     if (isSpot3)
                     {
-                        if (Input.GetKeyDown(KeyCode.Joystick1Button0))
+                        //X button
+                        if (Input.GetKeyDown(KeyCode.Joystick1Button2))
                         {
+                            Debug.Log("A frer");
                             if (coin1OnSpot3)
                             {
                                 if (carteManager.weWantCoin1 == true)
@@ -268,8 +274,10 @@ namespace Dragons_Peperes
 
                     if (isSpot4)
                     {
-                        if (Input.GetKeyDown(KeyCode.Joystick1Button2))
+                        //A button
+                        if (Input.GetKeyDown(KeyCode.Joystick1Button0))
                         {
+                            Debug.Log("X frer");
                             if (coin1OnSpot4)
                             {
                                 if (carteManager.weWantCoin1 == true)
