@@ -96,6 +96,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isCarte1: 0
   isCarte2: 0
-  isCarte3: 0
-  isCarte4: 1
+  isCarte3: 1
+  isCarte4: 0
   carteIsHere: 0

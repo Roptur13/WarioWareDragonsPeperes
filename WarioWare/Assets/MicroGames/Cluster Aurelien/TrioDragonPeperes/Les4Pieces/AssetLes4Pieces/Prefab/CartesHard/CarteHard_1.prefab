@@ -94,8 +94,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2456e5d4a5b80a74d9eb6935f632780e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isCarte1: 0
+  isCarte1: 1
   isCarte2: 0
   isCarte3: 0
-  isCarte4: 1
+  isCarte4: 0
   carteIsHere: 0

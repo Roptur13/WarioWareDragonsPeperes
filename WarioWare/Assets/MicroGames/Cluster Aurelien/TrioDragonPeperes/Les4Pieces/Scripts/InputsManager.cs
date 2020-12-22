@@ -453,21 +453,25 @@ namespace Dragons_Peperes
                 if ((collision.name == "CoinHard_1(Clone)") && (isSpot1))
                 {
                     coin1OnSpot1 = true;
+                    Debug.Log("coin_1 is on spot 1");
                 }
 
                 if ((collision.name == "CoinHard_1(Clone)") && (isSpot2))
                 {
                     coin1OnSpot2 = true;
+                    Debug.Log("coin_1 is on spot 2");
                 }
 
                 if ((collision.name == "CoinHard_1(Clone)") && (isSpot3))
                 {
                     coin1OnSpot3 = true;
+                    Debug.Log("coin_1 is on spot 3");
                 }
 
                 if ((collision.name == "CoinHard_1(Clone)") && (isSpot4))
                 {
                     coin1OnSpot4 = true;
+                    Debug.Log("coin_1 is on spot 4");
                 }
 
                 #endregion
@@ -476,21 +480,25 @@ namespace Dragons_Peperes
                 if ((collision.name == "CoinHard_2(Clone)") && (isSpot1))
                 {
                     coin2OnSpot1 = true;
+                    Debug.Log("coin_2 is on spot 1");
                 }
 
                 if ((collision.name == "CoinHard_2(Clone)") && (isSpot2))
                 {
                     coin2OnSpot2 = true;
+                    Debug.Log("coin_2 is on spot 2");
                 }
 
                 if ((collision.name == "CoinHard_2(Clone)") && (isSpot3))
                 {
                     coin2OnSpot3 = true;
+                    Debug.Log("coin_2 is on spot 3");
                 }
 
                 if ((collision.name == "CoinHard_2(Clone)") && (isSpot4))
                 {
                     coin2OnSpot4 = true;
+                    Debug.Log("coin_2 is on spot 4");
                 }
                 #endregion
 
@@ -498,43 +506,51 @@ namespace Dragons_Peperes
                 if ((collision.name == "CoinHard_3(Clone)") && (isSpot1))
                 {
                     coin3OnSpot1 = true;
+                    Debug.Log("coin_3 is on spot 1");
                 }
 
                 if ((collision.name == "CoinHard_3(Clone)") && (isSpot2))
                 {
                     coin3OnSpot2 = true;
+                    Debug.Log("coin_3 is on spot 2");
                 }
 
                 if ((collision.name == "CoinHard_3(Clone)") && (isSpot3))
                 {
                     coin3OnSpot3 = true;
+                    Debug.Log("coin_3 is on spot 3");
                 }
 
-                if ((collision.name == "CoinHard_2(Clone)") && (isSpot4))
+                if ((collision.name == "CoinHard_3(Clone)") && (isSpot4))
                 {
                     coin3OnSpot4 = true;
+                    Debug.Log("coin_3 is on spot 4");
                 }
                 #endregion
 
                 #region Check where is CoinHard4
-                if ((collision.name == "CoinHard_3(Clone)") && (isSpot1))
+                if ((collision.name == "CoinHard_4(Clone)") && (isSpot1))
                 {
                     coin4OnSpot1 = true;
+                    Debug.Log("coin_4 is on spot 1");
                 }
 
-                if ((collision.name == "CoinHard_3(Clone)") && (isSpot2))
+                if ((collision.name == "CoinHard_4(Clone)") && (isSpot2))
                 {
                     coin4OnSpot2 = true;
+                    Debug.Log("coin_4 is on spot 2");
                 }
 
-                if ((collision.name == "CoinHard_3(Clone)") && (isSpot3))
+                if ((collision.name == "CoinHard_4(Clone)") && (isSpot3))
                 {
                     coin4OnSpot3 = true;
+                    Debug.Log("coin_4 is on spot 3");
                 }
 
-                if ((collision.name == "CoinHard_2(Clone)") && (isSpot4))
+                if ((collision.name == "CoinHard_4(Clone)") && (isSpot4))
                 {
                     coin4OnSpot4 = true;
+                    Debug.Log("coin_4 is on spot 4");
                 }
                 #endregion
                 #endregion
