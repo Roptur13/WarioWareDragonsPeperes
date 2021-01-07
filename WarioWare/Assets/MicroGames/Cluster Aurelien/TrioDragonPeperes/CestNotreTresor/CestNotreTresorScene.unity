@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -692,6 +692,99 @@ Transform:
   m_Father: {fileID: 1764547256}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &620136566
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 620136567}
+  - component: {fileID: 620136568}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &620136567
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 620136566}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1585736906}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &620136568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 620136566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc980d47dd5f0c2478c064912a026b2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: AmbianceSound
+    clip: {fileID: 8300000, guid: 70b8adbdfa1cf3c4183ac1b4e9761678, type: 3}
+    volume: 0.493
+    pitch: 0
+    randomVolume: 0
+    randomPitch: 0
+    loop: 1
+  - name: PlayerCatchedSound
+    clip: {fileID: 8300000, guid: 90b7043088b0f5a4c88b65f77fb4941b, type: 3}
+    volume: 1
+    pitch: 0
+    randomVolume: 0.5
+    randomPitch: 0.34
+    loop: 0
+  - name: Test
+    clip: {fileID: 8300000, guid: eca0aa6ac08c7604d8a833c04c178b77, type: 3}
+    volume: 0.393
+    pitch: 0
+    randomVolume: 0
+    randomPitch: 0
+    loop: 1
+  - name: Replique1
+    clip: {fileID: 8300000, guid: 343e0139c113d054ca35f6c1e5847c7f, type: 3}
+    volume: 1
+    pitch: 0
+    randomVolume: 0.342
+    randomPitch: 0.5
+    loop: 0
+  - name: Replique2
+    clip: {fileID: 8300000, guid: 116fe77e1f5f10b4b965effdae2b09ed, type: 3}
+    volume: 1
+    pitch: 0
+    randomVolume: 0.366
+    randomPitch: 0.5
+    loop: 0
+  - name: Replique3
+    clip: {fileID: 8300000, guid: ee08bd5ca50c68e418b733d9f835d414, type: 3}
+    volume: 1
+    pitch: 0
+    randomVolume: 0.375
+    randomPitch: 0.5
+    loop: 0
+  - name: Replique4
+    clip: {fileID: 8300000, guid: 0a087a37353b3ac4a8bc393185bd5100, type: 3}
+    volume: 1
+    pitch: 0
+    randomVolume: 0.348
+    randomPitch: 0.5
+    loop: 0
 --- !u!1 &628994414
 GameObject:
   m_ObjectHideFlags: 0
@@ -1177,7 +1270,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  canMove: 0
 --- !u!212 &1048492207
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1507,6 +1599,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1764547256}
+  - {fileID: 620136567}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
