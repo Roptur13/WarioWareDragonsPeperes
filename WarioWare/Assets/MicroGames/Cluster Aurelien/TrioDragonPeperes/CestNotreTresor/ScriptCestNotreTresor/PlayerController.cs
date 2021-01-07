@@ -34,7 +34,7 @@ namespace Dragons_Peperes
             {
                 //Debug.Log(Input.GetAxis("Left_Joystick_X"));
 
-                if(Mathf.Abs(moveInput) < 0.05 && Mathf.Abs(moveInput) > -0.05)
+                if(Mathf.Abs(moveInput) < 0.5 && Mathf.Abs(moveInput) > -0.5)
                 {
                     Debug.Log("You can't move mothafacka");
                     speed = 0f;
