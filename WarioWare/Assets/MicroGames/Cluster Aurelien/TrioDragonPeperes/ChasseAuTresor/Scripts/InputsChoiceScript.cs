@@ -29,11 +29,13 @@ namespace Dragons_Peperes
 
             private int inputNumber;
 
-            public float distance;
+            public float distance;            
 
             public override void Start()
             {
-                base.Start(); //Do not erase this line!
+                base.Start(); //Do not erase this line!              
+
+
 
                 distance = player.GetComponent<PlayerController>().distance;
 

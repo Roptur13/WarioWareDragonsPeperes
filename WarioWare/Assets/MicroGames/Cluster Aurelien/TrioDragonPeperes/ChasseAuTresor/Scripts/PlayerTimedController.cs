@@ -1,19 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.Collections.Specialized;
 using UnityEngine;
 
 namespace Dragons_Peperes
 {
     namespace ChasseAuTresor
     {
+
         /// <summary>
         /// Noé Blanc
         /// </summary>
 
-        public class PlayerController : MonoBehaviour
+        public class PlayerTimedController : TimedBehaviour
         {
-
             private bool canMove;
 
             public float distance;
@@ -27,36 +26,41 @@ namespace Dragons_Peperes
             public Sprite leftSprite;
             public Sprite rightSprite;
 
-            public float bpmAccelerator;            
+            public float bpmAccelerator;
 
-            // Start is called before the first frame update
-            void Start()
+
+            public override void Start()
             {
+                base.Start(); //Do not erase this line!
+
                 canMove = true;
 
                 distance = 0.8f;
 
                 spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
 
-                //bpmAccelerator = bpm / 60;
+                bpmAccelerator = bpm / 60;
 
             }
 
-            private void FixedUpdate()
+            //FixedUpdate is called on a fixed time.
+            public override void FixedUpdate()
             {
-                if(treasure.GetComponent<WinOrLooseScript>().finished == false)
+                base.FixedUpdate(); //Do not erase this line!
+
+                if (treasure.GetComponent<WinOrLooseScript>().finished == false)
                 {
                     if (Mathf.Abs(Input.GetAxisRaw("Left_Joystick_X")) <= 0.2 && Mathf.Abs(Input.GetAxisRaw("Left_Joystick_Y")) <= 0.2)
                     {
                         canMove = true;
                     }
-                }                
+                }
 
                 if (canMove == true)
                 {
                     if (Mathf.Abs(Input.GetAxisRaw("Left_Joystick_X")) >= 0.95f)
                     {
-                        if(Input.GetAxisRaw("Left_Joystick_X") > 0f)
+                        if (Input.GetAxisRaw("Left_Joystick_X") > 0f)
                         {
                             transform.position += new Vector3(distance * Time.deltaTime, 0, 0);
                             spriteRenderer.sprite = rightSprite;
@@ -89,6 +93,13 @@ namespace Dragons_Peperes
                 {
                     canMove = false;
                 }
+
+            }
+
+            //TimedUpdate is called once every tick.
+            public override void TimedUpdate()
+            {
+
             }
         }
     }
