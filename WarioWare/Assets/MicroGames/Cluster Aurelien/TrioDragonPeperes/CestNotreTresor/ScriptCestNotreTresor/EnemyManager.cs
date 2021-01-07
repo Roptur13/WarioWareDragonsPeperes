@@ -26,7 +26,7 @@ namespace Dragons_Peperes
             private EnemyController enemyController;
 
             TimedBehaviour timedBehaviour;
-            AudioManager audioManager;
+
 
             public bool playerLost;
 
@@ -81,12 +81,11 @@ namespace Dragons_Peperes
 
 
                     if (Tick == 7)
-                        Debug.Log("la poupe du bateau apparait + end of scrolling");
+
 
                     if (Tick == 8)
                     {
-                        //audioManager.StopSound("RunningPlayerSound");
-                        //audioManager.StopSound("AmbianceSound");
+
                         if (playerLost)
                         {
                             YouLost();
@@ -139,8 +138,6 @@ namespace Dragons_Peperes
 
                     if (Tick == 8)
                     {
-                        audioManager.StopSound("RunningPlayerSound");
-                        audioManager.StopSound("AmbianceSound");
 
                         if (playerLost)
                         {
@@ -188,8 +185,6 @@ namespace Dragons_Peperes
 
                     if (Tick == 8)
                     {
-                        audioManager.StopSound("RunningPlayerSound");
-                        audioManager.StopSound("AmbianceSound");
 
                         if (playerLost)
                         {

@@ -21,14 +21,14 @@ namespace Dragons_Peperes
             private EnemyManager minigameManager;
             public GameObject looseScreen;
 
-            AudioManager audioManager;
 
             private void Start()
             {
                 target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
                 minigameManager = FindObjectOfType<EnemyManager>();
 
-                if(minigameManager.bpm > 90)
+
+                if (minigameManager.bpm > 90)
                 {
                     enemySpeed = enemySpeed * 1.2f;
                 }
@@ -70,8 +70,6 @@ namespace Dragons_Peperes
                     //okok alors là on fous une bool pour indiquer que le joueur a touché un enemi comme ac au 8eme tic on verifera cette bool pour voir si c win or loose
                     minigameManager.playerLost = true;
 
-                    audioManager.PlaySound("PlayerCatchedSound");
-                    audioManager.StopSound("RunningPlayerSound");
                 }
             }
         }

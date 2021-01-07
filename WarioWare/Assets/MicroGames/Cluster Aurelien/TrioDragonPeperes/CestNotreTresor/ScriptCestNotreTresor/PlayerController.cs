@@ -19,13 +19,10 @@ namespace Dragons_Peperes
             //[SerializeField]bool canMove;
 
             Rigidbody2D rb;
-            AudioManager audioManager;
 
             private void Start()
             {
                 rb = GetComponent<Rigidbody2D>();
-
-                //audioManager.PlaySound("Test");
             }
 
             private void Update()
