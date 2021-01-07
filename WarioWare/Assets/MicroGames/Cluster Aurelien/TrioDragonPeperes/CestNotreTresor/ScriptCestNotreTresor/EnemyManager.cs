@@ -26,6 +26,7 @@ namespace Dragons_Peperes
             private EnemyController enemyController;
 
             TimedBehaviour timedBehaviour;
+            AudioManager audioManager;
 
             public bool playerLost;
 
@@ -46,8 +47,7 @@ namespace Dragons_Peperes
                 if (playerLost)
                 {
                     lostScreen.SetActive(true);
-                    //on arrete le temps
-                    
+                                     
                 }
             }
 
@@ -69,12 +69,14 @@ namespace Dragons_Peperes
                     {
                         Destroy(showInput);
                         Instantiate(enemy, spot2.transform);
+                        //son random
                     }                  
 
                     if (Tick == 5)
                     {
                         Destroy(showInput);
                         Instantiate(enemy, spot2.transform);
+                        //son random
                     }
 
 
@@ -83,6 +85,8 @@ namespace Dragons_Peperes
 
                     if (Tick == 8)
                     {
+                        //audioManager.StopSound("RunningPlayerSound");
+                        //audioManager.StopSound("AmbianceSound");
                         if (playerLost)
                         {
                             YouLost();
@@ -111,17 +115,20 @@ namespace Dragons_Peperes
                     if (Tick == 2)
                     {
                         Instantiate(enemy, spot2.transform);
+                        //son random
                     }
 
                     if (Tick == 3)
                     {
                         Destroy(showInput);
                         Instantiate(enemy, spot3.transform);
+                        //son random
                     }
 
                     if (Tick == 5)
                     {
                         Instantiate(enemy, spot1.transform);
+                        //son random
                     }
 
                     if (Tick == 7)
@@ -132,6 +139,9 @@ namespace Dragons_Peperes
 
                     if (Tick == 8)
                     {
+                        audioManager.StopSound("RunningPlayerSound");
+                        audioManager.StopSound("AmbianceSound");
+
                         if (playerLost)
                         {
                             YouLost();
@@ -154,16 +164,19 @@ namespace Dragons_Peperes
                     if (Tick == 2)
                     {
                         Instantiate(enemy, spot1.transform);
+                        //son random
                     }
 
-                    if(Tick == 3)
+                    if (Tick == 3)
                     {
                         Instantiate(enemy, spot3.transform);
+                        //son random
                     }
 
                     if (Tick == 5)
                     {
                         Instantiate(enemy, spot2.transform);
+                        //son random
 
                     }
 
@@ -175,6 +188,9 @@ namespace Dragons_Peperes
 
                     if (Tick == 8)
                     {
+                        audioManager.StopSound("RunningPlayerSound");
+                        audioManager.StopSound("AmbianceSound");
+
                         if (playerLost)
                         {
                             YouLost();

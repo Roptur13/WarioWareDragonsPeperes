@@ -68,6 +68,7 @@ namespace Dragons_Peperes
                     sounds[i].SetSource(_go.AddComponent<AudioSource>());
                 }
 
+                PlaySound("AmbianceSound");
             }
 
 

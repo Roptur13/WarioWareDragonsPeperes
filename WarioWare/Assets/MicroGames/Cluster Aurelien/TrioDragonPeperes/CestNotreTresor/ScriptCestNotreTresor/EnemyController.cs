@@ -16,13 +16,12 @@ namespace Dragons_Peperes
             [SerializeField] float enemyXSpeed = 4;
 
             public Transform target;
-
-
             public float bound_Y;
 
             private EnemyManager minigameManager;
-
             public GameObject looseScreen;
+
+            AudioManager audioManager;
 
             private void Start()
             {
@@ -39,7 +38,6 @@ namespace Dragons_Peperes
                     enemySpeed = enemySpeed * 1.5f;
                 }
 
-                
             }
 
 
@@ -71,8 +69,9 @@ namespace Dragons_Peperes
 
                     //okok alors là on fous une bool pour indiquer que le joueur a touché un enemi comme ac au 8eme tic on verifera cette bool pour voir si c win or loose
                     minigameManager.playerLost = true;
-                
 
+                    audioManager.PlaySound("PlayerCatchedSound");
+                    audioManager.StopSound("RunningPlayerSound");
                 }
             }
         }
