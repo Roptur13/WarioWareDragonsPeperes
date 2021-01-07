@@ -53,7 +53,9 @@ namespace Dragons_Peperes
             public override void FixedUpdate()
             {
                 base.FixedUpdate(); //Do not erase this line!
+
                 transform.position = Vector3.MoveTowards(transform.position, target.transform.position, speed * bpmAccelerator * Time.deltaTime);
+
                 if (treasure.GetComponent<WinOrLooseScript>().finished == false)
                 {
                     if (Mathf.Abs(Input.GetAxisRaw("Left_Joystick_X")) <= 0.2 && Mathf.Abs(Input.GetAxisRaw("Left_Joystick_Y")) <= 0.2 && transform.position == target.transform.position)
@@ -79,6 +81,7 @@ namespace Dragons_Peperes
 
                         canMove = false;
                     }
+
                     if (Mathf.Abs(Input.GetAxisRaw("Left_Joystick_Y")) >= 0.95f)
                     {
                         if (Input.GetAxisRaw("Left_Joystick_Y") > 0f)
