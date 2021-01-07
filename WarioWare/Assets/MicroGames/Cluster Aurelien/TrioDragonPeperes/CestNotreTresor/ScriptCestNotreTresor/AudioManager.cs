@@ -13,10 +13,14 @@ namespace Dragons_Peperes
         public class AudioManager : MonoBehaviour
         {
             private AudioSource[] sounds;
+            public AudioSource audioSource;
 
             private AudioSource running;
             private AudioSource ambiance;
             private AudioSource catched;
+
+            [SerializeField] AudioClip[] audioClipArray;
+            AudioClip lastClip;
 
             private void Start()
             {
@@ -27,6 +31,21 @@ namespace Dragons_Peperes
                 catched = sounds[2];
                 
                 
+            }
+
+            AudioClip RandomClip()
+            {
+                int attempts = 3;
+                AudioClip newClip = audioClipArray[Random.Range(0, audioClipArray.Length)];
+
+                while (newClip == lastClip && attempts > 0)
+                {
+                    newClip = audioClipArray[Random.Range(0, audioClipArray.Length)];
+                    attempts--;
+                }
+
+                lastClip = newClip;
+                return newClip;
             }
 
             #region Functions pour lancer les sons
@@ -43,6 +62,11 @@ namespace Dragons_Peperes
             public void PlayCatched()
             {
                 catched.Play();
+            }
+
+            public void PlayRandomReplique()
+            {
+                audioSource.PlayOneShot(RandomClip());
             }
             #endregion
 

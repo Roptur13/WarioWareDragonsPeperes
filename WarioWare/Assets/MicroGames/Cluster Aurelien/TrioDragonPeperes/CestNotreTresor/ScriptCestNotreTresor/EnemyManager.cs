@@ -26,7 +26,7 @@ namespace Dragons_Peperes
             private EnemyController enemyController;
 
             TimedBehaviour timedBehaviour;
-
+            AudioManager audioManager;
 
             public bool playerLost;
 
@@ -34,6 +34,7 @@ namespace Dragons_Peperes
             {
                 base.Start(); //Do not erase this line!
                 enemyController = FindObjectOfType<EnemyController>();
+                audioManager = FindObjectOfType<AudioManager>();
             }
 
             //FixedUpdate is called on a fixed time.
@@ -69,14 +70,13 @@ namespace Dragons_Peperes
                     {
                         Destroy(showInput);
                         Instantiate(enemy, spot2.transform);
-                        //son random
+                        audioManager.PlayRandomReplique();
                     }                  
 
                     if (Tick == 5)
                     {
                         Destroy(showInput);
                         Instantiate(enemy, spot2.transform);
-                        //son random
                     }
 
 
@@ -114,20 +114,18 @@ namespace Dragons_Peperes
                     if (Tick == 2)
                     {
                         Instantiate(enemy, spot2.transform);
-                        //son random
+                        audioManager.PlayRandomReplique();
                     }
 
                     if (Tick == 3)
                     {
                         Destroy(showInput);
                         Instantiate(enemy, spot3.transform);
-                        //son random
                     }
 
                     if (Tick == 5)
                     {
                         Instantiate(enemy, spot1.transform);
-                        //son random
                     }
 
                     if (Tick == 7)
@@ -161,13 +159,12 @@ namespace Dragons_Peperes
                     if (Tick == 2)
                     {
                         Instantiate(enemy, spot1.transform);
-                        //son random
+                        audioManager.PlayRandomReplique();
                     }
 
                     if (Tick == 3)
                     {
                         Instantiate(enemy, spot3.transform);
-                        //son random
                     }
 
                     if (Tick == 5)

@@ -41,7 +41,6 @@ namespace Dragons_Peperes
                 {
                     enemySpeed = enemySpeed * 1.5f;
                 }
-
             }
 
 
