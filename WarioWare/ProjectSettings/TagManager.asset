@@ -8,12 +8,8 @@ TagManager:
   - Button1
   - Button2
   - Wall
-  - Ennemy2
-  - Ennemy1
-  - Coin1
-  - Coin2
-  - Coin3
-  - Coin4
+  - Enemy1
+  - Enemy2
   layers:
   - Default
   - TransparentFX
@@ -24,7 +20,7 @@ TagManager:
   - 
   - 
   - Player
-  - Ennemy
+  - Enemy
   - AbovePlayer
   - UnderPlayer
   - 
