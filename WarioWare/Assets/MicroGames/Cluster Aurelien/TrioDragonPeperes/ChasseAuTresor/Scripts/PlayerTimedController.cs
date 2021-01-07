@@ -16,8 +16,10 @@ namespace Dragons_Peperes
             private bool canMove;
 
             public float distance;
+            private float speed;
 
             public GameObject treasure;
+            public GameObject target;
 
             private SpriteRenderer spriteRenderer;
 
@@ -41,16 +43,20 @@ namespace Dragons_Peperes
 
                 bpmAccelerator = bpm / 60;
 
+                target.transform.position = new Vector3(0, 0, 0);
+
+                speed = 5f;
+
             }
 
             //FixedUpdate is called on a fixed time.
             public override void FixedUpdate()
             {
                 base.FixedUpdate(); //Do not erase this line!
-
+                transform.position = Vector3.MoveTowards(transform.position, target.transform.position, speed * bpmAccelerator * Time.deltaTime);
                 if (treasure.GetComponent<WinOrLooseScript>().finished == false)
                 {
-                    if (Mathf.Abs(Input.GetAxisRaw("Left_Joystick_X")) <= 0.2 && Mathf.Abs(Input.GetAxisRaw("Left_Joystick_Y")) <= 0.2)
+                    if (Mathf.Abs(Input.GetAxisRaw("Left_Joystick_X")) <= 0.2 && Mathf.Abs(Input.GetAxisRaw("Left_Joystick_Y")) <= 0.2 && transform.position == target.transform.position)
                     {
                         canMove = true;
                     }
@@ -62,12 +68,12 @@ namespace Dragons_Peperes
                     {
                         if (Input.GetAxisRaw("Left_Joystick_X") > 0f)
                         {
-                            transform.position += new Vector3(distance * Time.deltaTime, 0, 0);
+                            target.transform.position += new Vector3(distance, 0, 0);                            
                             spriteRenderer.sprite = rightSprite;
                         }
                         if (Input.GetAxisRaw("Left_Joystick_X") < 0f)
                         {
-                            transform.position += new Vector3(-distance, 0, 0);
+                            target.transform.position += new Vector3(-distance, 0, 0);
                             spriteRenderer.sprite = leftSprite;
                         }
 
@@ -77,12 +83,12 @@ namespace Dragons_Peperes
                     {
                         if (Input.GetAxisRaw("Left_Joystick_Y") > 0f)
                         {
-                            transform.position += new Vector3(0, distance, 0);
+                            target.transform.position += new Vector3(0, distance, 0);
                             spriteRenderer.sprite = upSprite;
                         }
                         if (Input.GetAxisRaw("Left_Joystick_Y") < 0f)
                         {
-                            transform.position += new Vector3(0, -distance, 0);
+                            target.transform.position += new Vector3(0, -distance, 0);
                             spriteRenderer.sprite = downSprite;
                         }
                         canMove = false;

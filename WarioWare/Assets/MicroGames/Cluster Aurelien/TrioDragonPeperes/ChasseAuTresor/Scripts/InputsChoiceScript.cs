@@ -37,7 +37,7 @@ namespace Dragons_Peperes
 
 
 
-                distance = player.GetComponent<PlayerController>().distance;
+                distance = player.GetComponent<PlayerTimedController>().distance;
 
                 player.SetActive(false);
                 treasure.transform.position = new Vector3(0, 0, 0);
