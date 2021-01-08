@@ -63,6 +63,7 @@ namespace Dragons_Peperes
                         canMove = true;
                     }
                 }
+                
 
                 if (canMove == true)
                 {

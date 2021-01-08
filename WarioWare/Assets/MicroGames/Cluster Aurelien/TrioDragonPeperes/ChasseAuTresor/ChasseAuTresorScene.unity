@@ -5167,6 +5167,7 @@ MonoBehaviour:
   treasure: {fileID: 1462516084}
   mouetteGauche: {fileID: 2047842677}
   mouetteDroite: {fileID: 957577638}
+  inputsChosen: 0
   distance: 0
 --- !u!4 &1205313961
 Transform:
@@ -5281,6 +5282,7 @@ MonoBehaviour:
   timer: 0
   currentTime: 0
   player: {fileID: 61501694}
+  inputAppearance: {fileID: 1205313959}
   chest: {fileID: 21300000, guid: bcb90b36f61dcb34399a443ad78700f8, type: 3}
   finished: 0
 --- !u!1 &1718911010
