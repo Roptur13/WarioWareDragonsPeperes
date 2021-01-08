@@ -32,7 +32,25 @@ namespace Dragons_Peperes
                 coinManager = FindObjectOfType<CoinManager>();
                 carteManager = FindObjectOfType<CarteManager>();
 
-                if(currentDifficulty != Difficulty.EASY)
+                #region Spawn Coins
+                if(currentDifficulty == Difficulty.EASY)
+                {
+                    coinManager.SpawnCoinsEasy();
+                    coinController = FindObjectsOfType<CoinController>();
+                }
+                if (currentDifficulty == Difficulty.MEDIUM)
+                {
+                    coinManager.SpawnCoinsMedium();
+                    coinController = FindObjectsOfType<CoinController>();
+                }
+                if (currentDifficulty == Difficulty.HARD)
+                {
+                    coinManager.SpawnCoinsHard();
+                    coinController = FindObjectsOfType<CoinController>();
+                }
+                #endregion
+
+                if (currentDifficulty != Difficulty.EASY)
                 {
                     fourthSpot.SetActive(true);
                 }
@@ -54,11 +72,6 @@ namespace Dragons_Peperes
 
                 if(currentDifficulty == Difficulty.EASY)
                 {
-                    if(Tick == 1)
-                    {
-                        coinManager.SpawnCoinsEasy();
-                        coinController = FindObjectsOfType<CoinController>();
-                    }
 
                     if(Tick == 5)
                     {
@@ -96,12 +109,6 @@ namespace Dragons_Peperes
                 if(currentDifficulty == Difficulty.MEDIUM)
                 {
 
-                    if (Tick == 1)
-                    {
-                        coinManager.SpawnCoinsMedium();
-                        coinController = FindObjectsOfType<CoinController>();
-                    }
-
                     if (Tick == 5)
                     {
                         enableInput = true;
@@ -138,7 +145,7 @@ namespace Dragons_Peperes
 
                 if (currentDifficulty == Difficulty.HARD)
                 {
-                    if (Tick == 1)
+                    if (Tick == 0)
                     {
                         coinManager.SpawnCoinsHard();
                         coinController = FindObjectsOfType<CoinController>();

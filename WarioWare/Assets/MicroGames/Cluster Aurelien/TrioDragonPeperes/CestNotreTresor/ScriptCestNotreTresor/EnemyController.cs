@@ -18,17 +18,21 @@ namespace Dragons_Peperes
             public Transform target;
             public float bound_Y;
 
-            private EnemyManager minigameManager;
+            EnemyManager minigameManager;
+            AudioManager audioManager;
+
+
             public GameObject looseScreen;
 
-            AudioManager audioManager;
 
             private void Start()
             {
                 target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
                 minigameManager = FindObjectOfType<EnemyManager>();
 
-                if(minigameManager.bpm > 90)
+                audioManager = FindObjectOfType<AudioManager>();
+
+                if (minigameManager.bpm > 90)
                 {
                     enemySpeed = enemySpeed * 1.2f;
                 }
@@ -37,7 +41,6 @@ namespace Dragons_Peperes
                 {
                     enemySpeed = enemySpeed * 1.5f;
                 }
-
             }
 
 
@@ -67,11 +70,16 @@ namespace Dragons_Peperes
                 {
                     Debug.Log("Game Lost");
 
+                    audioManager.StopRunning();
+
+                    if(minigameManager.playerLost != true)
+                    {
+                        audioManager.PlayCatched();
+                    }
+
                     //okok alors là on fous une bool pour indiquer que le joueur a touché un enemi comme ac au 8eme tic on verifera cette bool pour voir si c win or loose
                     minigameManager.playerLost = true;
 
-                    audioManager.PlaySound("PlayerCatchedSound");
-                    audioManager.StopSound("RunningPlayerSound");
                 }
             }
         }

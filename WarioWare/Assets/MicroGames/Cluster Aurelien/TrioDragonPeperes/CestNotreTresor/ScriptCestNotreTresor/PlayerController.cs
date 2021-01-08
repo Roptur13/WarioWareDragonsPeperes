@@ -24,15 +24,17 @@ namespace Dragons_Peperes
             private void Start()
             {
                 rb = GetComponent<Rigidbody2D>();
+                audioManager = FindObjectOfType<AudioManager>();
 
-                //audioManager.PlaySound("Test");
+                audioManager.PlayRunning();
+                audioManager.PlayAmbiance();
             }
 
             private void Update()
             {
                 //Debug.Log(Input.GetAxis("Left_Joystick_X"));
 
-                if(Mathf.Abs(moveInput) < 0.05 && Mathf.Abs(moveInput) > -0.05)
+                if(Mathf.Abs(moveInput) < 0.5 && Mathf.Abs(moveInput) > -0.5)
                 {
                     Debug.Log("You can't move mothafacka");
                     speed = 0f;

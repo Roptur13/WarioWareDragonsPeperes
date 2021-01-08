@@ -10,99 +10,82 @@ namespace Dragons_Peperes
         /// <summary>
         /// Mael Ricou
         /// </summary>
-        /// 
-
-        [System.Serializable]
-        public class Sound
-        {
-            public string name; 
-            public AudioClip clip; 
-
-            private AudioSource source;
-
-            [Range(0f, 1f)]
-            public float volume = 0.7f;
-            [Range(0.5f, 1.5f)]
-            public float pitch = 1f;
-
-            [Range(0f, 0.5f)]
-            public float randomVolume = 0.1f;
-            [Range(0f, 0.5f)]
-            public float randomPitch = 0.1f;
-
-            public bool loop = false;
-
-            public void SetSource(AudioSource _source)
-            {
-                source = _source;
-                source.clip = clip;
-                source.loop = loop;
-            }
-
-            public void Play()
-            {
-                source.volume = volume * (1 + Random.Range(-randomVolume / 2f, randomVolume / 2f));
-                source.pitch = pitch * (1 + Random.Range(-randomPitch / 2f, randomPitch / 2f));
-                source.Play();
-            }
-
-            public void Stop()
-            {
-
-                source.Stop();
-            }
-        }
         public class AudioManager : MonoBehaviour
         {
-            [SerializeField]
-            Sound[] sounds;
+            private AudioSource[] sounds;
+            public AudioSource audioSource;
 
+            private AudioSource running;
+            private AudioSource ambiance;
+            private AudioSource catched;
 
+            [SerializeField] AudioClip[] audioClipArray;
+            AudioClip lastClip;
 
             private void Start()
             {
-                for (int i = 0; i < sounds.Length; i++)
-                {
-                    GameObject _go = new GameObject("Sound_" + i + "_" + sounds[i].name);
-                    _go.transform.SetParent(this.transform);
-                    sounds[i].SetSource(_go.AddComponent<AudioSource>());
-                }
+                sounds = GetComponents<AudioSource>();
 
-                PlaySound("AmbianceSound");
+                running = sounds[0];
+                ambiance = sounds[1];
+                catched = sounds[2];
+                
+                
             }
 
-
-            public void PlaySound(string _name)
+            AudioClip RandomClip()
             {
-                for (int i = 0; i < sounds.Length; i++)
+                int attempts = 3;
+                AudioClip newClip = audioClipArray[Random.Range(0, audioClipArray.Length)];
+
+                while (newClip == lastClip && attempts > 0)
                 {
-                    if (sounds[i].name == _name)
-                    {
-                        sounds[i].Play();
-                        return;
-                    }
+                    newClip = audioClipArray[Random.Range(0, audioClipArray.Length)];
+                    attempts--;
                 }
 
-                //pas de son avec nom
-                Debug.LogWarning("AudioManager n'a pas trouvé de son:" + _name);
+                lastClip = newClip;
+                return newClip;
             }
 
-            public void StopSound(string _name)
+            #region Functions pour lancer les sons
+            public void PlayRunning()
             {
-                for (int i = 0; i < sounds.Length; i++)
-                {
-                    if (sounds[i].name == _name)
-                    {
-                        sounds[i].Stop();
-                        return;
-                    }
-                }
-
-                //pas de son avec nom
-                Debug.LogWarning("AudioManager n'a pas trouvé de son à stop:" + _name);
+                running.Play();
             }
+
+            public void PlayAmbiance()
+            {
+                ambiance.Play();
+            }
+
+            public void PlayCatched()
+            {
+                catched.Play();
+            }
+
+            public void PlayRandomReplique()
+            {
+                audioSource.PlayOneShot(RandomClip());
+            }
+            #endregion
+
+            #region Functions pour arreter les sons
+            public void StopRunning()
+            {
+                running.Stop();
+            }
+
+            public void StopAmbiance()
+            {
+                ambiance.Stop();
+            }
+
+            public void StopCatched()
+            {
+                catched.Stop();
+            }
+            #endregion
         }
-
     }
 }
-
