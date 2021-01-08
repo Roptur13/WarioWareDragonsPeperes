@@ -26,6 +26,8 @@ namespace Dragons_Peperes
 
             public GameObject player;
             public GameObject treasure;
+            public GameObject mouetteGauche;
+            public GameObject mouetteDroite;
 
             private int inputNumber;
 
@@ -40,6 +42,10 @@ namespace Dragons_Peperes
                 distance = player.GetComponent<PlayerTimedController>().distance;
 
                 player.SetActive(false);
+
+                mouetteGauche.SetActive(false);
+                mouetteDroite.SetActive(false);
+
                 treasure.transform.position = new Vector3(0, 0, 0);
 
                 if(currentDifficulty == Difficulty.EASY)
@@ -400,8 +406,11 @@ namespace Dragons_Peperes
                     for(int i = 0; i< inputInstantiated.Count; i++)
                     {
                         Destroy(inputInstantiated[i]);
-                        player.SetActive(true);
+                        
                     }
+                    player.SetActive(true);
+                    mouetteGauche.SetActive(true);
+                    mouetteDroite.SetActive(true);
                 }
             }
             
