@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemySpeed: 4.5
-  enemyXSpeed: 4
+  enemyXSpeed: 3
   target: {fileID: 0}
   bound_Y: -7
   looseScreen: {fileID: 0}
