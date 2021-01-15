@@ -20,6 +20,7 @@ namespace Dragons_Peperes
 
             public GameObject treasure;
             public GameObject target;
+            public GameObject bulle;
 
             private SpriteRenderer spriteRenderer;
 
@@ -47,6 +48,7 @@ namespace Dragons_Peperes
 
                 speed = 5f;
 
+                bulle.SetActive(false);
             }
 
             //FixedUpdate is called on a fixed time.
@@ -97,6 +99,11 @@ namespace Dragons_Peperes
                         }
                         canMove = false;
                     }
+                }
+
+                if(transform.position == treasure.transform.position)
+                {
+                    bulle.SetActive(true);
                 }
 
                 if (treasure.GetComponent<WinOrLooseScript>().finished == true)
