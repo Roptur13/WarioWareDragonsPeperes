@@ -13,6 +13,7 @@ namespace Dragons_Peperes
         {
             public bool enableInput;
 
+            private SoundManager soundManager;
             private CoinManager coinManager;
             private CarteManager carteManager;
             public CoinController[] coinController;
@@ -36,6 +37,7 @@ namespace Dragons_Peperes
 
                 coinManager = FindObjectOfType<CoinManager>();
                 carteManager = FindObjectOfType<CarteManager>();
+                soundManager = FindObjectOfType<SoundManager>();
 
                 #region Spawn Coins
                 if(currentDifficulty == Difficulty.EASY)
@@ -88,6 +90,7 @@ namespace Dragons_Peperes
 
                     if(Tick == 8)
                     {
+                        soundManager.StopMusic();
                         //le joueur n'a pas trouvé la bonne pièce à temps, il loose
                         if (playerWon)
                         {
@@ -118,6 +121,7 @@ namespace Dragons_Peperes
 
                     if (Tick == 8)
                     {
+                        soundManager.StopMusic();
                         //le joueur n'a pas trouvé la bonne pièce à temps, il loose
                         if (playerWon)
                         {
@@ -153,6 +157,7 @@ namespace Dragons_Peperes
 
                     if (Tick == 8)
                     {
+                        soundManager.StopMusic();
                         //le joueur n'a pas trouvé la bonne pièce à temps, il loose
                         if (playerWon)
                         {
@@ -171,20 +176,22 @@ namespace Dragons_Peperes
 
             public void YouWIn()
             {
-                //ptite bool pour signifier la victoire
+                soundManager.PlayFoule_P();
                 playerWon = true;
-                //boom winScreen
                 winScreen.SetActive(true);
             }
 
             public void YouLost()
             {
-                //boom looseScreen
+                soundManager.PlayFoule_N();
                 lostScreen.SetActive(true);
+                soundManager.StopMusic();
             }
 
             public void HideCoins()
             {
+                soundManager.PlayCoin();
+
                 Instantiate(hideCoin, spot1);
                 Instantiate(hideCoin, spot2);
                 Instantiate(hideCoin, spot3);

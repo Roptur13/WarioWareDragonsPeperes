@@ -2,27 +2,37 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PropController : MonoBehaviour
+
+namespace Dragons_Peperes
 {
-
-    public float propSpeed = 6f;
-    public float bound_Y;
-
-
-    private void Update()
+    namespace CestNotreTresor
     {
-        MoveProp();
-    }
-    void MoveProp()
-    {
+        /// <summary>
+        /// Mael Ricou
+        /// </summary>
+        public class PropController : MonoBehaviour
+        {
 
-        //se déplace sur l'axe Y en négatif
-        Vector2 temp = transform.position;
-        temp.y -= propSpeed * Time.deltaTime;
-        transform.position = temp;
+            public float propSpeed = 6f;
+            public float bound_Y;
 
-        //si le prop dépasse un certain axe, se fait détruire
-        if (temp.y < bound_Y)
-            Destroy(gameObject, 1);
+
+            private void Update()
+            {
+                MoveProp();
+            }
+            void MoveProp()
+            {
+
+                //se déplace sur l'axe Y en négatif
+                Vector2 temp = transform.position;
+                temp.y -= propSpeed * Time.deltaTime;
+                transform.position = temp;
+
+                //si le prop dépasse un certain axe, se fait détruire
+                if (temp.y < bound_Y)
+                    Destroy(gameObject, 1);
+            }
+        }
     }
 }

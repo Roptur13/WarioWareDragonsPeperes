@@ -19,13 +19,15 @@ namespace Dragons_Peperes
 
 
             private CarteManager carteManager;
+            private SoundManager soundManager;
 
             public bool carteIsHere;
 
             private void Start()
             {
                 carteManager = FindObjectOfType<CarteManager>();
-
+                soundManager = FindObjectOfType<SoundManager>();
+                soundManager.PlayPaper();
                 carteIsHere = true;
 
                 #region We want that coin

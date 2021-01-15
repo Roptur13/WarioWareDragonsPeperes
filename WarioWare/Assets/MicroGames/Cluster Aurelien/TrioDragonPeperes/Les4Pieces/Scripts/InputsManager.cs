@@ -13,7 +13,7 @@ namespace Dragons_Peperes
         {
             private CarteManager carteManager;
             private GameManager gameManager;
-            //private CarteController carteController;
+            private SoundManager soundManager;
 
             [SerializeField] bool isSpot1;
             [SerializeField] bool isSpot2;
@@ -47,7 +47,7 @@ namespace Dragons_Peperes
             {
                 carteManager = FindObjectOfType<CarteManager>();
                 gameManager = FindObjectOfType<GameManager>();
-                //carteController = FindObjectOfType<CarteController>();
+                soundManager = FindObjectOfType<SoundManager>();
             }
 
             private void Update()
