@@ -26,8 +26,6 @@ namespace Dragons_Peperes
             public List<GameObject> spotsHard = new List<GameObject>();
 
 
-
-
             //public List<GameObject> hiddenCoin = new List<GameObject>();
 
             public void SpawnCoinsEasy()
