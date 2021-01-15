@@ -36,14 +36,11 @@ namespace Dragons_Peperes
                 treasureFound = false;
             }
 
-            //FixedUpdate is called on a fixed time.
-            public override void FixedUpdate()
+            private void Update()
             {
-                base.FixedUpdate(); //Do not erase this line!
-                
-                if(Input.GetKeyDown(KeyCode.Joystick1Button0) && inputAppearance.GetComponent<InputsChoiceScript>().inputsChosen == true)
+                if (Input.GetKeyDown(KeyCode.Joystick1Button0) && inputAppearance.GetComponent<InputsChoiceScript>().inputsChosen == true)
                 {
-                    if(transform.position == target.transform.position)
+                    if (transform.position == target.transform.position)
                     {
                         audiosource.Play();
                         Debug.Log("Gagné !");
@@ -51,12 +48,15 @@ namespace Dragons_Peperes
                         finished = true;
                         treasureFound = true;
                     }
-                    if(transform.position != target.transform.position)
-                    {
-                        Debug.Log("Perdu !");
-                        finished = true;
-                    }
                 }
+            }
+
+            //FixedUpdate is called on a fixed time.
+            public override void FixedUpdate()
+            {
+                base.FixedUpdate(); //Do not erase this line!
+                
+                
             }
 
             //TimedUpdate is called once every tick.
