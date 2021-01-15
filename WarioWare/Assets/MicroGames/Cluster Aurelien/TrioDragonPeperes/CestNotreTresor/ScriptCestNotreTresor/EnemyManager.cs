@@ -94,6 +94,7 @@ namespace Dragons_Peperes
 
                         if (!playerLost)
                         {
+                                audioManager.StopMusic();
                             Testing.Manager.Instance.Result(true);
                         }
                         
@@ -146,6 +147,7 @@ namespace Dragons_Peperes
 
                         if (!playerLost)
                         {
+                            audioManager.StopMusic();
                             Testing.Manager.Instance.Result(true);
                         }
                     }
@@ -193,6 +195,7 @@ namespace Dragons_Peperes
 
                         if (!playerLost)
                         {
+                            audioManager.StopMusic();
                             Testing.Manager.Instance.Result(true);
                         }
                     }

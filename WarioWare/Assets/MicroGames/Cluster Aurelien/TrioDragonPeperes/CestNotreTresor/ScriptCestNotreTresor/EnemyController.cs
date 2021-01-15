@@ -71,7 +71,7 @@ namespace Dragons_Peperes
                 if (other.name == "Player")
                 {
                     Debug.Log("Game Lost");
-
+                    audioManager.StopMusic();
                     audioManager.StopRunning();
                     dockScrolling.scrollSpeed = 0f;
                     enemySpeed = 0f;
