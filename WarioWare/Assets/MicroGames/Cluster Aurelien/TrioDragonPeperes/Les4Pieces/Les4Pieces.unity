@@ -1081,6 +1081,12 @@ MonoBehaviour:
   fourthSpot: {fileID: 137820695}
   winScreen: {fileID: 1462424900}
   lostScreen: {fileID: 1977541958}
+  hideCoin: {fileID: 4471764575349486080, guid: 7988a79b17ed67e4889d47b8c16a635a,
+    type: 3}
+  spot1: {fileID: 1296034777}
+  spot2: {fileID: 156484715}
+  spot3: {fileID: 2050632537}
+  spot4: {fileID: 137820696}
 --- !u!4 &1241422255
 Transform:
   m_ObjectHideFlags: 0

@@ -22,8 +22,13 @@ namespace Dragons_Peperes
             public GameObject winScreen;
             public GameObject lostScreen;
 
-            bool playerLost;
             bool playerWon;
+
+            public GameObject hideCoin;
+            public Transform spot1;
+            public Transform spot2;
+            public Transform spot3;
+            public Transform spot4;
 
             public override void Start()
             {
@@ -76,17 +81,10 @@ namespace Dragons_Peperes
                     if(Tick == 5)
                     {
                         enableInput = true;
-                        for (int i = 0; i < coinController.Length; i++)
-                        {
-                            coinController[i].hideCoins = true;
-                        }
+                        HideCoins();
                         carteManager.SpawnRandomCarteEasy();
                     }
 
-                    if(Tick == 7)
-                    {
-                        //destroy hiddencoins
-                    }
 
                     if(Tick == 8)
                     {
@@ -96,7 +94,7 @@ namespace Dragons_Peperes
                             Testing.Manager.Instance.Result(true);
                         }
 
-                        if(playerLost)
+                        if(!playerWon)
                         {
                             Testing.Manager.Instance.Result(false);
                         }
@@ -109,20 +107,14 @@ namespace Dragons_Peperes
                 if(currentDifficulty == Difficulty.MEDIUM)
                 {
 
+
                     if (Tick == 5)
                     {
                         enableInput = true;
-                        for (int i = 0; i < coinController.Length; i++)
-                        {
-                            coinController[i].hideCoins = true;
-                        }
+                        HideCoins();
                         carteManager.SpawnRandomCarteMedium();
                     }
 
-                    if (Tick == 7)
-                    {
-                        //destroy hiddencoins
-                    }
 
                     if (Tick == 8)
                     {
@@ -132,7 +124,7 @@ namespace Dragons_Peperes
                             Testing.Manager.Instance.Result(true);
                         }
 
-                        if (playerLost)
+                        if (!playerWon)
                         {
                             Testing.Manager.Instance.Result(false);
                         }
@@ -154,17 +146,10 @@ namespace Dragons_Peperes
                     if (Tick == 5)
                     {
                         enableInput = true;
-                        for (int i = 0; i < coinController.Length; i++)
-                        {
-                            coinController[i].hideCoins = true;
-                        }
+                        HideCoins();
                         carteManager.SpawnRandomCarteHard();
                     }
 
-                    if (Tick == 7)
-                    {
-                        //destroy hiddencoins
-                    }
 
                     if (Tick == 8)
                     {
@@ -174,7 +159,7 @@ namespace Dragons_Peperes
                             Testing.Manager.Instance.Result(true);
                         }
 
-                        if (playerLost)
+                        if (!playerWon)
                         {
                             Testing.Manager.Instance.Result(false);
                         }
@@ -194,9 +179,21 @@ namespace Dragons_Peperes
 
             public void YouLost()
             {
-                playerLost = false;
                 //boom looseScreen
                 lostScreen.SetActive(true);
+            }
+
+            public void HideCoins()
+            {
+                Instantiate(hideCoin, spot1);
+                Instantiate(hideCoin, spot2);
+                Instantiate(hideCoin, spot3);
+
+                if(fourthSpot == true)
+                {
+                    Instantiate(hideCoin, spot4);
+                }
+                
             }
         }
     }
