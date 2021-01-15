@@ -90,7 +90,9 @@ namespace Dragons_Peperes
                         {
                             YouLost();
                         }
-                        else
+                        
+
+                        if (!playerLost)
                         {
                             Testing.Manager.Instance.Result(true);
                         }
@@ -141,7 +143,8 @@ namespace Dragons_Peperes
                         {
                             YouLost();
                         }
-                        else
+
+                        if (!playerLost)
                         {
                             Testing.Manager.Instance.Result(true);
                         }
@@ -187,7 +190,8 @@ namespace Dragons_Peperes
                         {
                             YouLost();
                         }
-                        else
+
+                        if (!playerLost)
                         {
                             Testing.Manager.Instance.Result(true);
                         }
