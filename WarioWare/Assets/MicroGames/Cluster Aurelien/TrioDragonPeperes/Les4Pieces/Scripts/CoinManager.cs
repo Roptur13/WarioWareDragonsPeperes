@@ -33,7 +33,7 @@ namespace Dragons_Peperes
                 for (int i = 0; i < spotsEasy.Count; i++)
                 {
                     int rand = Random.Range(0, coinsEasy.Count);
-                    Instantiate(coinsEasy[rand], spotsEasy[i].transform.position, Quaternion.identity);
+                    Instantiate(coinsEasy[rand], spotsEasy[i].transform.position, Quaternion.identity, spotsEasy[i].transform);
                     coinsEasy.RemoveAt(rand);
                 }
             }
@@ -44,7 +44,7 @@ namespace Dragons_Peperes
                 for (int i = 0; i < spotsMedium.Count; i++)
                 {
                     int rand = Random.Range(0, coinsMedium.Count);
-                    Instantiate(coinsMedium[rand], spotsMedium[i].transform.position, Quaternion.identity);
+                    Instantiate(coinsMedium[rand], spotsMedium[i].transform.position, Quaternion.identity, spotsMedium[i].transform);
                     coinsMedium.RemoveAt(rand);
                 }
             }
@@ -55,7 +55,7 @@ namespace Dragons_Peperes
                 for (int i = 0; i < spotsMedium.Count; i++)
                 {
                     int rand = Random.Range(0, coinsHard.Count);
-                    Instantiate(coinsHard[rand], spotsMedium[i].transform.position, Quaternion.identity);
+                    Instantiate(coinsHard[rand], spotsMedium[i].transform.position, Quaternion.identity, spotsHard[i].transform);
                     coinsHard.RemoveAt(rand);
                 }
             }

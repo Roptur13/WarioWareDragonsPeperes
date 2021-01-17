@@ -142,11 +142,11 @@ namespace Dragons_Peperes
 
                 if (currentDifficulty == Difficulty.HARD)
                 {
-                    if (Tick == 0)
+                   /* if (Tick == 0)
                     {
                         coinManager.SpawnCoinsHard();
                         coinController = FindObjectsOfType<CoinController>();
-                    }
+                    }*/
 
                     if (Tick == 5)
                     {
