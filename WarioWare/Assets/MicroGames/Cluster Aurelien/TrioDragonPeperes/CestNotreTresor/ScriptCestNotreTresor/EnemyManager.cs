@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Testing;
 
 namespace Dragons_Peperes
 {
@@ -95,7 +96,7 @@ namespace Dragons_Peperes
                         if (!playerLost)
                         {
                                 audioManager.StopMusic();
-                            Testing.Manager.Instance.Result(true);
+                                Manager.Instance.Result(true);
                         }
                         
                     }
@@ -143,7 +144,7 @@ namespace Dragons_Peperes
                         if (!playerLost)
                         {
                             audioManager.StopMusic();
-                            Testing.Manager.Instance.Result(true);
+                            Manager.Instance.Result(true);
                         }
                     }
                 }
@@ -187,7 +188,7 @@ namespace Dragons_Peperes
                         if (!playerLost)
                         {
                             audioManager.StopMusic();
-                            Testing.Manager.Instance.Result(true);
+                            Manager.Instance.Result(true);
                         }
                     }
                 }
@@ -196,7 +197,7 @@ namespace Dragons_Peperes
 
             public void YouLost()
             {
-                Testing.Manager.Instance.Result(false);              
+                Manager.Instance.Result(false);              
             }           
         }
     }

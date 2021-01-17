@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Testing;
 
 namespace Dragons_Peperes
 {
@@ -94,12 +95,12 @@ namespace Dragons_Peperes
                         //le joueur n'a pas trouvé la bonne pièce à temps, il loose
                         if (playerWon)
                         {
-                            Testing.Manager.Instance.Result(true);
+                            Manager.Instance.Result(true);
                         }
 
                         if(!playerWon)
                         {
-                            Testing.Manager.Instance.Result(false);
+                            Manager.Instance.Result(false);
                         }
                     }
                 }
@@ -125,12 +126,12 @@ namespace Dragons_Peperes
                         //le joueur n'a pas trouvé la bonne pièce à temps, il loose
                         if (playerWon)
                         {
-                            Testing.Manager.Instance.Result(true);
+                            Manager.Instance.Result(true);
                         }
 
                         if (!playerWon)
                         {
-                            Testing.Manager.Instance.Result(false);
+                            Manager.Instance.Result(false);
                         }
                     }
                 }
@@ -161,12 +162,12 @@ namespace Dragons_Peperes
                         //le joueur n'a pas trouvé la bonne pièce à temps, il loose
                         if (playerWon)
                         {
-                            Testing.Manager.Instance.Result(true);
+                            Manager.Instance.Result(true);
                         }
 
                         if (!playerWon)
                         {
-                            Testing.Manager.Instance.Result(false);
+                            Manager.Instance.Result(false);
                         }
                     }
                 }
