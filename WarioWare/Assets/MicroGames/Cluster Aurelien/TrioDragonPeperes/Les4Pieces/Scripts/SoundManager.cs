@@ -79,25 +79,21 @@ namespace Dragons_Peperes
                 if (gameManager.bpm == 60)
                 {
                     music60.Play();
-                    Debug.Log("Music à 60bpm bb");
                 }
 
                 if (gameManager.bpm == 80)
                 {
                     music80.Play();
-                    Debug.Log("Music à 80bpm bb");
                 }
 
                 if (gameManager.bpm == 100)
                 {
                     music100.Play();
-                    Debug.Log("Music à 100bpm bb");
                 }
 
                 if (gameManager.bpm == 120)
                 {
                     music120.Play();
-                    Debug.Log("Music à 120bpm bb");
                 }
             }
             #endregion

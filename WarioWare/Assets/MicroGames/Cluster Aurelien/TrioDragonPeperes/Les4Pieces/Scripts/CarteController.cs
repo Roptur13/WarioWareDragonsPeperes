@@ -35,25 +35,21 @@ namespace Dragons_Peperes
                 if (isCarte1)
                 {
                     carteManager.weWantCoin1 = true;
-                    Debug.Log("on veut la piece 1");
                 }
 
                 if (isCarte2)
                 {
                     carteManager.weWantCoin2 = true;
-                    Debug.Log("on veut la piece 2");
                 }
 
                 if (isCarte3)
                 {
                     carteManager.weWantCoin3 = true;
-                    Debug.Log("on veut la piece 3");
                 }
 
                 if (isCarte4)
                 {
                     carteManager.weWantCoin4 = true;
-                    Debug.Log("on veut la piece 4");
                 }
                 #endregion
             }

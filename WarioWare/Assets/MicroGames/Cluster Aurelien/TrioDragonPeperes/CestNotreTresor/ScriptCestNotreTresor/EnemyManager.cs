@@ -110,7 +110,6 @@ namespace Dragons_Peperes
                     if (Tick == 1)
                     {
                         showInput.SetActive(true);
-                        Debug.Log("audio: COME BACK HERE");
                     }
                         
 
@@ -131,10 +130,6 @@ namespace Dragons_Peperes
                         Instantiate(enemy, spot1.transform);
                     }
 
-                    if (Tick == 7)
-                    {
-                        Debug.Log("la poupe du bateau apparait + end of scrolling");
-                    }
                         
 
                     if (Tick == 8)
@@ -159,7 +154,7 @@ namespace Dragons_Peperes
                 if(currentDifficulty == Difficulty.HARD)
                 {
                     if (Tick == 1)
-                        Debug.Log("audio: COME BACK HERE");
+                        
 
                     if (Tick == 2)
                     {
@@ -180,10 +175,6 @@ namespace Dragons_Peperes
                     }
 
 
-                    if (Tick == 7)
-                    {
-                        Debug.Log("la poupe du bateau apparait + end of scrolling");
-                    }
 
                     if (Tick == 8)
                     {
