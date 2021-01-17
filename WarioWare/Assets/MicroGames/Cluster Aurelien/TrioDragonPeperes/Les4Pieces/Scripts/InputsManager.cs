@@ -58,7 +58,7 @@ namespace Dragons_Peperes
                     if (isSpot1)
                     {
                         //Y button
-                        if (Input.GetKeyDown(KeyCode.Joystick1Button3))
+                        if (Input.GetButtonDown("Y_Button"))
                         {
                             if (coin1OnSpot1)
                             {
@@ -127,7 +127,7 @@ namespace Dragons_Peperes
                     if (isSpot2)
                     {
                         //B button
-                        if (Input.GetKeyDown(KeyCode.Joystick1Button1))
+                        if (Input.GetButtonDown("B_Button"))
                         {
                             
                             if (coin1OnSpot2)
@@ -199,7 +199,7 @@ namespace Dragons_Peperes
                     if (isSpot3)
                     {
                         //X button
-                        if (Input.GetKeyDown(KeyCode.Joystick1Button2))
+                        if (Input.GetButtonDown("X_Button"))
                         {
                             
                             if (coin1OnSpot3)
@@ -271,7 +271,7 @@ namespace Dragons_Peperes
                     if (isSpot4)
                     {
                         //A button
-                        if (Input.GetKeyDown(KeyCode.Joystick1Button0))
+                        if (Input.GetButtonDown("A_Button"))
                         {
                             
                             if (coin1OnSpot4)
