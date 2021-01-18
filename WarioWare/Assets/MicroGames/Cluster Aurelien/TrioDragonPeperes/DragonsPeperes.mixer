@@ -52,7 +52,7 @@ AudioMixerGroupController:
   m_Pitch: 7fe26bd5f31d0ea469e657a74732679f
   m_Send: 00000000000000000000000000000000
   m_Effects:
-  - {fileID: -3694914719840529842}
+  - {fileID: 0}
   m_UserColorIndex: 0
   m_Mute: 0
   m_Solo: 0
@@ -106,6 +106,7 @@ AudioMixerController:
     - aa3c7d46ac2bcd9458ed98330f3aad0a
     - bd3ff4f58f661ef45b6823702dad0b45
     - 8274735591966f5489957e7dea7a1905
+    - 9b0a6ae3824790d4a9bba7d9ad37bba3
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -121,6 +122,7 @@ AudioMixerGroupController:
   m_Children:
   - {fileID: -3663378568801591942}
   - {fileID: -5684878419974224284}
+  - {fileID: 8831035793366708077}
   m_Volume: 5144e3854aa10b34cb92dd1f4e84a93c
   m_Pitch: df2a19b67b7409946a574ad018cfdde5
   m_Send: 00000000000000000000000000000000
@@ -169,6 +171,20 @@ AudioMixerEffectController:
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
+--- !u!244 &4263900605090443303
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 6c31811243d658b42837e702dc4b5543
+  m_EffectName: Attenuation
+  m_MixLevel: c9b2ce5acab4e704cb20396d8323e457
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!243 &5907212203889093156
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -184,6 +200,25 @@ AudioMixerGroupController:
   m_Send: 00000000000000000000000000000000
   m_Effects:
   - {fileID: 3544964439145961997}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!243 &8831035793366708077
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: ChasseAuTresor
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 9b0a6ae3824790d4a9bba7d9ad37bba3
+  m_Children: []
+  m_Volume: 9a092a7ae4a6ec545976da0d0357e182
+  m_Pitch: ce7cbbd26014a044995a166eb36bc865
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: 4263900605090443303}
   m_UserColorIndex: 0
   m_Mute: 0
   m_Solo: 0
