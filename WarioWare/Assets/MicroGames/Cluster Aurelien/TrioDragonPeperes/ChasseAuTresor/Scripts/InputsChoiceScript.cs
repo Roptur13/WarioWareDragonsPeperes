@@ -15,7 +15,7 @@ namespace Dragons_Peperes
             
             private int possibilityNumber;
 
-            private Vector3[] inputLocationList = { new Vector3(-3.7f, 0, 0), new Vector3(0, 0, 0), new Vector3(3.7f, 0, 0), new Vector3(-5, 0, 0), new Vector3(-2.5f, 0, 0), new Vector3(2.5f, 0, 0), new Vector3(5, 0, 0), new Vector3(-7.4f, 0, 0), new Vector3(-3.7f, 0, 0), new Vector3(0, 0, 0), new Vector3(3.7f, 0, 0), new Vector3(7.4f, 0, 0) };           
+            private Vector3[] inputLocationList = { new Vector3(-3.7f, 0, 0), new Vector3(0, 0, 0), new Vector3(3.7f, 0, 0), new Vector3(-6, 0, 0), new Vector3(-2.5f, 0, 0), new Vector3(2.5f, 0, 0), new Vector3(6, 0, 0), new Vector3(-7.4f, 0, 0), new Vector3(-3.7f, 0, 0), new Vector3(0, 0, 0), new Vector3(3.7f, 0, 0), new Vector3(7.4f, 0, 0) };           
 
             private List<GameObject> inputInstantiated = new List<GameObject>();
 
