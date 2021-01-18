@@ -76,13 +76,15 @@ namespace Dragons_Peperes
                     {
                         if (Input.GetAxisRaw("Left_Joystick_X") > 0f)
                         {
-                            target.transform.position += new Vector3(distance, 0, 0);                            
+                            target.transform.position += new Vector3(distance, 0, 0);
+                            StartCoroutine(Jump());
                             spriteRenderer.sprite = rightSprite;
                             audiosource.Play();
                         }
                         if (Input.GetAxisRaw("Left_Joystick_X") < 0f)
                         {
                             target.transform.position += new Vector3(-distance, 0, 0);
+                            StartCoroutine(Jump());
                             spriteRenderer.sprite = leftSprite;
                             audiosource.Play();
                         }
@@ -95,12 +97,14 @@ namespace Dragons_Peperes
                         if (Input.GetAxisRaw("Left_Joystick_Y") > 0f)
                         {
                             target.transform.position += new Vector3(0, distance, 0);
+                            StartCoroutine(Jump());
                             spriteRenderer.sprite = upSprite;
                             audiosource.Play();
                         }
                         if (Input.GetAxisRaw("Left_Joystick_Y") < 0f)
                         {
                             target.transform.position += new Vector3(0, -distance, 0);
+                            StartCoroutine(Jump());
                             spriteRenderer.sprite = downSprite;
                             audiosource.Play();
                         }
@@ -129,6 +133,12 @@ namespace Dragons_Peperes
             public override void TimedUpdate()
             {
 
+            }
+
+            IEnumerator Jump()
+            {
+                yield return new WaitForSeconds((speed * bpmAccelerator * Time.deltaTime) / 2);
+                transform.position += new Vector3(0, 0.3f, 0);
             }
         }
     }
