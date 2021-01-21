@@ -165,6 +165,10 @@ MonoBehaviour:
   downSprite: {fileID: 21300000, guid: 814d3ae13ca644f4babce1ed4193c96b, type: 3}
   leftSprite: {fileID: 21300000, guid: 20a432e7d0891c54f9f572c883d27543, type: 3}
   rightSprite: {fileID: 21300000, guid: f01665372b5216c499ed3426f639c81a, type: 3}
+  movingRightSprite: {fileID: 21300000, guid: 4e833bcee6909fe4bb17c9eb03894b5e, type: 3}
+  movingLeftSprite: {fileID: 21300000, guid: d530fb0159c96ec46bdbb109f76ae5af, type: 3}
+  movingUpSprite: {fileID: 21300000, guid: 0f26a2cd9fd90684980e715686630e25, type: 3}
+  movingDownSprite: {fileID: 21300000, guid: d6cf68ebb2a5bde4ebff6eb24d7bee20, type: 3}
   bpmAccelerator: 0
 --- !u!212 &61501696
 SpriteRenderer:

@@ -31,6 +31,13 @@ namespace Dragons_Peperes
             public Sprite downSprite;
             public Sprite leftSprite;
             public Sprite rightSprite;
+            public Sprite movingRightSprite;
+            public Sprite movingLeftSprite;
+            public Sprite movingUpSprite;
+            public Sprite movingDownSprite;
+
+            private Sprite movingSprite;
+            private Sprite idleSprite;
 
             public float bpmAccelerator;
 
@@ -53,7 +60,7 @@ namespace Dragons_Peperes
 
                 speed = 5f;
 
-                
+                idleSprite = downSprite;
 
                 bulle.SetActive(false);                
             }
@@ -72,6 +79,15 @@ namespace Dragons_Peperes
                         canMove = true;
                     }
                 }
+
+                if(transform.position == target.transform.position)
+                {
+                    spriteRenderer.sprite = idleSprite;
+                }
+                else if (transform.position != target.transform.position)
+                {
+                    spriteRenderer.sprite = movingSprite;
+                }
                 
 
                 if (canMove == true)
@@ -82,14 +98,16 @@ namespace Dragons_Peperes
                         {
                             target.transform.position += new Vector3(distance, 0, 0);
                             StartCoroutine(Jump());
-                            spriteRenderer.sprite = rightSprite;
+                            movingSprite = movingRightSprite;
+                            idleSprite = rightSprite;
                             audiosource.Play();
                         }
                         if (Input.GetAxisRaw("Left_Joystick_X") < 0f)
                         {
                             target.transform.position += new Vector3(-distance, 0, 0);
                             StartCoroutine(Jump());
-                            spriteRenderer.sprite = leftSprite;
+                            movingSprite = movingLeftSprite;
+                            idleSprite = leftSprite;
                             audiosource.Play();
                         }
 
@@ -102,14 +120,16 @@ namespace Dragons_Peperes
                         {
                             target.transform.position += new Vector3(0, distance, 0);
                             StartCoroutine(Jump());
-                            spriteRenderer.sprite = upSprite;
+                            movingSprite = movingUpSprite;
+                            idleSprite = upSprite;
                             audiosource.Play();
                         }
                         if (Input.GetAxisRaw("Left_Joystick_Y") < 0f)
                         {
                             target.transform.position += new Vector3(0, -distance, 0);
                             StartCoroutine(Jump());
-                            spriteRenderer.sprite = downSprite;
+                            movingSprite = movingDownSprite;
+                            idleSprite = downSprite;
                             audiosource.Play();
                         }
                         canMove = false;
