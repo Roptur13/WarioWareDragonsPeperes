@@ -17,10 +17,12 @@ namespace Dragons_Peperes
 
             public float distance;
             private float speed;
+            
 
             public GameObject treasure;
             public GameObject target;
             public GameObject bulle;
+            public GameObject spritePerso;
 
             private SpriteRenderer spriteRenderer;
             private AudioSource audiosource;
@@ -41,7 +43,7 @@ namespace Dragons_Peperes
 
                 distance = 0.8f;
 
-                spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+                spriteRenderer = spritePerso.GetComponent<SpriteRenderer>();
 
                 audiosource = gameObject.GetComponent<AudioSource>();
 
@@ -51,7 +53,9 @@ namespace Dragons_Peperes
 
                 speed = 5f;
 
-                bulle.SetActive(false);
+                
+
+                bulle.SetActive(false);                
             }
 
             //FixedUpdate is called on a fixed time.
@@ -137,8 +141,51 @@ namespace Dragons_Peperes
 
             IEnumerator Jump()
             {
-                yield return new WaitForSeconds((speed * bpmAccelerator * Time.deltaTime) / 2);
-                transform.position += new Vector3(0, 0.3f, 0);
+                spritePerso.transform.position += new Vector3(0, 0.05f, 0);
+                yield return new WaitForSeconds((speed * bpmAccelerator * Time.deltaTime) / 20);
+                spritePerso.transform.position += new Vector3(0, 0.05f, 0);
+                yield return new WaitForSeconds((speed * bpmAccelerator * Time.deltaTime) / 20);
+                spritePerso.transform.position += new Vector3(0, 0.05f, 0);
+                yield return new WaitForSeconds((speed * bpmAccelerator * Time.deltaTime) / 20);
+                spritePerso.transform.position += new Vector3(0, 0.05f, 0);
+                yield return new WaitForSeconds((speed * bpmAccelerator * Time.deltaTime) / 20);
+                spritePerso.transform.position += new Vector3(0, 0.05f, 0);
+                yield return new WaitForSeconds((speed * bpmAccelerator * Time.deltaTime) / 20);
+                spritePerso.transform.position += new Vector3(0, 0.05f, 0);
+                yield return new WaitForSeconds((speed * bpmAccelerator * Time.deltaTime) / 20);
+                spritePerso.transform.position += new Vector3(0, 0.05f, 0);
+                yield return new WaitForSeconds((speed * bpmAccelerator * Time.deltaTime) / 20);
+                spritePerso.transform.position += new Vector3(0, 0.05f, 0);
+                yield return new WaitForSeconds((speed * bpmAccelerator * Time.deltaTime) / 20);
+                spritePerso.transform.position += new Vector3(0, 0.05f, 0);
+                yield return new WaitForSeconds((speed * bpmAccelerator * Time.deltaTime) / 20);
+                spritePerso.transform.position += new Vector3(0, 0.05f, 0);
+                yield return new WaitForSeconds((speed * bpmAccelerator * Time.deltaTime) / 20);
+
+                spritePerso.transform.position += new Vector3(0, -0.05f, 0);
+                yield return new WaitForSeconds((speed * bpmAccelerator * Time.deltaTime) / 20);
+                spritePerso.transform.position += new Vector3(0, -0.05f, 0);
+                yield return new WaitForSeconds((speed * bpmAccelerator * Time.deltaTime) / 20);
+                spritePerso.transform.position += new Vector3(0, -0.05f, 0);
+                yield return new WaitForSeconds((speed * bpmAccelerator * Time.deltaTime) / 20);
+                spritePerso.transform.position += new Vector3(0, -0.05f, 0);
+                yield return new WaitForSeconds((speed * bpmAccelerator * Time.deltaTime) / 20);
+                spritePerso.transform.position += new Vector3(0, -0.05f, 0);
+                yield return new WaitForSeconds((speed * bpmAccelerator * Time.deltaTime) / 20);
+                spritePerso.transform.position += new Vector3(0, -0.05f, 0);
+                yield return new WaitForSeconds((speed * bpmAccelerator * Time.deltaTime) / 20);
+                spritePerso.transform.position += new Vector3(0, -0.05f, 0);
+                yield return new WaitForSeconds((speed * bpmAccelerator * Time.deltaTime) / 20);
+                spritePerso.transform.position += new Vector3(0, -0.05f, 0);
+                yield return new WaitForSeconds((speed * bpmAccelerator * Time.deltaTime) / 20);
+                spritePerso.transform.position += new Vector3(0, -0.05f, 0);
+                yield return new WaitForSeconds((speed * bpmAccelerator * Time.deltaTime) / 20);
+                spritePerso.transform.position += new Vector3(0, -0.05f, 0);
+
+                yield return null;
+
+
+
             }
         }
     }
