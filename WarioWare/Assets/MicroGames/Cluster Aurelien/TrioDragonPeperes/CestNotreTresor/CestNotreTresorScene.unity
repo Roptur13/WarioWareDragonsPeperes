@@ -2377,9 +2377,13 @@ MonoBehaviour:
   props:
   - {fileID: 289959570686607513, guid: 890237c45409b3142aaa86d1d055c5d0, type: 3}
   - {fileID: 2168664651801251060, guid: 6898d89eb4c9e114bae7c0b1f6d14844, type: 3}
+  - {fileID: 8005049029633358418, guid: 52cfc2c76bbf34841a5d4fafc7c037d1, type: 3}
+  - {fileID: 8162564835867594368, guid: 5b3df1456064c0542b481ec0ef571cd1, type: 3}
+  - {fileID: 6560801462654281036, guid: dc9b0346c2841904e947307686f94f7d, type: 3}
+  - {fileID: 7604865710470884958, guid: 23e4664534c3dd449bbb03a134fcb703, type: 3}
   spawnGauche: {fileID: 1650408912}
   spawnDroite: {fileID: 702088014}
-  timer: 3.5
+  timer: 3
 --- !u!1 &1706662209
 GameObject:
   m_ObjectHideFlags: 0
