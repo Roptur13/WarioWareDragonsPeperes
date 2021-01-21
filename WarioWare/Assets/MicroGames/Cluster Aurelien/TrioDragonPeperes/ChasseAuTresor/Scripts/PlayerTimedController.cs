@@ -17,12 +17,19 @@ namespace Dragons_Peperes
 
             public float distance;
             private float speed;
+            private float footstepRotation;
+            private int randomNumber;
             
 
             public GameObject treasure;
             public GameObject target;
             public GameObject bulle;
             public GameObject spritePerso;
+
+            public GameObject footstep1;
+            public GameObject footstep2;
+            public GameObject footstep3;
+            public GameObject footstep4;
 
             private SpriteRenderer spriteRenderer;
             private AudioSource audiosource;
@@ -96,6 +103,7 @@ namespace Dragons_Peperes
                     {
                         if (Input.GetAxisRaw("Left_Joystick_X") > 0f)
                         {
+                            footstepRotation = -90;
                             target.transform.position += new Vector3(distance, 0, 0);
                             StartCoroutine(Jump());
                             movingSprite = movingRightSprite;
@@ -104,6 +112,7 @@ namespace Dragons_Peperes
                         }
                         if (Input.GetAxisRaw("Left_Joystick_X") < 0f)
                         {
+                            footstepRotation = 90;
                             target.transform.position += new Vector3(-distance, 0, 0);
                             StartCoroutine(Jump());
                             movingSprite = movingLeftSprite;
@@ -118,6 +127,7 @@ namespace Dragons_Peperes
                     {
                         if (Input.GetAxisRaw("Left_Joystick_Y") > 0f)
                         {
+                            footstepRotation = 0;
                             target.transform.position += new Vector3(0, distance, 0);
                             StartCoroutine(Jump());
                             movingSprite = movingUpSprite;
@@ -126,6 +136,7 @@ namespace Dragons_Peperes
                         }
                         if (Input.GetAxisRaw("Left_Joystick_Y") < 0f)
                         {
+                            footstepRotation = 180;
                             target.transform.position += new Vector3(0, -distance, 0);
                             StartCoroutine(Jump());
                             movingSprite = movingDownSprite;
@@ -161,51 +172,38 @@ namespace Dragons_Peperes
 
             IEnumerator Jump()
             {
-                spritePerso.transform.position += new Vector3(0, 0.05f, 0);
-                yield return new WaitForSeconds((speed * bpmAccelerator * Time.deltaTime) / 20);
-                spritePerso.transform.position += new Vector3(0, 0.05f, 0);
-                yield return new WaitForSeconds((speed * bpmAccelerator * Time.deltaTime) / 20);
-                spritePerso.transform.position += new Vector3(0, 0.05f, 0);
-                yield return new WaitForSeconds((speed * bpmAccelerator * Time.deltaTime) / 20);
-                spritePerso.transform.position += new Vector3(0, 0.05f, 0);
-                yield return new WaitForSeconds((speed * bpmAccelerator * Time.deltaTime) / 20);
-                spritePerso.transform.position += new Vector3(0, 0.05f, 0);
-                yield return new WaitForSeconds((speed * bpmAccelerator * Time.deltaTime) / 20);
-                spritePerso.transform.position += new Vector3(0, 0.05f, 0);
-                yield return new WaitForSeconds((speed * bpmAccelerator * Time.deltaTime) / 20);
-                spritePerso.transform.position += new Vector3(0, 0.05f, 0);
-                yield return new WaitForSeconds((speed * bpmAccelerator * Time.deltaTime) / 20);
-                spritePerso.transform.position += new Vector3(0, 0.05f, 0);
-                yield return new WaitForSeconds((speed * bpmAccelerator * Time.deltaTime) / 20);
-                spritePerso.transform.position += new Vector3(0, 0.05f, 0);
-                yield return new WaitForSeconds((speed * bpmAccelerator * Time.deltaTime) / 20);
-                spritePerso.transform.position += new Vector3(0, 0.05f, 0);
-                yield return new WaitForSeconds((speed * bpmAccelerator * Time.deltaTime) / 20);
+                for(float i = 0; i < (speed * bpmAccelerator * Time.deltaTime)/2; i += Time.deltaTime)
+                {
+                    spritePerso.transform.position += new Vector3(0, 0.05f, 0);
+                    yield return null;
+                }
+                for (float i = 0; i < (speed * bpmAccelerator * Time.deltaTime) / 2; i += Time.deltaTime)
+                {
+                    spritePerso.transform.position += new Vector3(0, -0.05f, 0);
+                    yield return null;
+                }
 
-                spritePerso.transform.position += new Vector3(0, -0.05f, 0);
-                yield return new WaitForSeconds((speed * bpmAccelerator * Time.deltaTime) / 20);
-                spritePerso.transform.position += new Vector3(0, -0.05f, 0);
-                yield return new WaitForSeconds((speed * bpmAccelerator * Time.deltaTime) / 20);
-                spritePerso.transform.position += new Vector3(0, -0.05f, 0);
-                yield return new WaitForSeconds((speed * bpmAccelerator * Time.deltaTime) / 20);
-                spritePerso.transform.position += new Vector3(0, -0.05f, 0);
-                yield return new WaitForSeconds((speed * bpmAccelerator * Time.deltaTime) / 20);
-                spritePerso.transform.position += new Vector3(0, -0.05f, 0);
-                yield return new WaitForSeconds((speed * bpmAccelerator * Time.deltaTime) / 20);
-                spritePerso.transform.position += new Vector3(0, -0.05f, 0);
-                yield return new WaitForSeconds((speed * bpmAccelerator * Time.deltaTime) / 20);
-                spritePerso.transform.position += new Vector3(0, -0.05f, 0);
-                yield return new WaitForSeconds((speed * bpmAccelerator * Time.deltaTime) / 20);
-                spritePerso.transform.position += new Vector3(0, -0.05f, 0);
-                yield return new WaitForSeconds((speed * bpmAccelerator * Time.deltaTime) / 20);
-                spritePerso.transform.position += new Vector3(0, -0.05f, 0);
-                yield return new WaitForSeconds((speed * bpmAccelerator * Time.deltaTime) / 20);
-                spritePerso.transform.position += new Vector3(0, -0.05f, 0);
+                randomNumber = Random.Range(1, 5);
+
+                if (randomNumber == 1)
+                {
+                    GameObject.Instantiate(footstep1, transform.position, Quaternion.Euler(0, 0, footstepRotation));
+                }
+                if (randomNumber == 2)
+                {
+                    GameObject.Instantiate(footstep2, transform.position, Quaternion.Euler(0, 0, footstepRotation));
+                }
+                if (randomNumber == 3)
+                {
+                    GameObject.Instantiate(footstep3, transform.position, Quaternion.Euler(0, 0, footstepRotation));
+                }
+                if (randomNumber == 4)
+                {
+                    GameObject.Instantiate(footstep4, transform.position, Quaternion.Euler(0, 0, footstepRotation));
+                }
+
 
                 yield return null;
-
-
-
             }
         }
     }

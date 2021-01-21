@@ -22,7 +22,7 @@ namespace Dragons_Peperes
             public GameObject upArrow;
             public GameObject downArrow;
             public GameObject leftArrow;
-            public GameObject rightArrow;
+            public GameObject rightArrow;            
 
             public GameObject player;
             public GameObject treasure;
