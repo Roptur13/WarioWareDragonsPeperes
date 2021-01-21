@@ -35,7 +35,7 @@ namespace Dragons_Peperes
 
                 if (Random.Range(0, 2) > 0)
                 {
-                    Instantiate(props[Random.Range(0, props.Length)], spawnGauche.transform.position, Quaternion.identity);
+                    Instantiate(props[Random.Range(0, props.Length)], spawnGauche.transform.position, Quaternion.identity, spawnGauche.transform);
                 }
 
 
@@ -43,7 +43,7 @@ namespace Dragons_Peperes
 
                 if (Random.Range(0, 2) > 0)
                 {
-                    Instantiate(props[Random.Range(0, props.Length)], spawnDroite.transform.position, Quaternion.identity);
+                    Instantiate(props[Random.Range(0, props.Length)], spawnDroite.transform.position, Quaternion.identity, spawnDroite.transform);
                 }
 
 
