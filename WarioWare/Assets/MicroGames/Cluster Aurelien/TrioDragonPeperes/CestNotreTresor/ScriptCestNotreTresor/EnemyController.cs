@@ -25,6 +25,7 @@ namespace Dragons_Peperes
 
             public GameObject looseScreen;
 
+            [SerializeField] bool isEnemy2;
 
             private void Start()
             {
@@ -48,7 +49,15 @@ namespace Dragons_Peperes
 
             private void Update()
             {
-                MoveEnemy();
+                if (!isEnemy2)
+                {
+                    MoveEnemy();
+                }
+
+                if (isEnemy2)
+                {
+                    MoveEnemy2();
+                }
             }
 
             void MoveEnemy()
@@ -56,6 +65,18 @@ namespace Dragons_Peperes
                 //se dirige vers l'axe X du Joueur
                 transform.position = Vector2.MoveTowards(transform.position, new Vector2(target.position.x, transform.position.y), enemyXSpeed * Time.deltaTime);
 
+                //se déplace sur l'axe Y en négatif
+                Vector2 temp = transform.position;
+                temp.y -= enemySpeed * Time.deltaTime;
+                transform.position = temp;
+
+                //si l'ennemi dépasse un certain axe, se fait détruire
+                if (temp.y < bound_Y)
+                    Destroy(gameObject, 1);
+            }
+
+            public void MoveEnemy2()
+            {
                 //se déplace sur l'axe Y en négatif
                 Vector2 temp = transform.position;
                 temp.y -= enemySpeed * Time.deltaTime;

@@ -16,6 +16,7 @@ namespace Dragons_Peperes
             public GameObject showInput;
 
             public GameObject enemy;
+            public GameObject enemy2;
             public GameObject lostScreen;
 
             [Space]
@@ -160,9 +161,7 @@ namespace Dragons_Peperes
 
                 if(currentDifficulty == Difficulty.HARD)
                 {
-                    if (Tick == 1)
-                        
-
+                    
                     if (Tick == 2)
                     {
                         Instantiate(enemy, spot1.transform);
@@ -177,6 +176,7 @@ namespace Dragons_Peperes
                     if (Tick == 5)
                     {
                         Instantiate(enemy, spot2.transform);
+                        Instantiate(enemy2, spot1.transform);
                         //son random
 
                     }
