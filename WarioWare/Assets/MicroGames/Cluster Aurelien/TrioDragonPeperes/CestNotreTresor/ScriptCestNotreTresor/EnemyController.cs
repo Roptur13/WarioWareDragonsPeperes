@@ -21,7 +21,7 @@ namespace Dragons_Peperes
             EnemyManager minigameManager;
             AudioManager audioManager;
             DockScrolling dockScrolling;
-
+            PlayerController playerController;
 
             public GameObject looseScreen;
 
@@ -34,10 +34,20 @@ namespace Dragons_Peperes
 
                 audioManager = FindObjectOfType<AudioManager>();
                 dockScrolling = FindObjectOfType<DockScrolling>();
+                playerController = FindObjectOfType<PlayerController>();
 
-                    if (minigameManager.bpm > 80)
+                if (minigameManager.bpm > 60)
+                {
+                    enemySpeed = enemySpeed * 1.1f;
+                }
+
+                if (minigameManager.bpm > 80)
                 {
                     enemySpeed = enemySpeed * 1.2f;
+                }
+                if (minigameManager.bpm > 100)
+                {
+                    enemySpeed = enemySpeed * 1.3f;
                 }
 
                 if(minigameManager.bpm >= 120)
@@ -91,20 +101,24 @@ namespace Dragons_Peperes
             {
                 if (other.name == "Player")
                 {
-                    audioManager.StopMusic();
-                    audioManager.StopRunning();
-                    dockScrolling.scrollSpeed = 0f;
-                    enemySpeed = 0f;
+                    EndGame();
 
                     if(minigameManager.playerLost != true)
                     {
                         audioManager.PlayCatched();
                     }
-
                     
                     minigameManager.playerLost = true;
-
                 }
+            }
+
+            public void EndGame()
+            {
+                audioManager.StopMusic();
+                audioManager.StopRunning();
+                dockScrolling.scrollSpeed = 0f;
+                enemySpeed = 0f;
+                playerController.speed = 0f;
             }
         }
 

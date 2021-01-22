@@ -136,6 +136,7 @@ namespace Dragons_Peperes
                     if (Tick == 5)
                     {
                         Instantiate(enemy, spot1.transform);
+                        audioManager.PlayRandomReplique();
                     }
 
                         
@@ -176,9 +177,14 @@ namespace Dragons_Peperes
                     if (Tick == 5)
                     {
                         Instantiate(enemy, spot2.transform);
-                        Instantiate(enemy2, spot1.transform);
-                        //son random
+                        Instantiate(enemy2, spot2.transform);
+                        audioManager.PlayRandomReplique();
 
+                    }
+
+                    if(Tick == 6)
+                    {
+                        Instantiate(enemy2, spot3.transform);
                     }
 
 
