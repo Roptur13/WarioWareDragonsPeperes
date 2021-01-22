@@ -28,7 +28,7 @@ namespace Dragons_Peperes
             public GameObject treasure;
             public GameObject mouetteGauche;
             public GameObject mouetteDroite;
-            public GameObject map;
+            public GameObject map;           
 
             public bool inputsChosen;
 

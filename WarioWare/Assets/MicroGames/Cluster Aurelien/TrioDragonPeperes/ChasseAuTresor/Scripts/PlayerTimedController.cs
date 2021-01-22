@@ -25,6 +25,7 @@ namespace Dragons_Peperes
             public GameObject target;
             public GameObject bulle;
             public GameObject spritePerso;
+            public GameObject jumpParticles;
 
             public GameObject footstep1;
             public GameObject footstep2;
@@ -201,6 +202,8 @@ namespace Dragons_Peperes
                 {
                     GameObject.Instantiate(footstep4, transform.position, Quaternion.Euler(0, 0, footstepRotation));
                 }
+
+                Instantiate(jumpParticles, spritePerso.transform.position, Quaternion.identity);
 
 
                 yield return null;
