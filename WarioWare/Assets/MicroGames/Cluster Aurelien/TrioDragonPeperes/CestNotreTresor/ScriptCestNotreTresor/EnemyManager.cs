@@ -32,6 +32,8 @@ namespace Dragons_Peperes
 
             public bool playerLost;
 
+            public GameObject particule;
+
             public override void Start()
             {
                 base.Start(); //Do not erase this line!
@@ -92,7 +94,7 @@ namespace Dragons_Peperes
 
                     if (Tick == 8)
                     {
-                            Debug.Log(playerLost);
+                        particule.SetActive(false);
 
                         if (playerLost)
                         {
@@ -143,6 +145,7 @@ namespace Dragons_Peperes
 
                     if (Tick == 8)
                     {
+                        particule.SetActive(false);
 
                         if (playerLost)
                         {
@@ -162,7 +165,11 @@ namespace Dragons_Peperes
 
                 if(currentDifficulty == Difficulty.HARD)
                 {
-                    
+                    if (Tick == 1)
+                    {
+                        showInput.SetActive(true);
+                    }
+
                     if (Tick == 2)
                     {
                         Instantiate(enemy, spot1.transform);
@@ -191,6 +198,7 @@ namespace Dragons_Peperes
 
                     if (Tick == 8)
                     {
+                        particule.SetActive(false);
 
                         if (playerLost)
                         {

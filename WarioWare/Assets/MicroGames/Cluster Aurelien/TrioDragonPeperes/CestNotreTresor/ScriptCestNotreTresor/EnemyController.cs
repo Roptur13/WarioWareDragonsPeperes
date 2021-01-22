@@ -27,10 +27,14 @@ namespace Dragons_Peperes
 
             [SerializeField] bool isEnemy2;
 
+
+            public GameObject particule;
+
             private void Start()
             {
                 target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
                 minigameManager = FindObjectOfType<EnemyManager>();
+                particule = GameObject.Find("Particle");
 
                 audioManager = FindObjectOfType<AudioManager>();
                 dockScrolling = FindObjectOfType<DockScrolling>();
@@ -115,6 +119,7 @@ namespace Dragons_Peperes
 
             public void EndGame()
             {
+                particule.SetActive(false);
                 audioManager.StopMusic();
                 audioManager.StopRunning();
                 dockScrolling.scrollSpeed = 0f;
