@@ -43,10 +43,7 @@ namespace Dragons_Peperes
                 music80 = sounds[4];
                 music100 = sounds[5];
                 music120 = sounds[6];
-                #endregion
-
-
-                PlayMusic();
+                #endregion               
 
             }
 

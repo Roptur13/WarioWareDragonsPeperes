@@ -47,8 +47,6 @@ namespace Dragons_Peperes
                 #endregion
 
 
-                PlayMusic();
-
             }
 
 

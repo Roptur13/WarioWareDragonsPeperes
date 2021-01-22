@@ -58,6 +58,11 @@ namespace Dragons_Peperes
             {
                 //base.TimedUpdate();
 
+                if(Tick == 1)
+                {
+                    audioManager.PlayMusic();
+                }
+
                 #region EasyMode
 
                 if(currentDifficulty == Difficulty.EASY)
