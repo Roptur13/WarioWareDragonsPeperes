@@ -36,23 +36,28 @@ namespace Dragons_Peperes
                 dockScrolling = FindObjectOfType<DockScrolling>();
                 playerController = FindObjectOfType<PlayerController>();
 
-                if (minigameManager.bpm > 60)
+                if (minigameManager.bpm == 60)
                 {
                     enemySpeed = enemySpeed * 1.1f;
+                    Debug.Log("bpm 60");
                 }
 
-                if (minigameManager.bpm > 80)
+                if (minigameManager.bpm == 80)
                 {
                     enemySpeed = enemySpeed * 1.2f;
-                }
-                if (minigameManager.bpm > 100)
-                {
-                    enemySpeed = enemySpeed * 1.3f;
+                    Debug.Log("bpm 80");
                 }
 
-                if(minigameManager.bpm >= 120)
+                if (minigameManager.bpm == 100)
+                {
+                    enemySpeed = enemySpeed * 1.3f;
+                    Debug.Log("bpm 100");
+                }
+
+                if(minigameManager.bpm == 120)
                 {
                     enemySpeed = enemySpeed * 1.5f;
+                    Debug.Log("bpm 120");
                 }
             }
 
