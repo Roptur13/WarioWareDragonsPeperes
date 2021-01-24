@@ -39,6 +39,7 @@ namespace Dragons_Peperes
                 base.Start(); //Do not erase this line!
                 enemyController = FindObjectOfType<EnemyController>();
                 audioManager = FindObjectOfType<AudioManager>();
+
             }
 
             //FixedUpdate is called on a fixed time.
@@ -61,14 +62,14 @@ namespace Dragons_Peperes
             {
                 //base.TimedUpdate();
 
-                if(Tick == 1)
+                if (Tick == 1)
                 {
                     audioManager.PlayMusic();
                 }
 
                 #region EasyMode
 
-                if(currentDifficulty == Difficulty.EASY)
+                if (currentDifficulty == Difficulty.EASY)
                 {
                     if (Tick == 1)
                     {

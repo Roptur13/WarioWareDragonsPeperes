@@ -85,7 +85,8 @@ namespace Dragons_Peperes
 
             public void PlayMusic()
             {
-                if(gameManager.bpm == 60)
+
+                if (gameManager.bpm == 60)
                 {
                     music60.Play();
                 }
