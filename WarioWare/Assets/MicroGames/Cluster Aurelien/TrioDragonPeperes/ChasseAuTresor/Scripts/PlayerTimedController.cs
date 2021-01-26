@@ -169,6 +169,10 @@ namespace Dragons_Peperes
                 {
                     bulle.SetActive(true);
                 }
+                else
+                {
+                    bulle.SetActive(false);
+                }
 
                 if (treasure.GetComponent<WinOrLooseScript>().finished == true)
                 {
