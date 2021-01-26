@@ -1,7 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using Testing;
+﻿using UnityEngine;
+using Caps;
 
 namespace Dragons_Peperes
 {
@@ -48,7 +46,6 @@ namespace Dragons_Peperes
                     if (transform.position == target.transform.position && finished == false && inputNumber >= inputMinNumber)
                     {
                         audiosource.Play();
-                        Debug.Log("Gagné !");
                         spriteRenderer.sprite = chest;
                         finished = true;
                         treasureFound = true;
