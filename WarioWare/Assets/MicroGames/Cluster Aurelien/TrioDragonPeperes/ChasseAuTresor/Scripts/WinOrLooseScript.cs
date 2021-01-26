@@ -38,7 +38,6 @@ namespace Dragons_Peperes
 
                 treasureFound = false;
 
-                //inputNumber = player.GetComponent<PlayerTimedController>().inputNumber;
                 inputMinNumber = inputAppearance.GetComponent<InputsChoiceScript>().inputMinNumber;
             }
 

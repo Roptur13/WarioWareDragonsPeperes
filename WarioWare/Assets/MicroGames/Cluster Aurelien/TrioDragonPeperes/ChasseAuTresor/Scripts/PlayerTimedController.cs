@@ -77,8 +77,6 @@ namespace Dragons_Peperes
                 bulle.SetActive(false);
 
                 inputNumber = 0;
-
-                //inputMinNumber = inputAppearance.GetComponent<InputsChoiceScript>().inputMinNumber;
             }
 
             //FixedUpdate is called on a fixed time.
