@@ -18,6 +18,7 @@ namespace Dragons_Peperes
             public GameObject enemy;
             public GameObject enemy2;
             public GameObject lostScreen;
+            public GameObject winScreen;
 
             [Space]
             [Header("Lieux de spawns pour les enemies")]
@@ -108,6 +109,7 @@ namespace Dragons_Peperes
 
                         if (!playerLost)
                         {
+                            winScreen.SetActive(true);
                              audioManager.StopMusic();
                              Manager.Instance.Result(true);
                         }
@@ -158,6 +160,7 @@ namespace Dragons_Peperes
 
                         if (!playerLost)
                         {
+                            winScreen.SetActive(true);
                             audioManager.StopMusic();
                             Manager.Instance.Result(true);
                         }
@@ -211,6 +214,7 @@ namespace Dragons_Peperes
 
                         if (!playerLost)
                         {
+                            winScreen.SetActive(true);
                             audioManager.StopMusic();
                             Manager.Instance.Result(true);
                         }
