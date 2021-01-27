@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-namespace Testing { 
+namespace Caps { 
     public class Manager : Singleton<Manager>
     {
      
