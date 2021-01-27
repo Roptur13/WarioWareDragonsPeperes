@@ -25,6 +25,9 @@ namespace Dragons_Peperes
             public GameObject spot2;
             public GameObject spot3;
 
+
+            
+
             private EnemyController enemyController;
 
             TimedBehaviour timedBehaviour;
